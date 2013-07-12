@@ -37,11 +37,13 @@
           <label>$LOCALIZE[21429]: $LOCALIZE[21430]</label>
           <altlabel>$LOCALIZE[21429]: $LOCALIZE[21431]</altlabel>
         </control>
-        <control type="button" id="5" description="MediaFilter">
+        <control type="radiobutton" id="5" description="MediaFilter">
+          <visible>Container.CanFilterAdvanced</visible>
           <include>9000Buttons</include>
           <label>$LOCALIZE[587]</label>
-	  <onclick>right</onclick>
-	  <onclick>Filter</onclick>
+          <selected>Container.Filtered</selected>
+          <onclick>right</onclick>
+          <onclick>Filter</onclick>
         </control>
         <control type="button" id="698" description="Browse files">
           <include>9000Buttons</include>
