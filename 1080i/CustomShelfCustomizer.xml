@@ -282,6 +282,19 @@
           <onclick>Skin.Reset(TVShelf_Custom)</onclick>
           <onclick>Skin.Reset(TVShelf_Image)</onclick>
         </control>
+        <control type="button" id="299" description="TV Auto Theme">
+          <visible>!Skin.HasSetting(TVSectionHide) + Container(50).HasFocus(1002)</visible>
+          <visible>!Skin.HasSetting(TVShelf_Image) + !Skin.HasSetting(TVShelf_Custom</visible>
+          <include>SettingsSubmenuButtons</include>
+          <label>- Thumbnail theme</label>
+          <label2>$VAR[TVShelfLabel3]</label2>
+          <onclick condition="!Skin.HasSetting(TVShelfTheme2) + !Skin.HasSetting(TVShelfTheme3)">Skin.Reset(TVShelfTheme1)</onclick>
+          <onclick condition="!Skin.HasSetting(TVShelfTheme2) + !Skin.HasSetting(TVShelfTheme3)">Skin.SetBool(TVShelfTheme2)</onclick>
+          <onclick condition="Skin.HasSetting(TVShelfTheme2)">Skin.Reset(TVShelfTheme2)</onclick>
+          <onclick condition="Skin.HasSetting(TVShelfTheme2)">Skin.SetBool(TVShelfTheme3)</onclick>
+          <onclick condition="Skin.HasSetting(TVShelfTheme3)">Skin.Reset(TVShelfTheme3)</onclick>
+          <onclick condition="Skin.HasSetting(TVShelfTheme3)">Skin.SetBool(TVShelfTheme1)</onclick>
+        </control>
         <control type="radiobutton" id="201" description="Image">
           <visible>!Skin.HasSetting(TVSectionHide) + Container(50).HasFocus(1002)</visible>
           <include>SettingsSubmenuButtons</include>

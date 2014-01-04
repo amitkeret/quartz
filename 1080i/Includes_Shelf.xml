@@ -293,6 +293,7 @@
         <aspectratio scalediffuse="false">scale</aspectratio>
       </control>
       <control type="image">
+        <visible>!Skin.HasSetting(TVShelfTheme3)</visible>
         <posx>27</posx>
         <posy>27</posy>
         <width>393</width>
@@ -300,9 +301,19 @@
         <texture fallback="DefaultVideo.png" background="true">$INFO[ListItem.Thumb]</texture>
         <aspectratio>scale</aspectratio>
       </control>
+      <control type="image">
+        <visible>Skin.HasSetting(TVShelfTheme3)</visible>
+        <posx>27</posx>
+        <posy>102</posy>
+        <width>393</width>
+        <height>228</height>
+        <texture fallback="DefaultVideo.png" background="true">$INFO[ListItem.Thumb]</texture>
+        <aspectratio>scale</aspectratio>
+      </control>
       <control type="group">
         <visible>!IsEmpty(ListItem.Label2)</visible>
         <control type="image">
+          <visible>!Skin.HasSetting(TVShelfTheme3)</visible>
           <posx>27</posx>
           <posy>243</posy>
           <width>393</width>
@@ -310,7 +321,17 @@
           <texture>img/BlackDotT.png</texture>
           <aspectratio>stretch</aspectratio>
         </control>
+        <control type="image">
+          <visible>Skin.HasSetting(TVShelfTheme3)</visible>
+          <posx>27</posx>
+          <posy>275</posy>
+          <width>393</width>
+          <height>43</height>
+          <texture>img/BlackDotT.png</texture>
+          <aspectratio>stretch</aspectratio>
+        </control>
         <control type="label">
+          <visible>!Skin.HasSetting(TVShelfTheme3)</visible>
           <posx>224</posx>
           <posy>249</posy>
           <width>375</width>
@@ -334,6 +355,27 @@
           <align>center</align>
         </control>
       </control>
+      <control type="group">
+        <visible>!IsEmpty(ListItem.Property(tvShowBanner)) + [Skin.HasSetting(TVShelfTheme2) | Skin.HasSetting(TVShelfTheme3)]</visible>
+        <control type="image">
+          <visible>!Skin.HasSetting(TVShelfTheme3)</visible>
+          <posx>27</posx>
+          <posy>243</posy>
+          <width>393</width>
+          <height>75</height>
+          <texture>$INFO[ListItem.Property(tvShowBanner)]</texture>
+          <aspectratio>scale</aspectratio>
+        </control>
+        <control type="image">
+          <visible>Skin.HasSetting(TVShelfTheme3)</visible>
+          <posx>27</posx>
+          <posy>27</posy>
+          <width>393</width>
+          <height>75</height>
+          <texture>$INFO[ListItem.Property(tvShowBanner)]</texture>
+          <aspectratio>scale</aspectratio>
+        </control>
+      </control>
     </itemlayout>
     <focusedlayout condition="!Skin.HasSetting(TVShelf_Custom) + Library.HasContent(TVShows)" height="357" width="444">
       <control type="group">
@@ -346,6 +388,7 @@
           <aspectratio scalediffuse="false">scale</aspectratio>
         </control>
         <control type="image">
+          <visible>!Skin.HasSetting(TVShelfTheme3)</visible>
           <posx>27</posx>
           <posy>27</posy>
           <width>393</width>
@@ -353,9 +396,19 @@
           <texture background="true">$INFO[ListItem.Thumb]</texture>
           <aspectratio>scale</aspectratio>
         </control>
+        <control type="image">
+          <visible>Skin.HasSetting(TVShelfTheme3)</visible>
+          <posx>27</posx>
+          <posy>102</posy>
+          <width>393</width>
+          <height>228</height>
+          <texture background="true">$INFO[ListItem.Thumb]</texture>
+          <aspectratio>scale</aspectratio>
+        </control>
         <control type="group">
           <visible>!IsEmpty(ListItem.Label2)</visible>
           <control type="image">
+            <visible>!Skin.HasSetting(TVShelfTheme3)</visible>
             <posx>27</posx>
             <posy>243</posy>
             <width>393</width>
@@ -363,7 +416,17 @@
             <texture>img/BlackDotT.png</texture>
             <aspectratio>stretch</aspectratio>
           </control>
+          <control type="image">
+            <visible>Skin.HasSetting(TVShelfTheme3)</visible>
+            <posx>27</posx>
+            <posy>275</posy>
+            <width>393</width>
+            <height>43</height>
+            <texture>img/BlackDotT.png</texture>
+            <aspectratio>stretch</aspectratio>
+          </control>
           <control type="label">
+            <visible>!Skin.HasSetting(TVShelfTheme3)</visible>
             <posx>224</posx>
             <posy>249</posy>
             <width>375</width>
@@ -385,6 +448,28 @@
             <textcolor>Silver</textcolor>
             <label>[B][UPPERCASE]$INFO[ListItem.Property(SeasonEpisode)][/UPPERCASE][/B]</label>
             <align>center</align>
+          </control>
+        </control>
+        <control type="group">
+          <visible>!IsEmpty(ListItem.Property(tvShowBanner)) + [Skin.HasSetting(TVShelfTheme2) | Skin.HasSetting(TVShelfTheme3)]</visible>
+          <animation condition="!Skin.HasSetting(TVShelfTheme3)" effect="fade" start="100" end="0" time="200" delay="0">Focus</animation>
+          <control type="image">
+            <visible>!Skin.HasSetting(TVShelfTheme3)</visible>
+            <posx>27</posx>
+            <posy>243</posy>
+            <width>393</width>
+            <height>75</height>
+            <texture>$INFO[ListItem.Property(tvShowBanner)]</texture>
+            <aspectratio>scale</aspectratio>
+          </control>
+          <control type="image">
+            <visible>Skin.HasSetting(TVShelfTheme3)</visible>
+            <posx>27</posx>
+            <posy>27</posy>
+            <width>393</width>
+            <height>75</height>
+            <texture>$INFO[ListItem.Property(tvShowBanner)]</texture>
+            <aspectratio>scale</aspectratio>
           </control>
         </control>
         <control type="group">
@@ -689,6 +774,7 @@
             <property name="SeasonEpisode">$INFO[Window.Property(LatestEpisode.1.EpisodeSeason),S,•]$INFO[Window.Property(LatestEpisode.1.EpisodeNumber),E]</property>
             <thumb>$INFO[Window.Property(LatestEpisode.1.Thumb)]</thumb>
             <property name="ItemType">$LOCALIZE[20387]</property>
+            <property name="tvShowBanner">$INFO[Window.Property(RecentEpisode.1.Art(tvshow.banner))]</property>
             <onclick>PlayMedia($ESCINFO[Window(Home).Property(LatestEpisode.1.Path)])</onclick>
           </item>
           <item id="2" description="Shortcut2">
@@ -699,6 +785,7 @@
             <property name="SeasonEpisode">$INFO[Window.Property(LatestEpisode.2.EpisodeSeason),S,•]$INFO[Window.Property(LatestEpisode.2.EpisodeNumber),E]</property>
             <thumb>$INFO[Window.Property(LatestEpisode.2.Thumb)]</thumb>
             <property name="ItemType">$LOCALIZE[20387]</property>
+            <property name="tvShowBanner">$INFO[Window.Property(RecentEpisode.2.Art(tvshow.banner))]</property>
             <onclick>PlayMedia($ESCINFO[Window(Home).Property(LatestEpisode.2.Path)])</onclick>
           </item>
           <item id="3" description="Shortcut3">
@@ -709,6 +796,7 @@
             <property name="SeasonEpisode">$INFO[Window.Property(LatestEpisode.3.EpisodeSeason),S,•]$INFO[Window.Property(LatestEpisode.3.EpisodeNumber),E]</property>
             <thumb>$INFO[Window.Property(LatestEpisode.3.Thumb)]</thumb>
             <property name="ItemType">$LOCALIZE[20387]</property>
+            <property name="tvShowBanner">$INFO[Window.Property(RecentEpisode.3.Art(tvshow.banner))]</property>
             <onclick>PlayMedia($ESCINFO[Window(Home).Property(LatestEpisode.3.Path)])</onclick>
           </item>
           <item id="4" description="Shortcut4">
@@ -719,6 +807,7 @@
             <property name="SeasonEpisode">$INFO[Window.Property(LatestEpisode.4.EpisodeSeason),S,•]$INFO[Window.Property(LatestEpisode.4.EpisodeNumber),E]</property>
             <thumb>$INFO[Window.Property(LatestEpisode.4.Thumb)]</thumb>
             <property name="ItemType">$LOCALIZE[20387]</property>
+            <property name="tvShowBanner">$INFO[Window.Property(RecentEpisode.4.Art(tvshow.banner))]</property>
             <onclick>PlayMedia($ESCINFO[Window(Home).Property(LatestEpisode.4.Path)])</onclick>
           </item>
           <item id="5" description="Shortcut5">
@@ -729,6 +818,7 @@
             <property name="SeasonEpisode">$INFO[Window.Property(LatestEpisode.5.EpisodeSeason),S,•]$INFO[Window.Property(LatestEpisode.5.EpisodeNumber),E]</property>
             <thumb>$INFO[Window.Property(LatestEpisode.5.Thumb)]</thumb>
             <property name="ItemType">$LOCALIZE[20387]</property>
+            <property name="tvShowBanner">$INFO[Window.Property(RecentEpisode.5.Art(tvshow.banner))]</property>
             <onclick>PlayMedia($ESCINFO[Window(Home).Property(LatestEpisode.5.Path)])</onclick>
           </item>
           <item id="6" description="Shortcut6">
@@ -739,6 +829,7 @@
             <property name="SeasonEpisode">$INFO[Window.Property(LatestEpisode.6.EpisodeSeason),S,•]$INFO[Window.Property(LatestEpisode.6.EpisodeNumber),E]</property>
             <thumb>$INFO[Window.Property(LatestEpisode.6.Thumb)]</thumb>
             <property name="ItemType">$LOCALIZE[20387]</property>
+            <property name="tvShowBanner">$INFO[Window.Property(RecentEpisode.6.Art(tvshow.banner))]</property>
             <onclick>PlayMedia($ESCINFO[Window(Home).Property(LatestEpisode.6.Path)])</onclick>
           </item>
           <item id="7" description="Shortcut7">
@@ -749,6 +840,7 @@
             <property name="SeasonEpisode">$INFO[Window.Property(LatestEpisode.7.EpisodeSeason),S,•]$INFO[Window.Property(LatestEpisode.7.EpisodeNumber),E]</property>
             <thumb>$INFO[Window.Property(LatestEpisode.7.Thumb)]</thumb>
             <property name="ItemType">$LOCALIZE[20387]</property>
+            <property name="tvShowBanner">$INFO[Window.Property(RecentEpisode.7.Art(tvshow.banner))]</property>
             <onclick>PlayMedia($ESCINFO[Window(Home).Property(LatestEpisode.7.Path)])</onclick>
           </item>
           <item id="8" description="Shortcut8">
@@ -759,6 +851,7 @@
             <property name="SeasonEpisode">$INFO[Window.Property(LatestEpisode.8.EpisodeSeason),S,•]$INFO[Window.Property(LatestEpisode.8.EpisodeNumber),E]</property>
             <thumb>$INFO[Window.Property(LatestEpisode.8.Thumb)]</thumb>
             <property name="ItemType">$LOCALIZE[20387]</property>
+            <property name="tvShowBanner">$INFO[Window.Property(RecentEpisode.8.Art(tvshow.banner))]</property>
             <onclick>PlayMedia($ESCINFO[Window(Home).Property(LatestEpisode.8.Path)])</onclick>
           </item>
           <item id="9" description="Shortcut9">
@@ -769,6 +862,7 @@
             <property name="SeasonEpisode">$INFO[Window.Property(LatestEpisode.9.EpisodeSeason),S,•]$INFO[Window.Property(LatestEpisode.9.EpisodeNumber),E]</property>
             <thumb>$INFO[Window.Property(LatestEpisode.9.Thumb)]</thumb>
             <property name="ItemType">$LOCALIZE[20387]</property>
+            <property name="tvShowBanner">$INFO[Window.Property(RecentEpisode.9.Art(tvshow.banner))]</property>
             <onclick>PlayMedia($ESCINFO[Window(Home).Property(LatestEpisode.9.Path)])</onclick>
           </item>
           <item id="10" description="Shortcut10">
@@ -779,6 +873,7 @@
             <property name="SeasonEpisode">$INFO[Window.Property(LatestEpisode.10.EpisodeSeason),S,•]$INFO[Window.Property(LatestEpisode.10.EpisodeNumber),E]</property>
             <thumb>$INFO[Window.Property(LatestEpisode.10.Thumb)]</thumb>
             <property name="ItemType">$LOCALIZE[20387]</property>
+            <property name="tvShowBanner">$INFO[Window.Property(RecentEpisode.10.Art(tvshow.banner))]</property>
             <onclick>PlayMedia($ESCINFO[Window(Home).Property(LatestEpisode.10.Path)])</onclick>
           </item>
           <item id="1" description="Addons">
