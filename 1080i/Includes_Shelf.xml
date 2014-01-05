@@ -307,8 +307,8 @@
         <posy>102</posy>
         <width>393</width>
         <height>228</height>
-        <texture fallback="DefaultVideo.png" background="true">$INFO[ListItem.Thumb]</texture>
-        <aspectratio>scale</aspectratio>
+        <texture fallback="DefaultVideo.png" background="true" diffuse="img/EpisodesBottom.png">$INFO[ListItem.Thumb]</texture>
+          <aspectratio scalediffuse="false">scale</aspectratio>
       </control>
       <control type="group">
         <visible>!IsEmpty(ListItem.Label2)</visible>
@@ -402,8 +402,8 @@
           <posy>102</posy>
           <width>393</width>
           <height>228</height>
-          <texture background="true">$INFO[ListItem.Thumb]</texture>
-          <aspectratio>scale</aspectratio>
+          <texture fallback="DefaultVideo.png" background="true" diffuse="img/EpisodesBottom.png">$INFO[ListItem.Thumb]</texture>
+          <aspectratio scalediffuse="false">scale</aspectratio>
         </control>
         <control type="group">
           <visible>!IsEmpty(ListItem.Label2)</visible>
