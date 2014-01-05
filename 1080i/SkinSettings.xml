@@ -210,7 +210,11 @@
             <label2>106</label2>
             <onclick>Skin.ToggleSetting(ShowClock)</onclick>
           </item>
-          <item id="12" description="Reset Skin">
+          <item id="13" description="Reload Skin">
+            <label>Reload skin</label>
+            <onclick>XBMC.ReloadSkin()</onclick>
+          </item>
+          <item id="20" description="Reset Skin">
             <label>$LOCALIZE[31038]</label>
             <onclick>Skin.ResetSettings</onclick>
             <onclick>XBMC.ReloadSkin()</onclick>
