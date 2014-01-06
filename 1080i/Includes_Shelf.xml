@@ -1599,4 +1599,10 @@
       </control>
     </control>
   </include>
+  <include name="SettingsAutoItemsThemePreview">
+		<animation effect="fade" time="200">VisibleChange</animation>
+		<posx>10</posx>
+		<posy>50</posy>
+		<aspectratio align="center" aligny="bottom">keep</aspectratio>
+  </include>
 </includes>
