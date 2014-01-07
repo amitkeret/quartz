@@ -283,7 +283,8 @@
     <height>402</height>
     <orientation>horizontal</orientation>
     <scrolltime>400</scrolltime>
-    <itemlayout condition="!Skin.HasSetting(TVShelf_Custom) + Library.HasContent(TVShows)" height="357" width="444">
+    <!-- thumbnail-based themes -->
+    <itemlayout condition="!Skin.HasSetting(TVShelf_Custom) + Library.HasContent(TVShows) + !Skin.HasSetting(TVShelfTheme4)" height="357" width="444">
       <control type="image" description="Reflection">
         <posx>27</posx>
         <posy>330</posy>
@@ -292,26 +293,27 @@
         <texture fallback="DefaultVideo.png" background="true" diffuse="img/ReflectionShelf.png" flipy="true">$INFO[ListItem.Thumb]</texture>
         <aspectratio scalediffuse="false">scale</aspectratio>
       </control>
-      <control type="image">
-        <visible>!Skin.HasSetting(TVShelfTheme3)</visible>
-        <posx>27</posx>
-        <posy>27</posy>
-        <width>393</width>
-        <height>303</height>
-        <texture fallback="DefaultVideo.png" background="true">$INFO[ListItem.Thumb]</texture>
-        <aspectratio>scale</aspectratio>
-      </control>
-      <control type="image">
-        <visible>Skin.HasSetting(TVShelfTheme3)</visible>
-        <posx>27</posx>
-        <posy>102</posy>
-        <width>393</width>
-        <height>228</height>
-        <texture fallback="DefaultVideo.png" background="true" diffuse="img/EpisodesBottom.png">$INFO[ListItem.Thumb]</texture>
-          <aspectratio scalediffuse="false">scale</aspectratio>
+      <control type="group">
+        <control type="image">
+          <visible>!Skin.HasSetting(TVShelfTheme3)</visible>
+          <posx>27</posx>
+          <posy>27</posy>
+          <width>393</width>
+          <height>303</height>
+          <texture fallback="DefaultVideo.png" background="true">$INFO[ListItem.Thumb]</texture>
+          <aspectratio>scale</aspectratio>
+        </control>
+        <control type="image">
+          <visible>Skin.HasSetting(TVShelfTheme3)</visible>
+          <posx>27</posx>
+          <posy>102</posy>
+          <width>393</width>
+          <height>228</height>
+          <texture fallback="DefaultVideo.png" background="true" diffuse="img/EpisodesBottom.png">$INFO[ListItem.Thumb]</texture>
+            <aspectratio scalediffuse="false">scale</aspectratio>
+        </control>
       </control>
       <control type="group">
-        <visible>!IsEmpty(ListItem.Label2)</visible>
         <control type="image">
           <visible>!Skin.HasSetting(TVShelfTheme3)</visible>
           <posx>27</posx>
@@ -330,6 +332,9 @@
           <texture>img/BlackDotT.png</texture>
           <aspectratio>stretch</aspectratio>
         </control>
+      </control>
+      <control type="group">
+        <visible>!IsEmpty(ListItem.Label2)</visible>
         <control type="label">
           <visible>!Skin.HasSetting(TVShelfTheme3)</visible>
           <posx>224</posx>
@@ -376,8 +381,31 @@
           <aspectratio>scale</aspectratio>
         </control>
       </control>
-    </itemlayout>
-    <focusedlayout condition="!Skin.HasSetting(TVShelf_Custom) + Library.HasContent(TVShows)" height="357" width="444">
+    </itemlayout><!-- /thumbnail-based themes -->
+    <itemlayout condition="!Skin.HasSetting(TVShelf_Custom) + Library.HasContent(TVShows) + Skin.HasSetting(TVShelfTheme4)" height="387" width="254">
+      <!-- poster-based themes -->
+      <control type="group">
+        <visible>Skin.HasSetting(TVShelfTheme4)</visible>
+        <control type="image" description="Reflection">
+          <posx>26</posx>
+          <posy>330</posy>
+          <width>202</width>
+          <height>303</height>
+          <texture fallback="DefaultVideo.png" background="true" diffuse="img/ReflectionShelf.png" flipy="true">$INFO[ListItem.Property(tvShowPoster)]</texture>
+          <aspectratio>scale</aspectratio>
+        </control>
+        <control type="image">
+          <posx>26</posx>
+          <posy>27</posy>
+          <width>202</width>
+          <height>303</height>
+          <texture fallback="DefaultVideo.png" background="true">$INFO[ListItem.Property(tvShowPoster)]</texture>
+          <aspectratio>scale</aspectratio>
+        </control>
+      </control>
+    </itemlayout><!-- /poster-based themes -->
+    <focusedlayout condition="!Skin.HasSetting(TVShelf_Custom) + Library.HasContent(TVShows) + !Skin.HasSetting(TVShelfTheme4)" height="357" width="444">
+      <!-- thumbnail-based themes -->
       <control type="group">
         <control type="image" description="Reflection">
           <posx>27</posx>
@@ -387,26 +415,27 @@
           <texture background="true" diffuse="img/ReflectionShelf.png" flipy="true">$INFO[ListItem.Thumb]</texture>
           <aspectratio scalediffuse="false">scale</aspectratio>
         </control>
-        <control type="image">
-          <visible>!Skin.HasSetting(TVShelfTheme3)</visible>
-          <posx>27</posx>
-          <posy>27</posy>
-          <width>393</width>
-          <height>303</height>
-          <texture background="true">$INFO[ListItem.Thumb]</texture>
-          <aspectratio>scale</aspectratio>
-        </control>
-        <control type="image">
-          <visible>Skin.HasSetting(TVShelfTheme3)</visible>
-          <posx>27</posx>
-          <posy>102</posy>
-          <width>393</width>
-          <height>228</height>
-          <texture fallback="DefaultVideo.png" background="true" diffuse="img/EpisodesBottom.png">$INFO[ListItem.Thumb]</texture>
-          <aspectratio scalediffuse="false">scale</aspectratio>
+        <control type="group">
+          <control type="image">
+            <visible>!Skin.HasSetting(TVShelfTheme3)</visible>
+            <posx>27</posx>
+            <posy>27</posy>
+            <width>393</width>
+            <height>303</height>
+            <texture background="true">$INFO[ListItem.Thumb]</texture>
+            <aspectratio>scale</aspectratio>
+          </control>
+          <control type="image">
+            <visible>Skin.HasSetting(TVShelfTheme3)</visible>
+            <posx>27</posx>
+            <posy>102</posy>
+            <width>393</width>
+            <height>228</height>
+            <texture fallback="DefaultVideo.png" background="true" diffuse="img/EpisodesBottom.png">$INFO[ListItem.Thumb]</texture>
+            <aspectratio scalediffuse="false">scale</aspectratio>
+          </control>
         </control>
         <control type="group">
-          <visible>!IsEmpty(ListItem.Label2)</visible>
           <control type="image">
             <visible>!Skin.HasSetting(TVShelfTheme3)</visible>
             <posx>27</posx>
@@ -425,6 +454,9 @@
             <texture>img/BlackDotT.png</texture>
             <aspectratio>stretch</aspectratio>
           </control>
+        </control>
+        <control type="group">
+          <visible>!IsEmpty(ListItem.Label2)</visible>
           <control type="label">
             <visible>!Skin.HasSetting(TVShelfTheme3)</visible>
             <posx>224</posx>
@@ -487,7 +519,62 @@
           </control>
         </control>
       </control>
-    </focusedlayout>
+    </focusedlayout><!-- /thumbnail-based themes -->
+    <focusedlayout condition="!Skin.HasSetting(TVShelf_Custom) + Library.HasContent(TVShows) + Skin.HasSetting(TVShelfTheme4)" height="387" width="254">
+      <!-- poster-based themes -->
+      <control type="group">
+        <control type="image" description="Reflection">
+          <posx>26</posx>
+          <posy>330</posy>
+          <width>202</width>
+          <height>303</height>
+          <texture fallback="DefaultVideo.png" background="true" diffuse="img/ReflectionShelf.png" flipy="true">$INFO[ListItem.Property(tvShowPoster)]</texture>
+          <aspectratio>scale</aspectratio>
+        </control>
+        <control type="image">
+          <posx>26</posx>
+          <posy>27</posy>
+          <width>202</width>
+          <height>303</height>
+          <texture fallback="DefaultVideo.png" background="true">$INFO[ListItem.Property(tvShowPoster)]</texture>
+          <aspectratio>scale</aspectratio>
+        </control>
+        <control type="image">
+          <visible>Skin.HasSetting(TVShelfTheme4)</visible>
+          <posx>26</posx>
+          <posy>287</posy>
+          <width>202</width>
+          <height>43</height>
+          <texture>img/BlackDotT.png</texture>
+          <aspectratio>stretch</aspectratio>
+        </control>
+        <control type="group">
+          <visible>!IsEmpty(ListItem.Property(SeasonEpisode))</visible>
+          <control type="label">
+            <posx>125</posx>
+            <posy>287</posy>
+            <width>200</width>
+            <height>43</height>
+            <font>size15</font>
+            <textcolor>Silver</textcolor>
+            <label>[B][UPPERCASE]$INFO[ListItem.Property(SeasonEpisode)][/UPPERCASE][/B]</label>
+            <align>center</align>
+          </control>
+        </control>
+        <control type="label">
+          <visible>ControlGroup(700).HasFocus()</visible>
+          <animation effect="fade" start="0" end="100" time="200" delay="100">Focus</animation>
+          <posx>120</posx>
+          <posy>345</posy>
+          <width>249</width>
+          <height>30</height>
+          <font>size17</font>
+          <textcolor>White2</textcolor>
+          <label>[B]$INFO[ListItem.Label][/B]</label>
+          <align>center</align>
+        </control>
+      </control>
+    </focusedlayout><!-- /poster-based themes -->
     <itemlayout condition="Skin.HasSetting(TVShelf_Custom)" height="357" width="357">
       <control type="image" description="Reflection">
         <posx>27</posx>
@@ -775,6 +862,7 @@
             <thumb>$INFO[Window.Property(LatestEpisode.1.Thumb)]</thumb>
             <property name="ItemType">$LOCALIZE[20387]</property>
             <property name="tvShowBanner">$INFO[Window.Property(RecentEpisode.1.Art(tvshow.banner))]</property>
+            <property name="tvShowPoster">$INFO[Window.Property(RecentEpisode.1.Art(tvshow.poster))]</property>
             <onclick>PlayMedia($ESCINFO[Window(Home).Property(LatestEpisode.1.Path)])</onclick>
           </item>
           <item id="2" description="Shortcut2">
@@ -786,6 +874,7 @@
             <thumb>$INFO[Window.Property(LatestEpisode.2.Thumb)]</thumb>
             <property name="ItemType">$LOCALIZE[20387]</property>
             <property name="tvShowBanner">$INFO[Window.Property(RecentEpisode.2.Art(tvshow.banner))]</property>
+            <property name="tvShowPoster">$INFO[Window.Property(RecentEpisode.2.Art(tvshow.poster))]</property>
             <onclick>PlayMedia($ESCINFO[Window(Home).Property(LatestEpisode.2.Path)])</onclick>
           </item>
           <item id="3" description="Shortcut3">
@@ -797,6 +886,7 @@
             <thumb>$INFO[Window.Property(LatestEpisode.3.Thumb)]</thumb>
             <property name="ItemType">$LOCALIZE[20387]</property>
             <property name="tvShowBanner">$INFO[Window.Property(RecentEpisode.3.Art(tvshow.banner))]</property>
+            <property name="tvShowPoster">$INFO[Window.Property(RecentEpisode.3.Art(tvshow.poster))]</property>
             <onclick>PlayMedia($ESCINFO[Window(Home).Property(LatestEpisode.3.Path)])</onclick>
           </item>
           <item id="4" description="Shortcut4">
@@ -808,6 +898,7 @@
             <thumb>$INFO[Window.Property(LatestEpisode.4.Thumb)]</thumb>
             <property name="ItemType">$LOCALIZE[20387]</property>
             <property name="tvShowBanner">$INFO[Window.Property(RecentEpisode.4.Art(tvshow.banner))]</property>
+            <property name="tvShowPoster">$INFO[Window.Property(RecentEpisode.4.Art(tvshow.poster))]</property>
             <onclick>PlayMedia($ESCINFO[Window(Home).Property(LatestEpisode.4.Path)])</onclick>
           </item>
           <item id="5" description="Shortcut5">
@@ -819,6 +910,7 @@
             <thumb>$INFO[Window.Property(LatestEpisode.5.Thumb)]</thumb>
             <property name="ItemType">$LOCALIZE[20387]</property>
             <property name="tvShowBanner">$INFO[Window.Property(RecentEpisode.5.Art(tvshow.banner))]</property>
+            <property name="tvShowPoster">$INFO[Window.Property(RecentEpisode.5.Art(tvshow.poster))]</property>
             <onclick>PlayMedia($ESCINFO[Window(Home).Property(LatestEpisode.5.Path)])</onclick>
           </item>
           <item id="6" description="Shortcut6">
@@ -830,6 +922,7 @@
             <thumb>$INFO[Window.Property(LatestEpisode.6.Thumb)]</thumb>
             <property name="ItemType">$LOCALIZE[20387]</property>
             <property name="tvShowBanner">$INFO[Window.Property(RecentEpisode.6.Art(tvshow.banner))]</property>
+            <property name="tvShowPoster">$INFO[Window.Property(RecentEpisode.6.Art(tvshow.poster))]</property>
             <onclick>PlayMedia($ESCINFO[Window(Home).Property(LatestEpisode.6.Path)])</onclick>
           </item>
           <item id="7" description="Shortcut7">
@@ -841,6 +934,7 @@
             <thumb>$INFO[Window.Property(LatestEpisode.7.Thumb)]</thumb>
             <property name="ItemType">$LOCALIZE[20387]</property>
             <property name="tvShowBanner">$INFO[Window.Property(RecentEpisode.7.Art(tvshow.banner))]</property>
+            <property name="tvShowPoster">$INFO[Window.Property(RecentEpisode.7.Art(tvshow.poster))]</property>
             <onclick>PlayMedia($ESCINFO[Window(Home).Property(LatestEpisode.7.Path)])</onclick>
           </item>
           <item id="8" description="Shortcut8">
@@ -852,6 +946,7 @@
             <thumb>$INFO[Window.Property(LatestEpisode.8.Thumb)]</thumb>
             <property name="ItemType">$LOCALIZE[20387]</property>
             <property name="tvShowBanner">$INFO[Window.Property(RecentEpisode.8.Art(tvshow.banner))]</property>
+            <property name="tvShowPoster">$INFO[Window.Property(RecentEpisode.8.Art(tvshow.poster))]</property>
             <onclick>PlayMedia($ESCINFO[Window(Home).Property(LatestEpisode.8.Path)])</onclick>
           </item>
           <item id="9" description="Shortcut9">
@@ -863,6 +958,7 @@
             <thumb>$INFO[Window.Property(LatestEpisode.9.Thumb)]</thumb>
             <property name="ItemType">$LOCALIZE[20387]</property>
             <property name="tvShowBanner">$INFO[Window.Property(RecentEpisode.9.Art(tvshow.banner))]</property>
+            <property name="tvShowPoster">$INFO[Window.Property(RecentEpisode.9.Art(tvshow.poster))]</property>
             <onclick>PlayMedia($ESCINFO[Window(Home).Property(LatestEpisode.9.Path)])</onclick>
           </item>
           <item id="10" description="Shortcut10">
@@ -874,6 +970,7 @@
             <thumb>$INFO[Window.Property(LatestEpisode.10.Thumb)]</thumb>
             <property name="ItemType">$LOCALIZE[20387]</property>
             <property name="tvShowBanner">$INFO[Window.Property(RecentEpisode.10.Art(tvshow.banner))]</property>
+            <property name="tvShowPoster">$INFO[Window.Property(RecentEpisode.10.Art(tvshow.poster))]</property>
             <onclick>PlayMedia($ESCINFO[Window(Home).Property(LatestEpisode.10.Path)])</onclick>
           </item>
           <item id="1" description="Addons">
@@ -973,7 +1070,7 @@
         <animation condition="Container(312).Position(4)" effect="slide" start="0,0" end="1416,0" time="220" easing="inout" reversible="true">Conditional</animation>
       </control>
       <control type="image">
-        <visible>Control.HasFocus(312) + !Skin.HasSetting(TVShelf_Custom)</visible>
+        <visible>Control.HasFocus(312) + !Skin.HasSetting(TVShelf_Custom) + !Skin.HasSetting(TVShelfTheme4)</visible>
         <posx>74</posx>
         <posy>86</posy>
         <width>443</width>
@@ -984,6 +1081,22 @@
         <animation condition="Container(312).Position(1)" effect="slide" start="0,0" end="444,0" time="220" easing="inout" reversible="true">Conditional</animation>
         <animation condition="Container(312).Position(2)" effect="slide" start="0,0" end="888,0" time="220" easing="inout" reversible="true">Conditional</animation>
         <animation condition="Container(312).Position(3)" effect="slide" start="0,0" end="1332,0" time="220" easing="inout" reversible="true">Conditional</animation>
+      </control>
+      <control type="image">
+        <visible>Control.HasFocus(312) + !Skin.HasSetting(TVShelf_Custom) + Skin.HasSetting(TVShelfTheme4)</visible>
+        <posx>73</posx>
+        <posy>86</posy>
+        <width>252</width>
+        <height>352</height>
+        <texture border="28">img/Frame25.png</texture>
+        <aspectratio>stretch</aspectratio>
+        <animation condition="Container(312).Position(0)" effect="slide" start="0,0" end="0,0" time="220" easing="inout" reversible="true">Conditional</animation>
+        <animation condition="Container(312).Position(1)" effect="slide" start="0,0" end="254,0" time="220" easing="inout" reversible="true">Conditional</animation>
+        <animation condition="Container(312).Position(2)" effect="slide" start="0,0" end="508,0" time="220" easing="inout" reversible="true">Conditional</animation>
+        <animation condition="Container(312).Position(3)" effect="slide" start="0,0" end="762,0" time="220" easing="inout" reversible="true">Conditional</animation>
+        <animation condition="Container(312).Position(4)" effect="slide" start="0,0" end="1016,0" time="220" easing="inout" reversible="true">Conditional</animation>
+        <animation condition="Container(312).Position(5)" effect="slide" start="0,0" end="1270,0" time="220" easing="inout" reversible="true">Conditional</animation>
+        <animation condition="Container(312).Position(6)" effect="slide" start="0,0" end="1524,0" time="220" easing="inout" reversible="true">Conditional</animation>
       </control>
     </control>
   </include>

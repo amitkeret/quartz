@@ -37,6 +37,7 @@
   <variable name="TVShelfLabel3" description="Label3 media shelf TV">
     <value condition="Skin.HasSetting(TVShelfTheme2)">$LOCALIZE[31127]2</value>
     <value condition="Skin.HasSetting(TVShelfTheme3)">$LOCALIZE[31127]3</value>
+    <value condition="Skin.HasSetting(TVShelfTheme4)">$LOCALIZE[31127]4</value>
     <value>$LOCALIZE[31127]1</value>
   </variable>
   <variable name="MusicShelfLabel2" description="Label2 media shelf Music">
