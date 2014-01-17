@@ -294,7 +294,9 @@
           <onclick condition="Skin.HasSetting(TVShelfTheme2)">Skin.SetBool(TVShelfTheme3)</onclick>
           <onclick condition="Skin.HasSetting(TVShelfTheme3)">Skin.Reset(TVShelfTheme3)</onclick>
           <onclick condition="Skin.HasSetting(TVShelfTheme3)">Skin.SetBool(TVShelfTheme4)</onclick>
+          <onclick condition="Skin.HasSetting(TVShelfTheme3)">Skin.SetBool(TVShelfThemePosters)</onclick>
           <onclick condition="Skin.HasSetting(TVShelfTheme4)">Skin.Reset(TVShelfTheme4)</onclick>
+          <onclick condition="Skin.HasSetting(TVShelfTheme4)">Skin.Reset(TVShelfThemePosters)</onclick>
           <onclick condition="Skin.HasSetting(TVShelfTheme4)">Skin.SetBool(TVShelfTheme1)</onclick>
         </control>
         <control type="radiobutton" id="201" description="Image">
