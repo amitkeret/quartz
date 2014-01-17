@@ -1,4 +1,4 @@
-<addon id="skin.quartz" version="4.1.4" name="Quartz" provider-name="Pecinko">
+<addon id="skin.quartz.mod" version="4.1.4" name="Quartz Modded" provider-name="amitkeret">
   <requires>
     <import addon="xbmc.gui" version="4.0.0"/>
     <import addon="script.favourites" version="4.0.4"/>
@@ -8,7 +8,6 @@
     defaultthemename="Textures.xbt"
     debugging="false">
     <res width="1920" height="1080" aspect="16:9" default="true" folder="1080i" />
-	
   </extension>
   <extension point="xbmc.addon.metadata">
     <platform>all</platform>
