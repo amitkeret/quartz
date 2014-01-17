@@ -704,7 +704,14 @@
         <onclick>Skin.ToggleSetting(XBMC3)</onclick>
         <selected>!Skin.HasSetting(XBMC3)</selected>
       </control>
-      <control type="radiobutton" id="606">
+      <control type="radiobutton" id="606" description="Reload skin">
+        <visible>Container(50).HasFocus(1006)</visible>
+        <include>SettingsSubmenuButtons</include>
+        <label>$LOCALIZE[31401]</label>
+        <onclick>Skin.ToggleSetting(XBMC5)</onclick>
+        <selected>!Skin.HasSetting(XBMC5)</selected>
+      </control>
+      <control type="radiobutton" id="607">
         <visible>Container(50).HasFocus(1006)</visible>
         <include>SettingsSubmenuButtons</include>
         <label>$LOCALIZE[13009]</label>
