@@ -282,6 +282,23 @@
           <onclick>Skin.Reset(TVShelf_Custom)</onclick>
           <onclick>Skin.Reset(TVShelf_Image)</onclick>
         </control>
+        <control type="button" id="299" description="TV Auto Theme">
+          <visible>!Skin.HasSetting(TVSectionHide) + Container(50).HasFocus(1002)</visible>
+          <visible>!Skin.HasSetting(TVShelf_Image) + !Skin.HasSetting(TVShelf_Custom</visible>
+          <include>SettingsSubmenuButtons</include>
+          <label>- $LOCALIZE[31126]</label>
+          <label2>$VAR[TVShelfLabel3]</label2>
+          <onclick condition="!Skin.HasSetting(TVShelfTheme2) + !Skin.HasSetting(TVShelfTheme3) + !Skin.HasSetting(TVShelfTheme4)">Skin.Reset(TVShelfTheme1)</onclick>
+          <onclick condition="!Skin.HasSetting(TVShelfTheme2) + !Skin.HasSetting(TVShelfTheme3) + !Skin.HasSetting(TVShelfTheme4)">Skin.SetBool(TVShelfTheme2)</onclick>
+          <onclick condition="Skin.HasSetting(TVShelfTheme2)">Skin.Reset(TVShelfTheme2)</onclick>
+          <onclick condition="Skin.HasSetting(TVShelfTheme2)">Skin.SetBool(TVShelfTheme3)</onclick>
+          <onclick condition="Skin.HasSetting(TVShelfTheme3)">Skin.Reset(TVShelfTheme3)</onclick>
+          <onclick condition="Skin.HasSetting(TVShelfTheme3)">Skin.SetBool(TVShelfTheme4)</onclick>
+          <onclick condition="Skin.HasSetting(TVShelfTheme3)">Skin.SetBool(TVShelfThemePosters)</onclick>
+          <onclick condition="Skin.HasSetting(TVShelfTheme4)">Skin.Reset(TVShelfTheme4)</onclick>
+          <onclick condition="Skin.HasSetting(TVShelfTheme4)">Skin.Reset(TVShelfThemePosters)</onclick>
+          <onclick condition="Skin.HasSetting(TVShelfTheme4)">Skin.SetBool(TVShelfTheme1)</onclick>
+        </control>
         <control type="radiobutton" id="201" description="Image">
           <visible>!Skin.HasSetting(TVSectionHide) + Container(50).HasFocus(1002)</visible>
           <include>SettingsSubmenuButtons</include>
@@ -741,6 +758,56 @@
           <label>- $LOCALIZE[1030]</label>
           <label2>$INFO[Skin.String(XBMCShelf_Icon)]</label2>
           <onclick>Skin.SetImage(XBMCShelf_Icon)</onclick>
+        </control>
+      </control>
+      <control type="grouplist" id="53">
+        <posx>200</posx>
+        <posy>270</posy>
+        <width>350</width>
+        <height>660</height>
+        <control type="group" description="Theme preview images">
+          <visible>Control.HasFocus(299)</visible>
+          <animation effect="fade" time="200">VisibleChange</animation>
+          <control type="label">
+            <posx>10</posx>
+            <posy>0</posy>
+            <width>350</width>
+            <height>35</height>
+            <label>1000</label>
+            <align>left</align>
+            <font>size18</font>
+            <textcolor>Grey</textcolor>
+          </control>
+          <control type="group" description="TV Theme image">
+            <control type="image">
+              <visible>!Skin.HasSetting(TVShelfTheme2) + !Skin.HasSetting(TVShelfTheme3) + !Skin.HasSetting(TVShelfTheme4)</visible>
+              <include>SettingsAutoItemsThemePreview</include>
+              <width>280</width>
+              <height>202</height>
+              <texture>help/ShelfTVTheme1.png</texture>
+            </control>
+            <control type="image">
+              <visible>Skin.HasSetting(TVShelfTheme2)</visible>
+              <include>SettingsAutoItemsThemePreview</include>
+              <width>280</width>
+              <height>202</height>
+              <texture>help/ShelfTVTheme2.png</texture>
+            </control>
+            <control type="image">
+              <visible>Skin.HasSetting(TVShelfTheme3)</visible>
+              <include>SettingsAutoItemsThemePreview</include>
+              <width>280</width>
+              <height>202</height>
+              <texture>help/ShelfTVTheme3.png</texture>
+            </control>
+            <control type="image">
+              <visible>Skin.HasSetting(TVShelfTheme4)</visible>
+              <include>SettingsAutoItemsThemePreview</include>
+              <width>185</width>
+              <height>260</height>
+              <texture>help/ShelfTVTheme4.png</texture>
+            </control>
+          </control>
         </control>
       </control>
     </control>
