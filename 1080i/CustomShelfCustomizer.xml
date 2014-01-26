@@ -282,9 +282,10 @@
           <onclick>Skin.Reset(TVShelf_Custom)</onclick>
           <onclick>Skin.Reset(TVShelf_Image)</onclick>
         </control>
+
         <control type="button" id="299" description="TV Auto Theme">
           <visible>!Skin.HasSetting(TVSectionHide) + Container(50).HasFocus(1002)</visible>
-          <visible>!Skin.HasSetting(TVShelf_Image) + !Skin.HasSetting(TVShelf_Custom</visible>
+          <visible>!Skin.HasSetting(TVShelf_Image) + !Skin.HasSetting(TVShelf_Custom)</visible>
           <include>SettingsSubmenuButtons</include>
           <label>- $LOCALIZE[31126]</label>
           <label2>$VAR[TVShelfLabel3]</label2>
