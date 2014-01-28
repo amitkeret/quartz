@@ -424,7 +424,7 @@
         <visible>Control.IsVisible(311)</visible>
         <include>LabelVisibleFade</include>
         <include>ShelfTopLabel</include>
-        <label>[B]$INFO[Container(311).ListItem.Property(ItemType)][/B]</label>
+        <label>[B]$VAR[MovieShelfAutoItemsLabel][/B]</label>
       </control>
       <control type="panel" id="311" description="TOP Shortcuts">
         <visible>[Library.HasContent(Movies) | Skin.HasSetting(MoviesShelf_Custom)] + [ControlGroup(9000).HasFocus(301) | Control.HasFocus(311)]</visible>
@@ -434,166 +434,9 @@
         <onright>311</onright>
         <include>MoviesShortcutsCommons</include>
         <content>
-          <item id="1" description="Movies">
-            <visible>!Skin.HasSetting(MoviesShelf_Custom)</visible>
-            <visible>!IsEmpty(Window.Property(RecentMovie.1.File))</visible>
-            <label>$INFO[Window.Property(RecentMovie.1.Title)]</label>
-            <thumb>$INFO[Window.Property(RecentMovie.1.Art(poster))]</thumb>
-            <property name="ItemType">$LOCALIZE[20386]</property>
-            <onclick>PlayMedia($ESCINFO[Window(Home).Property(RecentMovie.1.File)])</onclick>
-          </item>
-          <item id="2" description="Shortcut2">
-            <visible>!Skin.HasSetting(MoviesShelf_Custom)</visible>
-            <visible>!IsEmpty(Window.Property(RecentMovie.2.File))</visible>
-            <label>$INFO[Window.Property(RecentMovie.2.Title)]</label>
-            <thumb>$INFO[Window.Property(RecentMovie.2.Art(poster))]</thumb>
-            <property name="ItemType">$LOCALIZE[20386]</property>
-            <onclick>PlayMedia($ESCINFO[Window(Home).Property(RecentMovie.2.File)])</onclick>
-          </item>
-          <item id="3" description="Shortcut3">
-            <visible>!Skin.HasSetting(MoviesShelf_Custom)</visible>
-            <visible>!IsEmpty(Window.Property(RecentMovie.3.File))</visible>
-            <label>$INFO[Window.Property(RecentMovie.3.Title)]</label>
-            <thumb>$INFO[Window.Property(RecentMovie.3.Art(poster))]</thumb>
-            <property name="ItemType">$LOCALIZE[20386]</property>
-            <onclick>PlayMedia($ESCINFO[Window(Home).Property(RecentMovie.3.File)])</onclick>
-          </item>
-          <item id="4" description="Shortcut4">
-            <visible>!Skin.HasSetting(MoviesShelf_Custom)</visible>
-            <visible>!IsEmpty(Window.Property(RecentMovie.4.File))</visible>
-            <label>$INFO[Window.Property(RecentMovie.4.Title)]</label>
-            <thumb>$INFO[Window.Property(RecentMovie.4.Art(poster))]</thumb>
-            <property name="ItemType">$LOCALIZE[20386]</property>
-            <onclick>PlayMedia($ESCINFO[Window(Home).Property(RecentMovie.4.File)])</onclick>
-          </item>
-          <item id="5" description="Shortcut5">
-            <visible>!Skin.HasSetting(MoviesShelf_Custom)</visible>
-            <visible>!IsEmpty(Window.Property(RecentMovie.5.File))</visible>
-            <label>$INFO[Window.Property(RecentMovie.5.Title)]</label>
-            <thumb>$INFO[Window.Property(RecentMovie.5.Art(poster))]</thumb>
-            <property name="ItemType">$LOCALIZE[20386]</property>
-            <onclick>PlayMedia($ESCINFO[Window(Home).Property(RecentMovie.5.File)])</onclick>
-          </item>
-          <item id="6" description="Movies">
-            <visible>!Skin.HasSetting(MoviesShelf_Custom)</visible>
-            <visible>!IsEmpty(Window.Property(RecentMovie.6.File))</visible>
-            <label>$INFO[Window.Property(RecentMovie.6.Title)]</label>
-            <thumb>$INFO[Window.Property(RecentMovie.6.Art(poster))]</thumb>
-            <property name="ItemType">$LOCALIZE[20386]</property>
-            <onclick>PlayMedia($ESCINFO[Window(Home).Property(RecentMovie.6.File)])</onclick>
-          </item>
-          <item id="7" description="Shortcut7">
-            <visible>!Skin.HasSetting(MoviesShelf_Custom)</visible>
-            <visible>!IsEmpty(Window.Property(RecentMovie.7.File))</visible>
-            <label>$INFO[Window.Property(RecentMovie.7.Title)]</label>
-            <thumb>$INFO[Window.Property(RecentMovie.7.Art(poster))]</thumb>
-            <property name="ItemType">$LOCALIZE[20386]</property>
-            <onclick>PlayMedia($ESCINFO[Window(Home).Property(RecentMovie.7.File)])</onclick>
-          </item>
-          <item id="8" description="Shortcut8">
-            <visible>!Skin.HasSetting(MoviesShelf_Custom)</visible>
-            <visible>!IsEmpty(Window.Property(RecentMovie.8.File))</visible>
-            <label>$INFO[Window.Property(RecentMovie.8.Title)]</label>
-            <thumb>$INFO[Window.Property(RecentMovie.8.Art(poster))]</thumb>
-            <property name="ItemType">$LOCALIZE[20386]</property>
-            <onclick>PlayMedia($ESCINFO[Window(Home).Property(RecentMovie.8.File)])</onclick>
-          </item>
-          <item id="9" description="Shortcut9">
-            <visible>!Skin.HasSetting(MoviesShelf_Custom)</visible>
-            <visible>!IsEmpty(Window.Property(RecentMovie.9.File))</visible>
-            <label>$INFO[Window.Property(RecentMovie.9.Title)]</label>
-            <thumb>$INFO[Window.Property(RecentMovie.9.Art(poster))]</thumb>
-            <property name="ItemType">$LOCALIZE[20386]</property>
-            <onclick>PlayMedia($ESCINFO[Window(Home).Property(RecentMovie.9.File)])</onclick>
-          </item>
-          <item id="10" description="Shortcut10">
-            <visible>!Skin.HasSetting(MoviesShelf_Custom)</visible>
-            <visible>!IsEmpty(Window.Property(RecentMovie.10.File))</visible>
-            <label>$INFO[Window.Property(RecentMovie.10.Title)]</label>
-            <thumb>$INFO[Window.Property(RecentMovie.10.Art(poster))]</thumb>
-            <property name="ItemType">$LOCALIZE[20386]</property>
-            <onclick>PlayMedia($ESCINFO[Window(Home).Property(RecentMovie.10.File)])</onclick>
-          </item>
-          <item id="1" description="Addons">
-            <visible>Skin.HasSetting(MoviesShelf_Custom)</visible>
-            <visible>!IsEmpty(Skin.String(ShelfMovies.1.Label))</visible>
-            <label>$INFO[system.addontitle(Skin.String(ShelfMovies.1.Label))]</label>
-            <thumb>$INFO[system.addonicon(Skin.String(ShelfMovies.1.Label))]</thumb>
-            <onclick>RunAddon($INFO[Skin.String(ShelfMovies.1.Label)])</onclick>
-            <property name="ItemType">$LOCALIZE[111]</property>
-          </item>
-          <item id="2" description="Addons">
-            <visible>Skin.HasSetting(MoviesShelf_Custom)</visible>
-            <visible>!IsEmpty(Skin.String(ShelfMovies.2.Label))</visible>
-            <label>$INFO[system.addontitle(Skin.String(ShelfMovies.2.Label))]</label>
-            <thumb>$INFO[system.addonicon(Skin.String(ShelfMovies.2.Label))]</thumb>
-            <onclick>RunAddon($INFO[Skin.String(ShelfMovies.2.Label)])</onclick>
-            <property name="ItemType">$LOCALIZE[111]</property>
-          </item>
-          <item id="3" description="Addons">
-            <visible>Skin.HasSetting(MoviesShelf_Custom)</visible>
-            <visible>!IsEmpty(Skin.String(ShelfMovies.3.Label))</visible>
-            <label>$INFO[system.addontitle(Skin.String(ShelfMovies.3.Label))]</label>
-            <thumb>$INFO[system.addonicon(Skin.String(ShelfMovies.3.Label))]</thumb>
-            <onclick>RunAddon($INFO[Skin.String(ShelfMovies.3.Label)])</onclick>
-            <property name="ItemType">$LOCALIZE[111]</property>
-          </item>
-          <item id="4" description="Addons">
-            <visible>Skin.HasSetting(MoviesShelf_Custom)</visible>
-            <visible>!IsEmpty(Skin.String(ShelfMovies.4.Label))</visible>
-            <label>$INFO[system.addontitle(Skin.String(ShelfMovies.4.Label))]</label>
-            <thumb>$INFO[system.addonicon(Skin.String(ShelfMovies.4.Label))]</thumb>
-            <onclick>RunAddon($INFO[Skin.String(ShelfMovies.4.Label)])</onclick>
-            <property name="ItemType">$LOCALIZE[111]</property>
-          </item>
-          <item id="5" description="Addons">
-            <visible>Skin.HasSetting(MoviesShelf_Custom)</visible>
-            <visible>!IsEmpty(Skin.String(ShelfMovies.5.Label))</visible>
-            <label>$INFO[system.addontitle(Skin.String(ShelfMovies.5.Label))]</label>
-            <thumb>$INFO[system.addonicon(Skin.String(ShelfMovies.5.Label))]</thumb>
-            <onclick>RunAddon($INFO[Skin.String(ShelfMovies.5.Label)])</onclick>
-            <property name="ItemType">$LOCALIZE[111]</property>
-          </item>
-          <item id="6" description="Fav">
-            <visible>Skin.HasSetting(MoviesShelf_Custom)</visible>
-            <visible>!IsEmpty(Skin.String(ShelfMovies.6.Label))</visible>
-            <label>$INFO[Skin.String(ShelfMovies.6.Label)]</label>
-            <thumb>$INFO[Skin.String(ShelfMovies.6.Icon)]</thumb>
-            <onclick>$INFO[Skin.String(ShelfMovies.6.Path)]</onclick>
-            <property name="ItemType">$LOCALIZE[111]</property>
-          </item>
-          <item id="7" description="Fav">
-            <visible>Skin.HasSetting(MoviesShelf_Custom)</visible>
-            <visible>!IsEmpty(Skin.String(ShelfMovies.7.Label))</visible>
-            <label>$INFO[Skin.String(ShelfMovies.7.Label)]</label>
-            <thumb>$INFO[Skin.String(ShelfMovies.7.Icon)]</thumb>
-            <onclick>$INFO[Skin.String(ShelfMovies.7.Path)]</onclick>
-            <property name="ItemType">$LOCALIZE[111]</property>
-          </item>
-          <item id="8" description="Fav">
-            <visible>Skin.HasSetting(MoviesShelf_Custom)</visible>
-            <visible>!IsEmpty(Skin.String(ShelfMovies.8.Label))</visible>
-            <label>$INFO[Skin.String(ShelfMovies.8.Label)]</label>
-            <thumb>$INFO[Skin.String(ShelfMovies.8.Icon)]</thumb>
-            <onclick>$INFO[Skin.String(ShelfMovies.8.Path)]</onclick>
-            <property name="ItemType">$LOCALIZE[111]</property>
-          </item>
-          <item id="9" description="Fav">
-            <visible>Skin.HasSetting(MoviesShelf_Custom)</visible>
-            <visible>!IsEmpty(Skin.String(ShelfMovies.9.Label))</visible>
-            <label>$INFO[Skin.String(ShelfMovies.9.Label)]</label>
-            <thumb>$INFO[Skin.String(ShelfMovies.9.Icon)]</thumb>
-            <onclick>$INFO[Skin.String(ShelfMovies.9.Path)]</onclick>
-            <property name="ItemType">$LOCALIZE[111]</property>
-          </item>
-          <item id="10" description="Fav">
-            <visible>Skin.HasSetting(MoviesShelf_Custom)</visible>
-            <visible>!IsEmpty(Skin.String(ShelfMovies.10.Label))</visible>
-            <label>$INFO[Skin.String(ShelfMovies.10.Label)]</label>
-            <thumb>$INFO[Skin.String(ShelfMovies.10.Icon)]</thumb>
-            <onclick>$INFO[Skin.String(ShelfMovies.10.Path)]</onclick>
-            <property name="ItemType">$LOCALIZE[111]</property>
-          </item>
+          <include condition="!Skin.HasSetting(MoviesShelf_Custom) + !Skin.HasSetting(MovieShelfItemsType2)">Movies_RA_ItemsRecent</include>
+          <include condition="!Skin.HasSetting(MoviesShelf_Custom) + Skin.HasSetting(MovieShelfItemsType2)">Movies_RA_ItemsRecentAired</include>
+          <include condition="Skin.HasSetting(MoviesShelf_Custom)">Movies_RA_ItemsCustom</include>
         </content>
       </control>
       <control type="group" description="item hover box">
@@ -621,13 +464,199 @@
       </control>
     </control>
   </include>
+  <include name="Movies_RA_ItemsRecent">
+    <item id="1" description="RecentMovie1">
+      <visible>!IsEmpty(Window.Property(RecentMovie.1.File))</visible>
+      <label>$INFO[Window.Property(RecentMovie.1.Title)]</label>
+      <thumb>$INFO[Window.Property(RecentMovie.1.Art(poster))]</thumb>
+      <onclick>PlayMedia($ESCINFO[Window(Home).Property(RecentMovie.1.File)])</onclick>
+    </item>
+    <item id="2" description="RecentMovie2">
+      <visible>!IsEmpty(Window.Property(RecentMovie.2.File))</visible>
+      <label>$INFO[Window.Property(RecentMovie.2.Title)]</label>
+      <thumb>$INFO[Window.Property(RecentMovie.2.Art(poster))]</thumb>
+      <onclick>PlayMedia($ESCINFO[Window(Home).Property(RecentMovie.2.File)])</onclick>
+    </item>
+    <item id="3" description="RecentMovie3">
+      <visible>!IsEmpty(Window.Property(RecentMovie.3.File))</visible>
+      <label>$INFO[Window.Property(RecentMovie.3.Title)]</label>
+      <thumb>$INFO[Window.Property(RecentMovie.3.Art(poster))]</thumb>
+      <onclick>PlayMedia($ESCINFO[Window(Home).Property(RecentMovie.3.File)])</onclick>
+    </item>
+    <item id="4" description="RecentMovie4">
+      <visible>!IsEmpty(Window.Property(RecentMovie.4.File))</visible>
+      <label>$INFO[Window.Property(RecentMovie.4.Title)]</label>
+      <thumb>$INFO[Window.Property(RecentMovie.4.Art(poster))]</thumb>
+      <onclick>PlayMedia($ESCINFO[Window(Home).Property(RecentMovie.4.File)])</onclick>
+    </item>
+    <item id="5" description="RecentMovie5">
+      <visible>!IsEmpty(Window.Property(RecentMovie.5.File))</visible>
+      <label>$INFO[Window.Property(RecentMovie.5.Title)]</label>
+      <thumb>$INFO[Window.Property(RecentMovie.5.Art(poster))]</thumb>
+      <onclick>PlayMedia($ESCINFO[Window(Home).Property(RecentMovie.5.File)])</onclick>
+    </item>
+    <item id="6" description="RecentMovie6">
+      <visible>!IsEmpty(Window.Property(RecentMovie.6.File))</visible>
+      <label>$INFO[Window.Property(RecentMovie.6.Title)]</label>
+      <thumb>$INFO[Window.Property(RecentMovie.6.Art(poster))]</thumb>
+      <onclick>PlayMedia($ESCINFO[Window(Home).Property(RecentMovie.6.File)])</onclick>
+    </item>
+    <item id="7" description="RecentMovie7">
+      <visible>!IsEmpty(Window.Property(RecentMovie.7.File))</visible>
+      <label>$INFO[Window.Property(RecentMovie.7.Title)]</label>
+      <thumb>$INFO[Window.Property(RecentMovie.7.Art(poster))]</thumb>
+      <onclick>PlayMedia($ESCINFO[Window(Home).Property(RecentMovie.7.File)])</onclick>
+    </item>
+    <item id="8" description="RecentMovie8">
+      <visible>!IsEmpty(Window.Property(RecentMovie.8.File))</visible>
+      <label>$INFO[Window.Property(RecentMovie.8.Title)]</label>
+      <thumb>$INFO[Window.Property(RecentMovie.8.Art(poster))]</thumb>
+      <onclick>PlayMedia($ESCINFO[Window(Home).Property(RecentMovie.8.File)])</onclick>
+    </item>
+    <item id="9" description="RecentMovie9">
+      <visible>!IsEmpty(Window.Property(RecentMovie.9.File))</visible>
+      <label>$INFO[Window.Property(RecentMovie.9.Title)]</label>
+      <thumb>$INFO[Window.Property(RecentMovie.9.Art(poster))]</thumb>
+      <onclick>PlayMedia($ESCINFO[Window(Home).Property(RecentMovie.9.File)])</onclick>
+    </item>
+    <item id="10" description="RecentMovie10">
+      <visible>!IsEmpty(Window.Property(RecentMovie.10.File))</visible>
+      <label>$INFO[Window.Property(RecentMovie.10.Title)]</label>
+      <thumb>$INFO[Window.Property(RecentMovie.10.Art(poster))]</thumb>
+      <onclick>PlayMedia($ESCINFO[Window(Home).Property(RecentMovie.10.File)])</onclick>
+    </item>
+  </include>
+  <include name="Movies_RA_ItemsRecentAired">
+    <item id="1" description="RecentAiredMovie1">
+      <visible>!IsEmpty(Window.Property(RecentAiredMovie.1.File))</visible>
+      <label>$INFO[Window.Property(RecentAiredMovie.1.Title)]</label>
+      <thumb>$INFO[Window.Property(RecentAiredMovie.1.Art(poster))]</thumb>
+      <onclick>PlayMedia($ESCINFO[Window(Home).Property(RecentAiredMovie.1.File)])</onclick>
+    </item>
+    <item id="2" description="RecentAiredMovie2">
+      <visible>!IsEmpty(Window.Property(RecentAiredMovie.2.File))</visible>
+      <label>$INFO[Window.Property(RecentAiredMovie.2.Title)]</label>
+      <thumb>$INFO[Window.Property(RecentAiredMovie.2.Art(poster))]</thumb>
+      <onclick>PlayMedia($ESCINFO[Window(Home).Property(RecentAiredMovie.2.File)])</onclick>
+    </item>
+    <item id="3" description="RecentAiredMovie3">
+      <visible>!IsEmpty(Window.Property(RecentAiredMovie.3.File))</visible>
+      <label>$INFO[Window.Property(RecentAiredMovie.3.Title)]</label>
+      <thumb>$INFO[Window.Property(RecentAiredMovie.3.Art(poster))]</thumb>
+      <onclick>PlayMedia($ESCINFO[Window(Home).Property(RecentAiredMovie.3.File)])</onclick>
+    </item>
+    <item id="4" description="RecentAiredMovie4">
+      <visible>!IsEmpty(Window.Property(RecentAiredMovie.4.File))</visible>
+      <label>$INFO[Window.Property(RecentAiredMovie.4.Title)]</label>
+      <thumb>$INFO[Window.Property(RecentAiredMovie.4.Art(poster))]</thumb>
+      <onclick>PlayMedia($ESCINFO[Window(Home).Property(RecentAiredMovie.4.File)])</onclick>
+    </item>
+    <item id="5" description="RecentAiredMovie5">
+      <visible>!IsEmpty(Window.Property(RecentAiredMovie.5.File))</visible>
+      <label>$INFO[Window.Property(RecentAiredMovie.5.Title)]</label>
+      <thumb>$INFO[Window.Property(RecentAiredMovie.5.Art(poster))]</thumb>
+      <onclick>PlayMedia($ESCINFO[Window(Home).Property(RecentAiredMovie.5.File)])</onclick>
+    </item>
+    <item id="6" description="RecentAiredMovie6">
+      <visible>!IsEmpty(Window.Property(RecentAiredMovie.6.File))</visible>
+      <label>$INFO[Window.Property(RecentAiredMovie.6.Title)]</label>
+      <thumb>$INFO[Window.Property(RecentAiredMovie.6.Art(poster))]</thumb>
+      <onclick>PlayMedia($ESCINFO[Window(Home).Property(RecentAiredMovie.6.File)])</onclick>
+    </item>
+    <item id="7" description="RecentAiredMovie7">
+      <visible>!IsEmpty(Window.Property(RecentAiredMovie.7.File))</visible>
+      <label>$INFO[Window.Property(RecentAiredMovie.7.Title)]</label>
+      <thumb>$INFO[Window.Property(RecentAiredMovie.7.Art(poster))]</thumb>
+      <onclick>PlayMedia($ESCINFO[Window(Home).Property(RecentAiredMovie.7.File)])</onclick>
+    </item>
+    <item id="8" description="RecentAiredMovie8">
+      <visible>!IsEmpty(Window.Property(RecentAiredMovie.8.File))</visible>
+      <label>$INFO[Window.Property(RecentAiredMovie.8.Title)]</label>
+      <thumb>$INFO[Window.Property(RecentAiredMovie.8.Art(poster))]</thumb>
+      <onclick>PlayMedia($ESCINFO[Window(Home).Property(RecentAiredMovie.8.File)])</onclick>
+    </item>
+    <item id="9" description="RecentAiredMovie9">
+      <visible>!IsEmpty(Window.Property(RecentAiredMovie.9.File))</visible>
+      <label>$INFO[Window.Property(RecentAiredMovie.9.Title)]</label>
+      <thumb>$INFO[Window.Property(RecentAiredMovie.9.Art(poster))]</thumb>
+      <onclick>PlayMedia($ESCINFO[Window(Home).Property(RecentAiredMovie.9.File)])</onclick>
+    </item>
+    <item id="10" description="RecentAiredMovie10">
+      <visible>!IsEmpty(Window.Property(RecentAiredMovie.10.File))</visible>
+      <label>$INFO[Window.Property(RecentAiredMovie.10.Title)]</label>
+      <thumb>$INFO[Window.Property(RecentAiredMovie.10.Art(poster))]</thumb>
+      <onclick>PlayMedia($ESCINFO[Window(Home).Property(RecentAiredMovie.10.File)])</onclick>
+    </item>
+  </include>
+  <include name="Movies_RA_ItemsCustom">
+    <item id="1" description="Addons">
+      <visible>!IsEmpty(Skin.String(ShelfMovies.1.Label))</visible>
+      <label>$INFO[system.addontitle(Skin.String(ShelfMovies.1.Label))]</label>
+      <thumb>$INFO[system.addonicon(Skin.String(ShelfMovies.1.Label))]</thumb>
+      <onclick>RunAddon($INFO[Skin.String(ShelfMovies.1.Label)])</onclick>
+    </item>
+    <item id="2" description="Addons">
+      <visible>!IsEmpty(Skin.String(ShelfMovies.2.Label))</visible>
+      <label>$INFO[system.addontitle(Skin.String(ShelfMovies.2.Label))]</label>
+      <thumb>$INFO[system.addonicon(Skin.String(ShelfMovies.2.Label))]</thumb>
+      <onclick>RunAddon($INFO[Skin.String(ShelfMovies.2.Label)])</onclick>
+    </item>
+    <item id="3" description="Addons">
+      <visible>!IsEmpty(Skin.String(ShelfMovies.3.Label))</visible>
+      <label>$INFO[system.addontitle(Skin.String(ShelfMovies.3.Label))]</label>
+      <thumb>$INFO[system.addonicon(Skin.String(ShelfMovies.3.Label))]</thumb>
+      <onclick>RunAddon($INFO[Skin.String(ShelfMovies.3.Label)])</onclick>
+    </item>
+    <item id="4" description="Addons">
+      <visible>!IsEmpty(Skin.String(ShelfMovies.4.Label))</visible>
+      <label>$INFO[system.addontitle(Skin.String(ShelfMovies.4.Label))]</label>
+      <thumb>$INFO[system.addonicon(Skin.String(ShelfMovies.4.Label))]</thumb>
+      <onclick>RunAddon($INFO[Skin.String(ShelfMovies.4.Label)])</onclick>
+    </item>
+    <item id="5" description="Addons">
+      <visible>!IsEmpty(Skin.String(ShelfMovies.5.Label))</visible>
+      <label>$INFO[system.addontitle(Skin.String(ShelfMovies.5.Label))]</label>
+      <thumb>$INFO[system.addonicon(Skin.String(ShelfMovies.5.Label))]</thumb>
+      <onclick>RunAddon($INFO[Skin.String(ShelfMovies.5.Label)])</onclick>
+    </item>
+    <item id="6" description="Fav">
+      <visible>!IsEmpty(Skin.String(ShelfMovies.6.Label))</visible>
+      <label>$INFO[Skin.String(ShelfMovies.6.Label)]</label>
+      <thumb>$INFO[Skin.String(ShelfMovies.6.Icon)]</thumb>
+      <onclick>$INFO[Skin.String(ShelfMovies.6.Path)]</onclick>
+    </item>
+    <item id="7" description="Fav">
+      <visible>!IsEmpty(Skin.String(ShelfMovies.7.Label))</visible>
+      <label>$INFO[Skin.String(ShelfMovies.7.Label)]</label>
+      <thumb>$INFO[Skin.String(ShelfMovies.7.Icon)]</thumb>
+      <onclick>$INFO[Skin.String(ShelfMovies.7.Path)]</onclick>
+    </item>
+    <item id="8" description="Fav">
+      <visible>!IsEmpty(Skin.String(ShelfMovies.8.Label))</visible>
+      <label>$INFO[Skin.String(ShelfMovies.8.Label)]</label>
+      <thumb>$INFO[Skin.String(ShelfMovies.8.Icon)]</thumb>
+      <onclick>$INFO[Skin.String(ShelfMovies.8.Path)]</onclick>
+    </item>
+    <item id="9" description="Fav">
+      <visible>!IsEmpty(Skin.String(ShelfMovies.9.Label))</visible>
+      <label>$INFO[Skin.String(ShelfMovies.9.Label)]</label>
+      <thumb>$INFO[Skin.String(ShelfMovies.9.Icon)]</thumb>
+      <onclick>$INFO[Skin.String(ShelfMovies.9.Path)]</onclick>
+    </item>
+    <item id="10" description="Fav">
+      <visible>!IsEmpty(Skin.String(ShelfMovies.10.Label))</visible>
+      <label>$INFO[Skin.String(ShelfMovies.10.Label)]</label>
+      <thumb>$INFO[Skin.String(ShelfMovies.10.Icon)]</thumb>
+      <onclick>$INFO[Skin.String(ShelfMovies.10.Path)]</onclick>
+    </item>
+  </include>
   <include name="TV_RA">
     <control type="group">
       <control type="label" description="Top Label">
         <visible>Control.IsVisible(312)</visible>
         <include>LabelVisibleFade</include>
         <include>ShelfTopLabel</include>
-        <label>[B]$INFO[Container(312).ListItem.Property(ItemType)][/B]</label>
+        <label>[B]$VAR[TVShelfAutoItemsLabel][/B]</label>
       </control>
       <control type="panel" id="312" description="TOP Shortcuts">
         <visible>[Library.HasContent(TVShows) | Skin.HasSetting(TVShelf_Custom)] + [ControlGroup(9000).HasFocus(302) | Control.HasFocus(312)]</visible>
@@ -637,206 +666,9 @@
         <onright>312</onright>
         <include>EpisodeShortcutsCommons</include>
         <content>
-          <item id="1" description="Episodes1">
-            <visible>!Skin.HasSetting(TVShelf_Custom)</visible>
-            <visible>!IsEmpty(Window.Property(RecentEpisode.1.File))</visible>
-            <label>$INFO[Window.Property(RecentEpisode.1.Title)]</label>
-            <label2>$INFO[Window.Property(RecentEpisode.1.TVshowTitle)]</label2>
-            <property name="SeasonEpisode">$INFO[Window.Property(RecentEpisode.1.Season),S,•]$INFO[Window.Property(RecentEpisode.1.Episode),E]</property>
-            <thumb>$INFO[Window.Property(RecentEpisode.1.Art(thumb))]</thumb>
-            <property name="ItemType">$LOCALIZE[20387]</property>
-            <property name="tvShowBanner">$INFO[Window.Property(RecentEpisode.1.Art(tvshow.banner))]</property>
-            <property name="tvShowPoster">$INFO[Window.Property(RecentEpisode.1.Art(tvshow.poster))]</property>
-            <onclick>PlayMedia($ESCINFO[Window(Home).Property(RecentEpisode.1.File)])</onclick>
-          </item>
-          <item id="2" description="Shortcut2">
-            <visible>!Skin.HasSetting(TVShelf_Custom)</visible>
-            <visible>!IsEmpty(Window.Property(RecentEpisode.2.File))</visible>
-            <label>$INFO[Window.Property(RecentEpisode.2.Title)]</label>
-            <label2>$INFO[Window.Property(RecentEpisode.2.TVshowTitle)]</label2>
-            <property name="SeasonEpisode">$INFO[Window.Property(RecentEpisode.2.Season),S,•]$INFO[Window.Property(RecentEpisode.2.Episode),E]</property>
-            <thumb>$INFO[Window.Property(RecentEpisode.2.Art(thumb))]</thumb>
-            <property name="ItemType">$LOCALIZE[20387]</property>
-            <property name="tvShowBanner">$INFO[Window.Property(RecentEpisode.2.Art(tvshow.banner))]</property>
-            <property name="tvShowPoster">$INFO[Window.Property(RecentEpisode.2.Art(tvshow.poster))]</property>
-            <onclick>PlayMedia($ESCINFO[Window(Home).Property(RecentEpisode.2.File)])</onclick>
-          </item>
-          <item id="3" description="Shortcut3">
-            <visible>!Skin.HasSetting(TVShelf_Custom)</visible>
-            <visible>!IsEmpty(Window.Property(RecentEpisode.3.File))</visible>
-            <label>$INFO[Window.Property(RecentEpisode.3.Title)]</label>
-            <label2>$INFO[Window.Property(RecentEpisode.3.TVshowTitle)]</label2>
-            <property name="SeasonEpisode">$INFO[Window.Property(RecentEpisode.3.Season),S,•]$INFO[Window.Property(RecentEpisode.3.Episode),E]</property>
-            <thumb>$INFO[Window.Property(RecentEpisode.3.Art(thumb))]</thumb>
-            <property name="ItemType">$LOCALIZE[20387]</property>
-            <property name="tvShowBanner">$INFO[Window.Property(RecentEpisode.3.Art(tvshow.banner))]</property>
-            <property name="tvShowPoster">$INFO[Window.Property(RecentEpisode.3.Art(tvshow.poster))]</property>
-            <onclick>PlayMedia($ESCINFO[Window(Home).Property(RecentEpisode.3.File)])</onclick>
-          </item>
-          <item id="4" description="Shortcut4">
-            <visible>!Skin.HasSetting(TVShelf_Custom)</visible>
-            <visible>!IsEmpty(Window.Property(RecentEpisode.4.File))</visible>
-            <label>$INFO[Window.Property(RecentEpisode.4.Title)]</label>
-            <label2>$INFO[Window.Property(RecentEpisode.4.TVshowTitle)]</label2>
-            <property name="SeasonEpisode">$INFO[Window.Property(RecentEpisode.4.Season),S,•]$INFO[Window.Property(RecentEpisode.4.Episode),E]</property>
-            <thumb>$INFO[Window.Property(RecentEpisode.4.Art(thumb))]</thumb>
-            <property name="ItemType">$LOCALIZE[20387]</property>
-            <property name="tvShowBanner">$INFO[Window.Property(RecentEpisode.4.Art(tvshow.banner))]</property>
-            <property name="tvShowPoster">$INFO[Window.Property(RecentEpisode.4.Art(tvshow.poster))]</property>
-            <onclick>PlayMedia($ESCINFO[Window(Home).Property(RecentEpisode.4.File)])</onclick>
-          </item>
-          <item id="5" description="Shortcut5">
-            <visible>!Skin.HasSetting(TVShelf_Custom)</visible>
-            <visible>!IsEmpty(Window.Property(RecentEpisode.5.File))</visible>
-            <label>$INFO[Window.Property(RecentEpisode.5.Title)]</label>
-            <label2>$INFO[Window.Property(RecentEpisode.5.TVshowTitle)]</label2>
-            <property name="SeasonEpisode">$INFO[Window.Property(RecentEpisode.5.Season),S,•]$INFO[Window.Property(RecentEpisode.5.Episode),E]</property>
-            <thumb>$INFO[Window.Property(RecentEpisode.5.Art(thumb))]</thumb>
-            <property name="ItemType">$LOCALIZE[20387]</property>
-            <property name="tvShowBanner">$INFO[Window.Property(RecentEpisode.5.Art(tvshow.banner))]</property>
-            <property name="tvShowPoster">$INFO[Window.Property(RecentEpisode.5.Art(tvshow.poster))]</property>
-            <onclick>PlayMedia($ESCINFO[Window(Home).Property(RecentEpisode.5.File)])</onclick>
-          </item>
-          <item id="6" description="Shortcut6">
-            <visible>!Skin.HasSetting(TVShelf_Custom)</visible>
-            <visible>!IsEmpty(Window.Property(RecentEpisode.6.File))</visible>
-            <label>$INFO[Window.Property(RecentEpisode.6.Title)]</label>
-            <label2>$INFO[Window.Property(RecentEpisode.6.TVshowTitle)]</label2>
-            <property name="SeasonEpisode">$INFO[Window.Property(RecentEpisode.6.Season),S,•]$INFO[Window.Property(RecentEpisode.6.Episode),E]</property>
-            <thumb>$INFO[Window.Property(RecentEpisode.6.Art(thumb))]</thumb>
-            <property name="ItemType">$LOCALIZE[20387]</property>
-            <property name="tvShowBanner">$INFO[Window.Property(RecentEpisode.6.Art(tvshow.banner))]</property>
-            <property name="tvShowPoster">$INFO[Window.Property(RecentEpisode.6.Art(tvshow.poster))]</property>
-            <onclick>PlayMedia($ESCINFO[Window(Home).Property(RecentEpisode.6.File)])</onclick>
-          </item>
-          <item id="7" description="Shortcut7">
-            <visible>!Skin.HasSetting(TVShelf_Custom)</visible>
-            <visible>!IsEmpty(Window.Property(RecentEpisode.7.File))</visible>
-            <label>$INFO[Window.Property(RecentEpisode.7.Title)]</label>
-            <label2>$INFO[Window.Property(RecentEpisode.7.TVshowTitle)]</label2>
-            <property name="SeasonEpisode">$INFO[Window.Property(RecentEpisode.7.Season),S,•]$INFO[Window.Property(RecentEpisode.7.Episode),E]</property>
-            <thumb>$INFO[Window.Property(RecentEpisode.7.Art(thumb))]</thumb>
-            <property name="ItemType">$LOCALIZE[20387]</property>
-            <property name="tvShowBanner">$INFO[Window.Property(RecentEpisode.7.Art(tvshow.banner))]</property>
-            <property name="tvShowPoster">$INFO[Window.Property(RecentEpisode.7.Art(tvshow.poster))]</property>
-            <onclick>PlayMedia($ESCINFO[Window(Home).Property(RecentEpisode.7.File)])</onclick>
-          </item>
-          <item id="8" description="Shortcut8">
-            <visible>!Skin.HasSetting(TVShelf_Custom)</visible>
-            <visible>!IsEmpty(Window.Property(RecentEpisode.8.File))</visible>
-            <label>$INFO[Window.Property(RecentEpisode.8.Title)]</label>
-            <label2>$INFO[Window.Property(RecentEpisode.8.TVshowTitle)]</label2>
-            <property name="SeasonEpisode">$INFO[Window.Property(RecentEpisode.8.Season),S,•]$INFO[Window.Property(RecentEpisode.8.Episode),E]</property>
-            <thumb>$INFO[Window.Property(RecentEpisode.8.Art(thumb))]</thumb>
-            <property name="ItemType">$LOCALIZE[20387]</property>
-            <property name="tvShowBanner">$INFO[Window.Property(RecentEpisode.8.Art(tvshow.banner))]</property>
-            <property name="tvShowPoster">$INFO[Window.Property(RecentEpisode.8.Art(tvshow.poster))]</property>
-            <onclick>PlayMedia($ESCINFO[Window(Home).Property(RecentEpisode.8.File)])</onclick>
-          </item>
-          <item id="9" description="Shortcut9">
-            <visible>!Skin.HasSetting(TVShelf_Custom)</visible>
-            <visible>!IsEmpty(Window.Property(RecentEpisode.9.File))</visible>
-            <label>$INFO[Window.Property(RecentEpisode.9.Title)]</label>
-            <label2>$INFO[Window.Property(RecentEpisode.9.TVshowTitle)]</label2>
-            <property name="SeasonEpisode">$INFO[Window.Property(RecentEpisode.9.Season),S,•]$INFO[Window.Property(RecentEpisode.9.Episode),E]</property>
-            <thumb>$INFO[Window.Property(RecentEpisode.9.Art(thumb))]</thumb>
-            <property name="ItemType">$LOCALIZE[20387]</property>
-            <property name="tvShowBanner">$INFO[Window.Property(RecentEpisode.9.Art(tvshow.banner))]</property>
-            <property name="tvShowPoster">$INFO[Window.Property(RecentEpisode.9.Art(tvshow.poster))]</property>
-            <onclick>PlayMedia($ESCINFO[Window(Home).Property(RecentEpisode.9.File)])</onclick>
-          </item>
-          <item id="10" description="Shortcut10">
-            <visible>!Skin.HasSetting(TVShelf_Custom)</visible>
-            <visible>!IsEmpty(Window.Property(RecentEpisode.10.File))</visible>
-            <label>$INFO[Window.Property(RecentEpisode.10.Title)]</label>
-            <label2>$INFO[Window.Property(RecentEpisode.10.TVshowTitle)]</label2>
-            <property name="SeasonEpisode">$INFO[Window.Property(RecentEpisode.10.Season),S,•]$INFO[Window.Property(RecentEpisode.10.Episode),E]</property>
-            <thumb>$INFO[Window.Property(RecentEpisode.10.Art(thumb))]</thumb>
-            <property name="ItemType">$LOCALIZE[20387]</property>
-            <property name="tvShowBanner">$INFO[Window.Property(RecentEpisode.10.Art(tvshow.banner))]</property>
-            <property name="tvShowPoster">$INFO[Window.Property(RecentEpisode.10.Art(tvshow.poster))]</property>
-            <onclick>PlayMedia($ESCINFO[Window(Home).Property(RecentEpisode.10.File)])</onclick>
-          </item>
-          <item id="1" description="Addons">
-            <visible>Skin.HasSetting(TVShelf_Custom)</visible>
-            <visible>!IsEmpty(Skin.String(ShelfTV.1.Label))</visible>
-            <label>$INFO[system.addontitle(Skin.String(ShelfTV.1.Label))]</label>
-            <thumb>$INFO[system.addonicon(Skin.String(ShelfTV.1.Label))]</thumb>
-            <onclick>RunAddon($INFO[Skin.String(ShelfTV.1.Label)])</onclick>
-            <property name="ItemType">$LOCALIZE[111]</property>
-          </item>
-          <item id="2" description="Addons">
-            <visible>Skin.HasSetting(TVShelf_Custom)</visible>
-            <visible>!IsEmpty(Skin.String(ShelfTV.2.Label))</visible>
-            <label>$INFO[system.addontitle(Skin.String(ShelfTV.2.Label))]</label>
-            <thumb>$INFO[system.addonicon(Skin.String(ShelfTV.2.Label))]</thumb>
-            <onclick>RunAddon($INFO[Skin.String(ShelfTV.2.Label)])</onclick>
-            <property name="ItemType">$LOCALIZE[111]</property>
-          </item>
-          <item id="3" description="Addons">
-            <visible>Skin.HasSetting(TVShelf_Custom)</visible>
-            <visible>!IsEmpty(Skin.String(ShelfTV.3.Label))</visible>
-            <label>$INFO[system.addontitle(Skin.String(ShelfTV.3.Label))]</label>
-            <thumb>$INFO[system.addonicon(Skin.String(ShelfTV.3.Label))]</thumb>
-            <onclick>RunAddon($INFO[Skin.String(ShelfTV.3.Label)])</onclick>
-            <property name="ItemType">$LOCALIZE[111]</property>
-          </item>
-          <item id="4" description="Addons">
-            <visible>Skin.HasSetting(TVShelf_Custom)</visible>
-            <visible>!IsEmpty(Skin.String(ShelfTV.4.Label))</visible>
-            <label>$INFO[system.addontitle(Skin.String(ShelfTV.4.Label))]</label>
-            <thumb>$INFO[system.addonicon(Skin.String(ShelfTV.4.Label))]</thumb>
-            <onclick>RunAddon($INFO[Skin.String(ShelfTV.4.Label)])</onclick>
-            <property name="ItemType">$LOCALIZE[111]</property>
-          </item>
-          <item id="5" description="Addons">
-            <visible>Skin.HasSetting(TVShelf_Custom)</visible>
-            <visible>!IsEmpty(Skin.String(ShelfTV.5.Label))</visible>
-            <label>$INFO[system.addontitle(Skin.String(ShelfTV.5.Label))]</label>
-            <thumb>$INFO[system.addonicon(Skin.String(ShelfTV.5.Label))]</thumb>
-            <onclick>RunAddon($INFO[Skin.String(ShelfTV.5.Label)])</onclick>
-            <property name="ItemType">$LOCALIZE[111]</property>
-          </item>
-          <item id="6" description="Fav">
-            <visible>Skin.HasSetting(TVShelf_Custom)</visible>
-            <visible>!IsEmpty(Skin.String(ShelfTV.6.Path))</visible>
-            <label>$INFO[Skin.String(ShelfTV.6.Label)]</label>
-            <thumb>$INFO[Skin.String(ShelfTV.6.Icon)]</thumb>
-            <onclick>$INFO[Skin.String(ShelfTV.6.Path)]</onclick>
-            <property name="ItemType">$LOCALIZE[111]</property>
-          </item>
-          <item id="7" description="Fav">
-            <visible>Skin.HasSetting(TVShelf_Custom)</visible>
-            <visible>!IsEmpty(Skin.String(ShelfTV.7.Path))</visible>
-            <label>$INFO[Skin.String(ShelfTV.7.Label)]</label>
-            <thumb>$INFO[Skin.String(ShelfTV.7.Icon)]</thumb>
-            <onclick>$INFO[Skin.String(ShelfTV.7.Path)]</onclick>
-            <property name="ItemType">$LOCALIZE[111]</property>
-          </item>
-          <item id="8" description="Fav">
-            <visible>Skin.HasSetting(TVShelf_Custom)</visible>
-            <visible>!IsEmpty(Skin.String(ShelfTV.8.Path))</visible>
-            <label>$INFO[Skin.String(ShelfTV.8.Label)]</label>
-            <thumb>$INFO[Skin.String(ShelfTV.8.Icon)]</thumb>
-            <onclick>$INFO[Skin.String(ShelfTV.8.Path)]</onclick>
-            <property name="ItemType">$LOCALIZE[111]</property>
-          </item>
-          <item id="9" description="Fav">
-            <visible>Skin.HasSetting(TVShelf_Custom)</visible>
-            <visible>!IsEmpty(Skin.String(ShelfTV.9.Path))</visible>
-            <label>$INFO[Skin.String(ShelfTV.9.Label)]</label>
-            <thumb>$INFO[Skin.String(ShelfTV.9.Icon)]</thumb>
-            <onclick>$INFO[Skin.String(ShelfTV.9.Path)]</onclick>
-            <property name="ItemType">$LOCALIZE[111]</property>
-          </item>
-          <item id="10" description="Fav">
-            <visible>Skin.HasSetting(TVShelf_Custom)</visible>
-            <visible>!IsEmpty(Skin.String(ShelfTV.10.Path))</visible>
-            <label>$INFO[Skin.String(ShelfTV.10.Label)]</label>
-            <thumb>$INFO[Skin.String(ShelfTV.10.Icon)]</thumb>
-            <onclick>$INFO[Skin.String(ShelfTV.10.Path)]</onclick>
-            <property name="ItemType">$LOCALIZE[111]</property>
-          </item>
+          <include condition="!Skin.HasSetting(TVShelf_Custom) + !Skin.HasSetting(TVShelfItemsType2)">TV_RA_ItemsRecent</include>
+          <include condition="!Skin.HasSetting(TVShelf_Custom) + Skin.HasSetting(TVShelfItemsType2)">TV_RA_ItemsRecentAired</include>
+          <include condition="Skin.HasSetting(TVShelf_Custom)">TV_RA_ItemsCustom</include>
         </content>
       </control>
       <control type="group" description="item hover box">
@@ -871,6 +703,272 @@
         </control>
       </control>
     </control>
+  </include>
+  <include name="TV_RA_ItemsRecent">
+    <item id="1" description="RecentEpisode1">
+      <visible>!IsEmpty(Window.Property(RecentEpisode.1.File))</visible>
+      <label>$INFO[Window.Property(RecentEpisode.1.Title)]</label>
+      <label2>$INFO[Window.Property(RecentEpisode.1.TVshowTitle)]</label2>
+      <property name="SeasonEpisode">$INFO[Window.Property(RecentEpisode.1.Season),S,•]$INFO[Window.Property(RecentEpisode.1.Episode),E]</property>
+      <thumb>$INFO[Window.Property(RecentEpisode.1.Art(thumb))]</thumb>
+      <property name="tvShowBanner">$INFO[Window.Property(RecentEpisode.1.Art(tvshow.banner))]</property>
+      <property name="tvShowPoster">$INFO[Window.Property(RecentEpisode.1.Art(tvshow.poster))]</property>
+      <onclick>PlayMedia($ESCINFO[Window(Home).Property(RecentEpisode.1.File)])</onclick>
+    </item>
+    <item id="2" description="RecentEpisode2">
+      <visible>!IsEmpty(Window.Property(RecentEpisode.2.File))</visible>
+      <label>$INFO[Window.Property(RecentEpisode.2.Title)]</label>
+      <label2>$INFO[Window.Property(RecentEpisode.2.TVshowTitle)]</label2>
+      <property name="SeasonEpisode">$INFO[Window.Property(RecentEpisode.2.Season),S,•]$INFO[Window.Property(RecentEpisode.2.Episode),E]</property>
+      <thumb>$INFO[Window.Property(RecentEpisode.2.Art(thumb))]</thumb>
+      <property name="tvShowBanner">$INFO[Window.Property(RecentEpisode.2.Art(tvshow.banner))]</property>
+      <property name="tvShowPoster">$INFO[Window.Property(RecentEpisode.2.Art(tvshow.poster))]</property>
+      <onclick>PlayMedia($ESCINFO[Window(Home).Property(RecentEpisode.2.File)])</onclick>
+    </item>
+    <item id="3" description="RecentEpisode3">
+      <visible>!IsEmpty(Window.Property(RecentEpisode.3.File))</visible>
+      <label>$INFO[Window.Property(RecentEpisode.3.Title)]</label>
+      <label2>$INFO[Window.Property(RecentEpisode.3.TVshowTitle)]</label2>
+      <property name="SeasonEpisode">$INFO[Window.Property(RecentEpisode.3.Season),S,•]$INFO[Window.Property(RecentEpisode.3.Episode),E]</property>
+      <thumb>$INFO[Window.Property(RecentEpisode.3.Art(thumb))]</thumb>
+      <property name="tvShowBanner">$INFO[Window.Property(RecentEpisode.3.Art(tvshow.banner))]</property>
+      <property name="tvShowPoster">$INFO[Window.Property(RecentEpisode.3.Art(tvshow.poster))]</property>
+      <onclick>PlayMedia($ESCINFO[Window(Home).Property(RecentEpisode.3.File)])</onclick>
+    </item>
+    <item id="4" description="RecentEpisode4">
+      <visible>!IsEmpty(Window.Property(RecentEpisode.4.File))</visible>
+      <label>$INFO[Window.Property(RecentEpisode.4.Title)]</label>
+      <label2>$INFO[Window.Property(RecentEpisode.4.TVshowTitle)]</label2>
+      <property name="SeasonEpisode">$INFO[Window.Property(RecentEpisode.4.Season),S,•]$INFO[Window.Property(RecentEpisode.4.Episode),E]</property>
+      <thumb>$INFO[Window.Property(RecentEpisode.4.Art(thumb))]</thumb>
+      <property name="tvShowBanner">$INFO[Window.Property(RecentEpisode.4.Art(tvshow.banner))]</property>
+      <property name="tvShowPoster">$INFO[Window.Property(RecentEpisode.4.Art(tvshow.poster))]</property>
+      <onclick>PlayMedia($ESCINFO[Window(Home).Property(RecentEpisode.4.File)])</onclick>
+    </item>
+    <item id="5" description="RecentEpisode5">
+      <visible>!IsEmpty(Window.Property(RecentEpisode.5.File))</visible>
+      <label>$INFO[Window.Property(RecentEpisode.5.Title)]</label>
+      <label2>$INFO[Window.Property(RecentEpisode.5.TVshowTitle)]</label2>
+      <property name="SeasonEpisode">$INFO[Window.Property(RecentEpisode.5.Season),S,•]$INFO[Window.Property(RecentEpisode.5.Episode),E]</property>
+      <thumb>$INFO[Window.Property(RecentEpisode.5.Art(thumb))]</thumb>
+      <property name="tvShowBanner">$INFO[Window.Property(RecentEpisode.5.Art(tvshow.banner))]</property>
+      <property name="tvShowPoster">$INFO[Window.Property(RecentEpisode.5.Art(tvshow.poster))]</property>
+      <onclick>PlayMedia($ESCINFO[Window(Home).Property(RecentEpisode.5.File)])</onclick>
+    </item>
+    <item id="6" description="RecentEpisode6">
+      <visible>!IsEmpty(Window.Property(RecentEpisode.6.File))</visible>
+      <label>$INFO[Window.Property(RecentEpisode.6.Title)]</label>
+      <label2>$INFO[Window.Property(RecentEpisode.6.TVshowTitle)]</label2>
+      <property name="SeasonEpisode">$INFO[Window.Property(RecentEpisode.6.Season),S,•]$INFO[Window.Property(RecentEpisode.6.Episode),E]</property>
+      <thumb>$INFO[Window.Property(RecentEpisode.6.Art(thumb))]</thumb>
+      <property name="tvShowBanner">$INFO[Window.Property(RecentEpisode.6.Art(tvshow.banner))]</property>
+      <property name="tvShowPoster">$INFO[Window.Property(RecentEpisode.6.Art(tvshow.poster))]</property>
+      <onclick>PlayMedia($ESCINFO[Window(Home).Property(RecentEpisode.6.File)])</onclick>
+    </item>
+    <item id="7" description="RecentEpisode7">
+      <visible>!IsEmpty(Window.Property(RecentEpisode.7.File))</visible>
+      <label>$INFO[Window.Property(RecentEpisode.7.Title)]</label>
+      <label2>$INFO[Window.Property(RecentEpisode.7.TVshowTitle)]</label2>
+      <property name="SeasonEpisode">$INFO[Window.Property(RecentEpisode.7.Season),S,•]$INFO[Window.Property(RecentEpisode.7.Episode),E]</property>
+      <thumb>$INFO[Window.Property(RecentEpisode.7.Art(thumb))]</thumb>
+      <property name="tvShowBanner">$INFO[Window.Property(RecentEpisode.7.Art(tvshow.banner))]</property>
+      <property name="tvShowPoster">$INFO[Window.Property(RecentEpisode.7.Art(tvshow.poster))]</property>
+      <onclick>PlayMedia($ESCINFO[Window(Home).Property(RecentEpisode.7.File)])</onclick>
+    </item>
+    <item id="8" description="RecentEpisode8">
+      <visible>!IsEmpty(Window.Property(RecentEpisode.8.File))</visible>
+      <label>$INFO[Window.Property(RecentEpisode.8.Title)]</label>
+      <label2>$INFO[Window.Property(RecentEpisode.8.TVshowTitle)]</label2>
+      <property name="SeasonEpisode">$INFO[Window.Property(RecentEpisode.8.Season),S,•]$INFO[Window.Property(RecentEpisode.8.Episode),E]</property>
+      <thumb>$INFO[Window.Property(RecentEpisode.8.Art(thumb))]</thumb>
+      <property name="tvShowBanner">$INFO[Window.Property(RecentEpisode.8.Art(tvshow.banner))]</property>
+      <property name="tvShowPoster">$INFO[Window.Property(RecentEpisode.8.Art(tvshow.poster))]</property>
+      <onclick>PlayMedia($ESCINFO[Window(Home).Property(RecentEpisode.8.File)])</onclick>
+    </item>
+    <item id="9" description="RecentEpisode9">
+      <visible>!IsEmpty(Window.Property(RecentEpisode.9.File))</visible>
+      <label>$INFO[Window.Property(RecentEpisode.9.Title)]</label>
+      <label2>$INFO[Window.Property(RecentEpisode.9.TVshowTitle)]</label2>
+      <property name="SeasonEpisode">$INFO[Window.Property(RecentEpisode.9.Season),S,•]$INFO[Window.Property(RecentEpisode.9.Episode),E]</property>
+      <thumb>$INFO[Window.Property(RecentEpisode.9.Art(thumb))]</thumb>
+      <property name="tvShowBanner">$INFO[Window.Property(RecentEpisode.9.Art(tvshow.banner))]</property>
+      <property name="tvShowPoster">$INFO[Window.Property(RecentEpisode.9.Art(tvshow.poster))]</property>
+      <onclick>PlayMedia($ESCINFO[Window(Home).Property(RecentEpisode.9.File)])</onclick>
+    </item>
+    <item id="10" description="RecentEpisode10">
+      <visible>!IsEmpty(Window.Property(RecentEpisode.10.File))</visible>
+      <label>$INFO[Window.Property(RecentEpisode.10.Title)]</label>
+      <label2>$INFO[Window.Property(RecentEpisode.10.TVshowTitle)]</label2>
+      <property name="SeasonEpisode">$INFO[Window.Property(RecentEpisode.10.Season),S,•]$INFO[Window.Property(RecentEpisode.10.Episode),E]</property>
+      <thumb>$INFO[Window.Property(RecentEpisode.10.Art(thumb))]</thumb>
+      <property name="tvShowBanner">$INFO[Window.Property(RecentEpisode.10.Art(tvshow.banner))]</property>
+      <property name="tvShowPoster">$INFO[Window.Property(RecentEpisode.10.Art(tvshow.poster))]</property>
+      <onclick>PlayMedia($ESCINFO[Window(Home).Property(RecentEpisode.10.File)])</onclick>
+    </item>
+  </include>
+  <include name="TV_RA_ItemsRecentAired">
+    <item id="1" description="RecentAiredEpisode1">
+      <visible>!IsEmpty(Window.Property(RecentAiredEpisode.1.File))</visible>
+      <label>$INFO[Window.Property(RecentAiredEpisode.1.Title)]</label>
+      <label2>$INFO[Window.Property(RecentAiredEpisode.1.TVshowTitle)]</label2>
+      <property name="SeasonEpisode">$INFO[Window.Property(RecentAiredEpisode.1.Season),S,•]$INFO[Window.Property(RecentAiredEpisode.1.Episode),E]</property>
+      <thumb>$INFO[Window.Property(RecentAiredEpisode.1.Art(thumb))]</thumb>
+      <property name="tvShowBanner">$INFO[Window.Property(RecentAiredEpisode.1.Art(tvshow.banner))]</property>
+      <property name="tvShowPoster">$INFO[Window.Property(RecentAiredEpisode.1.Art(tvshow.poster))]</property>
+      <onclick>PlayMedia($ESCINFO[Window(Home).Property(RecentAiredEpisode.1.File)])</onclick>
+    </item>
+    <item id="2" description="RecentAiredEpisode2">
+      <visible>!IsEmpty(Window.Property(RecentAiredEpisode.2.File))</visible>
+      <label>$INFO[Window.Property(RecentAiredEpisode.2.Title)]</label>
+      <label2>$INFO[Window.Property(RecentAiredEpisode.2.TVshowTitle)]</label2>
+      <property name="SeasonEpisode">$INFO[Window.Property(RecentAiredEpisode.2.Season),S,•]$INFO[Window.Property(RecentAiredEpisode.2.Episode),E]</property>
+      <thumb>$INFO[Window.Property(RecentAiredEpisode.2.Art(thumb))]</thumb>
+      <property name="tvShowBanner">$INFO[Window.Property(RecentAiredEpisode.2.Art(tvshow.banner))]</property>
+      <property name="tvShowPoster">$INFO[Window.Property(RecentAiredEpisode.2.Art(tvshow.poster))]</property>
+      <onclick>PlayMedia($ESCINFO[Window(Home).Property(RecentAiredEpisode.2.File)])</onclick>
+    </item>
+    <item id="3" description="RecentAiredEpisode3">
+      <visible>!IsEmpty(Window.Property(RecentAiredEpisode.3.File))</visible>
+      <label>$INFO[Window.Property(RecentAiredEpisode.3.Title)]</label>
+      <label2>$INFO[Window.Property(RecentAiredEpisode.3.TVshowTitle)]</label2>
+      <property name="SeasonEpisode">$INFO[Window.Property(RecentAiredEpisode.3.Season),S,•]$INFO[Window.Property(RecentAiredEpisode.3.Episode),E]</property>
+      <thumb>$INFO[Window.Property(RecentAiredEpisode.3.Art(thumb))]</thumb>
+      <property name="tvShowBanner">$INFO[Window.Property(RecentAiredEpisode.3.Art(tvshow.banner))]</property>
+      <property name="tvShowPoster">$INFO[Window.Property(RecentAiredEpisode.3.Art(tvshow.poster))]</property>
+      <onclick>PlayMedia($ESCINFO[Window(Home).Property(RecentAiredEpisode.3.File)])</onclick>
+    </item>
+    <item id="4" description="RecentAiredEpisode4">
+      <visible>!IsEmpty(Window.Property(RecentAiredEpisode.4.File))</visible>
+      <label>$INFO[Window.Property(RecentAiredEpisode.4.Title)]</label>
+      <label2>$INFO[Window.Property(RecentAiredEpisode.4.TVshowTitle)]</label2>
+      <property name="SeasonEpisode">$INFO[Window.Property(RecentAiredEpisode.4.Season),S,•]$INFO[Window.Property(RecentAiredEpisode.4.Episode),E]</property>
+      <thumb>$INFO[Window.Property(RecentAiredEpisode.4.Art(thumb))]</thumb>
+      <property name="tvShowBanner">$INFO[Window.Property(RecentAiredEpisode.4.Art(tvshow.banner))]</property>
+      <property name="tvShowPoster">$INFO[Window.Property(RecentAiredEpisode.4.Art(tvshow.poster))]</property>
+      <onclick>PlayMedia($ESCINFO[Window(Home).Property(RecentAiredEpisode.4.File)])</onclick>
+    </item>
+    <item id="5" description="RecentAiredEpisode5">
+      <visible>!IsEmpty(Window.Property(RecentAiredEpisode.5.File))</visible>
+      <label>$INFO[Window.Property(RecentAiredEpisode.5.Title)]</label>
+      <label2>$INFO[Window.Property(RecentAiredEpisode.5.TVshowTitle)]</label2>
+      <property name="SeasonEpisode">$INFO[Window.Property(RecentAiredEpisode.5.Season),S,•]$INFO[Window.Property(RecentAiredEpisode.5.Episode),E]</property>
+      <thumb>$INFO[Window.Property(RecentAiredEpisode.5.Art(thumb))]</thumb>
+      <property name="tvShowBanner">$INFO[Window.Property(RecentAiredEpisode.5.Art(tvshow.banner))]</property>
+      <property name="tvShowPoster">$INFO[Window.Property(RecentAiredEpisode.5.Art(tvshow.poster))]</property>
+      <onclick>PlayMedia($ESCINFO[Window(Home).Property(RecentAiredEpisode.5.File)])</onclick>
+    </item>
+    <item id="6" description="RecentAiredEpisode6">
+      <visible>!IsEmpty(Window.Property(RecentAiredEpisode.6.File))</visible>
+      <label>$INFO[Window.Property(RecentAiredEpisode.6.Title)]</label>
+      <label2>$INFO[Window.Property(RecentAiredEpisode.6.TVshowTitle)]</label2>
+      <property name="SeasonEpisode">$INFO[Window.Property(RecentAiredEpisode.6.Season),S,•]$INFO[Window.Property(RecentAiredEpisode.6.Episode),E]</property>
+      <thumb>$INFO[Window.Property(RecentAiredEpisode.6.Art(thumb))]</thumb>
+      <property name="tvShowBanner">$INFO[Window.Property(RecentAiredEpisode.6.Art(tvshow.banner))]</property>
+      <property name="tvShowPoster">$INFO[Window.Property(RecentAiredEpisode.6.Art(tvshow.poster))]</property>
+      <onclick>PlayMedia($ESCINFO[Window(Home).Property(RecentAiredEpisode.6.File)])</onclick>
+    </item>
+    <item id="7" description="RecentAiredEpisode7">
+      <visible>!IsEmpty(Window.Property(RecentAiredEpisode.7.File))</visible>
+      <label>$INFO[Window.Property(RecentAiredEpisode.7.Title)]</label>
+      <label2>$INFO[Window.Property(RecentAiredEpisode.7.TVshowTitle)]</label2>
+      <property name="SeasonEpisode">$INFO[Window.Property(RecentAiredEpisode.7.Season),S,•]$INFO[Window.Property(RecentAiredEpisode.7.Episode),E]</property>
+      <thumb>$INFO[Window.Property(RecentAiredEpisode.7.Art(thumb))]</thumb>
+      <property name="tvShowBanner">$INFO[Window.Property(RecentAiredEpisode.7.Art(tvshow.banner))]</property>
+      <property name="tvShowPoster">$INFO[Window.Property(RecentAiredEpisode.7.Art(tvshow.poster))]</property>
+      <onclick>PlayMedia($ESCINFO[Window(Home).Property(RecentAiredEpisode.7.File)])</onclick>
+    </item>
+    <item id="8" description="RecentAiredEpisode8">
+      <visible>!IsEmpty(Window.Property(RecentAiredEpisode.8.File))</visible>
+      <label>$INFO[Window.Property(RecentAiredEpisode.8.Title)]</label>
+      <label2>$INFO[Window.Property(RecentAiredEpisode.8.TVshowTitle)]</label2>
+      <property name="SeasonEpisode">$INFO[Window.Property(RecentAiredEpisode.8.Season),S,•]$INFO[Window.Property(RecentAiredEpisode.8.Episode),E]</property>
+      <thumb>$INFO[Window.Property(RecentAiredEpisode.8.Art(thumb))]</thumb>
+      <property name="tvShowBanner">$INFO[Window.Property(RecentAiredEpisode.8.Art(tvshow.banner))]</property>
+      <property name="tvShowPoster">$INFO[Window.Property(RecentAiredEpisode.8.Art(tvshow.poster))]</property>
+      <onclick>PlayMedia($ESCINFO[Window(Home).Property(RecentAiredEpisode.8.File)])</onclick>
+    </item>
+    <item id="9" description="RecentAiredEpisode9">
+      <visible>!IsEmpty(Window.Property(RecentAiredEpisode.9.File))</visible>
+      <label>$INFO[Window.Property(RecentAiredEpisode.9.Title)]</label>
+      <label2>$INFO[Window.Property(RecentAiredEpisode.9.TVshowTitle)]</label2>
+      <property name="SeasonEpisode">$INFO[Window.Property(RecentAiredEpisode.9.Season),S,•]$INFO[Window.Property(RecentAiredEpisode.9.Episode),E]</property>
+      <thumb>$INFO[Window.Property(RecentAiredEpisode.9.Art(thumb))]</thumb>
+      <property name="tvShowBanner">$INFO[Window.Property(RecentAiredEpisode.9.Art(tvshow.banner))]</property>
+      <property name="tvShowPoster">$INFO[Window.Property(RecentAiredEpisode.9.Art(tvshow.poster))]</property>
+      <onclick>PlayMedia($ESCINFO[Window(Home).Property(RecentAiredEpisode.9.File)])</onclick>
+    </item>
+    <item id="10" description="RecentAiredEpisode10">
+      <visible>!IsEmpty(Window.Property(RecentAiredEpisode.10.File))</visible>
+      <label>$INFO[Window.Property(RecentAiredEpisode.10.Title)]</label>
+      <label2>$INFO[Window.Property(RecentAiredEpisode.10.TVshowTitle)]</label2>
+      <property name="SeasonEpisode">$INFO[Window.Property(RecentAiredEpisode.10.Season),S,•]$INFO[Window.Property(RecentAiredEpisode.10.Episode),E]</property>
+      <thumb>$INFO[Window.Property(RecentAiredEpisode.10.Art(thumb))]</thumb>
+      <property name="tvShowBanner">$INFO[Window.Property(RecentAiredEpisode.10.Art(tvshow.banner))]</property>
+      <property name="tvShowPoster">$INFO[Window.Property(RecentAiredEpisode.10.Art(tvshow.poster))]</property>
+      <onclick>PlayMedia($ESCINFO[Window(Home).Property(RecentAiredEpisode.10.File)])</onclick>
+    </item>
+  </include>
+  <include name="TV_RA_ItemsCustom">
+    <item id="1" description="Addons">
+      <visible>!IsEmpty(Skin.String(ShelfTV.1.Label))</visible>
+      <label>$INFO[system.addontitle(Skin.String(ShelfTV.1.Label))]</label>
+      <thumb>$INFO[system.addonicon(Skin.String(ShelfTV.1.Label))]</thumb>
+      <onclick>RunAddon($INFO[Skin.String(ShelfTV.1.Label)])</onclick>
+    </item>
+    <item id="2" description="Addons">
+      <visible>!IsEmpty(Skin.String(ShelfTV.2.Label))</visible>
+      <label>$INFO[system.addontitle(Skin.String(ShelfTV.2.Label))]</label>
+      <thumb>$INFO[system.addonicon(Skin.String(ShelfTV.2.Label))]</thumb>
+      <onclick>RunAddon($INFO[Skin.String(ShelfTV.2.Label)])</onclick>
+    </item>
+    <item id="3" description="Addons">
+      <visible>!IsEmpty(Skin.String(ShelfTV.3.Label))</visible>
+      <label>$INFO[system.addontitle(Skin.String(ShelfTV.3.Label))]</label>
+      <thumb>$INFO[system.addonicon(Skin.String(ShelfTV.3.Label))]</thumb>
+      <onclick>RunAddon($INFO[Skin.String(ShelfTV.3.Label)])</onclick>
+    </item>
+    <item id="4" description="Addons">
+      <visible>!IsEmpty(Skin.String(ShelfTV.4.Label))</visible>
+      <label>$INFO[system.addontitle(Skin.String(ShelfTV.4.Label))]</label>
+      <thumb>$INFO[system.addonicon(Skin.String(ShelfTV.4.Label))]</thumb>
+      <onclick>RunAddon($INFO[Skin.String(ShelfTV.4.Label)])</onclick>
+    </item>
+    <item id="5" description="Addons">
+      <visible>!IsEmpty(Skin.String(ShelfTV.5.Label))</visible>
+      <label>$INFO[system.addontitle(Skin.String(ShelfTV.5.Label))]</label>
+      <thumb>$INFO[system.addonicon(Skin.String(ShelfTV.5.Label))]</thumb>
+      <onclick>RunAddon($INFO[Skin.String(ShelfTV.5.Label)])</onclick>
+    </item>
+    <item id="6" description="Fav">
+      <visible>!IsEmpty(Skin.String(ShelfTV.6.Path))</visible>
+      <label>$INFO[Skin.String(ShelfTV.6.Label)]</label>
+      <thumb>$INFO[Skin.String(ShelfTV.6.Icon)]</thumb>
+      <onclick>$INFO[Skin.String(ShelfTV.6.Path)]</onclick>
+    </item>
+    <item id="7" description="Fav">
+      <visible>!IsEmpty(Skin.String(ShelfTV.7.Path))</visible>
+      <label>$INFO[Skin.String(ShelfTV.7.Label)]</label>
+      <thumb>$INFO[Skin.String(ShelfTV.7.Icon)]</thumb>
+      <onclick>$INFO[Skin.String(ShelfTV.7.Path)]</onclick>
+    </item>
+    <item id="8" description="Fav">
+      <visible>!IsEmpty(Skin.String(ShelfTV.8.Path))</visible>
+      <label>$INFO[Skin.String(ShelfTV.8.Label)]</label>
+      <thumb>$INFO[Skin.String(ShelfTV.8.Icon)]</thumb>
+      <onclick>$INFO[Skin.String(ShelfTV.8.Path)]</onclick>
+    </item>
+    <item id="9" description="Fav">
+      <visible>!IsEmpty(Skin.String(ShelfTV.9.Path))</visible>
+      <label>$INFO[Skin.String(ShelfTV.9.Label)]</label>
+      <thumb>$INFO[Skin.String(ShelfTV.9.Icon)]</thumb>
+      <onclick>$INFO[Skin.String(ShelfTV.9.Path)]</onclick>
+    </item>
+    <item id="10" description="Fav">
+      <visible>!IsEmpty(Skin.String(ShelfTV.10.Path))</visible>
+      <label>$INFO[Skin.String(ShelfTV.10.Label)]</label>
+      <thumb>$INFO[Skin.String(ShelfTV.10.Icon)]</thumb>
+      <onclick>$INFO[Skin.String(ShelfTV.10.Path)]</onclick>
+    </item>
   </include>
   <include name="Music_RA">
     <control type="group">

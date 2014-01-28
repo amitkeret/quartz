@@ -155,7 +155,7 @@
         <pagecontrol>60</pagecontrol>
         <scrolltime tween="sine" easing="inout">280</scrolltime>
         <!--MOVIES-->
-        <control type="button" id="100" description="Auto">
+        <control type="button" id="100" description="Movie Auto">
           <visible>Library.HasContent(Movies)</visible>
           <visible>!Skin.HasSetting(MoviesSectionHide) + Container(50).HasFocus(1001)</visible>
           <include>SettingsSubmenuButtons</include>
@@ -163,6 +163,17 @@
           <label2>$VAR[MoviesShelfLabel2]</label2>
           <onclick>Skin.Reset(MoviesShelf_Custom)</onclick>
           <onclick>Skin.Reset(MoviesShelf_Image)</onclick>
+        </control>
+        <control type="button" id="98" description="Movie Auto Type">
+          <visible>!Skin.HasSetting(MoviesSectionHide) + Container(50).HasFocus(1001)</visible>
+          <visible>!Skin.HasSetting(MoviesShelf_Image) + !Skin.HasSetting(MoviesShelf_Custom)</visible>
+          <include>SettingsSubmenuButtons</include>
+          <label>- $LOCALIZE[31121]</label>
+          <label2>$VAR[MovieShelfAutoItemsLabel]</label2>
+          <onclick condition="!Skin.HasSetting(MovieShelfItemsType2)">Skin.SetBool(MovieShelfItemsType2)</onclick>
+          <onclick condition="!Skin.HasSetting(MovieShelfItemsType2)">Skin.Reset(MovieShelfItemsType1)</onclick>
+          <onclick condition="Skin.HasSetting(MovieShelfItemsType2)">Skin.SetBool(MovieShelfItemsType1)</onclick>
+          <onclick condition="Skin.HasSetting(MovieShelfItemsType2)">Skin.Reset(MovieShelfItemsType2)</onclick>
         </control>
         <control type="radiobutton" id="101" description="Image">
           <visible>!Skin.HasSetting(MoviesSectionHide) + Container(50).HasFocus(1001)</visible>
@@ -282,7 +293,17 @@
           <onclick>Skin.Reset(TVShelf_Custom)</onclick>
           <onclick>Skin.Reset(TVShelf_Image)</onclick>
         </control>
-
+        <control type="button" id="298" description="TV Auto Type">
+          <visible>!Skin.HasSetting(TVSectionHide) + Container(50).HasFocus(1002)</visible>
+          <visible>!Skin.HasSetting(TVShelf_Image) + !Skin.HasSetting(TVShelf_Custom)</visible>
+          <include>SettingsSubmenuButtons</include>
+          <label>- $LOCALIZE[31121]</label>
+          <label2>$VAR[TVShelfAutoItemsLabel]</label2>
+          <onclick condition="!Skin.HasSetting(TVShelfItemsType2)">Skin.SetBool(TVShelfItemsType2)</onclick>
+          <onclick condition="!Skin.HasSetting(TVShelfItemsType2)">Skin.Reset(TVShelfItemsType1)</onclick>
+          <onclick condition="Skin.HasSetting(TVShelfItemsType2)">Skin.SetBool(TVShelfItemsType1)</onclick>
+          <onclick condition="Skin.HasSetting(TVShelfItemsType2)">Skin.Reset(TVShelfItemsType2)</onclick>
+        </control>
         <control type="button" id="299" description="TV Auto Theme">
           <visible>!Skin.HasSetting(TVSectionHide) + Container(50).HasFocus(1002)</visible>
           <visible>!Skin.HasSetting(TVShelf_Image) + !Skin.HasSetting(TVShelf_Custom)</visible>

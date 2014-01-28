@@ -30,6 +30,11 @@
     <value condition="Skin.HasSetting(MoviesShelf_Custom) | Skin.HasSetting(MoviesShelf_Image)">$LOCALIZE[16039]</value>
     <value>$LOCALIZE[16041]</value>
   </variable>
+  <variable name="MovieShelfAutoItemsLabel">
+    <value condition="Skin.HasSetting(MoviesShelf_Custom)">$LOCALIZE[111]</value>
+    <value condition="Skin.HasSetting(MovieShelfItemsType2)">$LOCALIZE[31018]</value>
+    <value>$LOCALIZE[20386]</value>
+  </variable>
   <variable name="TVShelfLabel2" description="Label2 media shelf TV">
     <value condition="Skin.HasSetting(TVShelf_Custom) | Skin.HasSetting(TVShelf_Image)">$LOCALIZE[16039]</value>
     <value>$LOCALIZE[16041]</value>
@@ -39,6 +44,15 @@
     <value condition="Skin.HasSetting(TVShelfTheme3)">$LOCALIZE[31127]3</value>
     <value condition="Skin.HasSetting(TVShelfTheme4)">$LOCALIZE[31127]4</value>
     <value>$LOCALIZE[31127]1</value>
+  </variable>
+  <variable name="TVShelfAutoItemsLabel">
+    <value condition="Skin.HasSetting(TVShelf_Custom)">$LOCALIZE[111]</value>
+    <value condition="Skin.HasSetting(TVShelfItemsType2)">$LOCALIZE[31019]</value>
+    <value>$LOCALIZE[20387]</value>
+  </variable>
+  <variable name="TVShelfItemsType" description="Label4 media shelf TV">
+    <value condition="Skin.HasSetting(TVShelfItemsType2)">RecentAiredEpisode</value>
+    <value>RecentEpisode</value>
   </variable>
   <variable name="MusicShelfLabel2" description="Label2 media shelf Music">
     <value condition="Skin.HasSetting(MusicShelf_Custom) | Skin.HasSetting(MusicShelf_Image)">$LOCALIZE[16039]</value>
