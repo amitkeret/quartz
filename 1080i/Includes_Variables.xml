@@ -9,7 +9,7 @@
   </variable>
   <variable name="ShelfIcon" description="Shelf custom and fallback image">
     <value condition="Control.HasFocus(301) + !Control.IsVisible(311) + Skin.HasSetting(MoviesShelf_Image)">$INFO[Skin.String(MoviesShelf_Icon)]</value>
-    <value condition="Control.HasFocus(302) + !Control.IsVisible(312) + Skin.HasSetting(TVShelf_Image)">$INFO[Skin.String(TVShelf_Icon)]</value>
+    <value condition="Control.HasFocus(302) + !Control.IsVisible(312) + StringCompare(Skin.String(TVShelfItemsType),image)">$INFO[Skin.String(TVShelf_Icon)]</value>
     <value condition="Control.HasFocus(303) + !Control.IsVisible(313) + Skin.HasSetting(MusicShelf_Image)">$INFO[Skin.String(MusicShelf_Icon)]</value>
     <value condition="Control.HasFocus(304) + !Control.IsVisible(314) + Skin.HasSetting(PicturesShelf_Image)">$INFO[Skin.String(PicturesShelf_Icon)]</value>
     <value condition="Control.HasFocus(305) + !Control.IsVisible(315) + Skin.HasSetting(AddonsShelf_Image)">$INFO[Skin.String(AddonsShelf_Icon)]</value>
@@ -36,18 +36,19 @@
     <value>$LOCALIZE[20386]</value>
   </variable>
   <variable name="TVShelfLabel2" description="Label2 media shelf TV">
-    <value condition="Skin.HasSetting(TVShelf_Custom) | Skin.HasSetting(TVShelf_Image)">$LOCALIZE[16039]</value>
+    <value condition="!IsEmpty(Skin.String(TVShelfItemsType)) + !StringCompare(Skin.String(TVShelfItemsType),auto)">$LOCALIZE[16039]</value>
     <value>$LOCALIZE[16041]</value>
   </variable>
   <variable name="TVShelfLabel3" description="Label3 media shelf TV">
-    <value condition="Skin.HasSetting(TVShelfTheme2)">$LOCALIZE[31127]2</value>
-    <value condition="Skin.HasSetting(TVShelfTheme3)">$LOCALIZE[31127]3</value>
-    <value condition="Skin.HasSetting(TVShelfTheme4)">$LOCALIZE[31127]4</value>
+    <value condition="StringCompare(Skin.String(TVShelfAutoItemsTheme),2)">$LOCALIZE[31127]2</value>
+    <value condition="StringCompare(Skin.String(TVShelfAutoItemsTheme),3)">$LOCALIZE[31127]3</value>
+    <value condition="StringCompare(Skin.String(TVShelfAutoItemsTheme),4)">$LOCALIZE[31127]4</value>
     <value>$LOCALIZE[31127]1</value>
   </variable>
   <variable name="TVShelfAutoItemsLabel">
-    <value condition="Skin.HasSetting(TVShelf_Custom)">$LOCALIZE[111]</value>
-    <value condition="Skin.HasSetting(TVShelfItemsType2)">$LOCALIZE[31019]</value>
+    <value condition="StringCompare(Skin.String(TVShelfItemsType),image)"></value>
+    <value condition="StringCompare(Skin.String(TVShelfItemsType),custom)">$LOCALIZE[111]</value>
+    <value condition="StringCompare(Skin.String(TVShelfAutoItemsType),aired)">$LOCALIZE[31019]</value>
     <value>$LOCALIZE[20387]</value>
   </variable>
   <variable name="TVShelfItemsType" description="Label4 media shelf TV">

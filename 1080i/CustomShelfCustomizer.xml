@@ -284,53 +284,47 @@
           <onclick>RunScript(script.favourites,property=ShelfMovies.10)</onclick>
         </control>
         <!--TV-->
-        <control type="button" id="200" description="TV Auto">
+        <control type="radiobutton" id="200" description="TV Auto">
           <visible>Library.HasContent(TVShows)</visible>
           <visible>!Skin.HasSetting(TVSectionHide) + Container(50).HasFocus(1002)</visible>
           <include>SettingsSubmenuButtons</include>
           <label>31986</label>
-          <label2>$VAR[TVShelfLabel2]</label2>
-          <onclick>Skin.Reset(TVShelf_Custom)</onclick>
-          <onclick>Skin.Reset(TVShelf_Image)</onclick>
+          <onclick>Skin.SetString(TVShelfItemsType,auto)</onclick>
+          <selected>IsEmpty(Skin.String(TVShelfItemsType)) | StringCompare(Skin.String(TVShelfItemsType),auto)</selected>
         </control>
         <control type="button" id="298" description="TV Auto Type">
+          <visible>Library.HasContent(TVShows)</visible>
           <visible>!Skin.HasSetting(TVSectionHide) + Container(50).HasFocus(1002)</visible>
-          <visible>!Skin.HasSetting(TVShelf_Image) + !Skin.HasSetting(TVShelf_Custom)</visible>
+          <visible>IsEmpty(Skin.String(TVShelfItemsType)) | StringCompare(Skin.String(TVShelfItemsType),auto)</visible>
           <include>SettingsSubmenuButtons</include>
           <label>- $LOCALIZE[31121]</label>
           <label2>$VAR[TVShelfAutoItemsLabel]</label2>
-          <onclick condition="!Skin.HasSetting(TVShelfItemsType2)">Skin.SetBool(TVShelfItemsType2)</onclick>
-          <onclick condition="!Skin.HasSetting(TVShelfItemsType2)">Skin.Reset(TVShelfItemsType1)</onclick>
-          <onclick condition="Skin.HasSetting(TVShelfItemsType2)">Skin.SetBool(TVShelfItemsType1)</onclick>
-          <onclick condition="Skin.HasSetting(TVShelfItemsType2)">Skin.Reset(TVShelfItemsType2)</onclick>
+          <onclick condition="IsEmpty(Skin.String(TVShelfAutoItemsType)) | StringCompare(Skin.String(TVShelfAutoItemsType),added)">Skin.SetString(TVShelfAutoItemsType,aired)</onclick>
+          <onclick condition="StringCompare(Skin.String(TVShelfAutoItemsType),aired)">Skin.SetString(TVShelfAutoItemsType,added)</onclick>
         </control>
         <control type="button" id="299" description="TV Auto Theme">
+          <visible>Library.HasContent(TVShows)</visible>
           <visible>!Skin.HasSetting(TVSectionHide) + Container(50).HasFocus(1002)</visible>
-          <visible>!Skin.HasSetting(TVShelf_Image) + !Skin.HasSetting(TVShelf_Custom)</visible>
+          <visible>IsEmpty(Skin.String(TVShelfItemsType)) | StringCompare(Skin.String(TVShelfItemsType),auto)</visible>
           <include>SettingsSubmenuButtons</include>
           <label>- $LOCALIZE[31126]</label>
           <label2>$VAR[TVShelfLabel3]</label2>
-          <onclick condition="!Skin.HasSetting(TVShelfTheme2) + !Skin.HasSetting(TVShelfTheme3) + !Skin.HasSetting(TVShelfTheme4)">Skin.Reset(TVShelfTheme1)</onclick>
-          <onclick condition="!Skin.HasSetting(TVShelfTheme2) + !Skin.HasSetting(TVShelfTheme3) + !Skin.HasSetting(TVShelfTheme4)">Skin.SetBool(TVShelfTheme2)</onclick>
-          <onclick condition="Skin.HasSetting(TVShelfTheme2)">Skin.Reset(TVShelfTheme2)</onclick>
-          <onclick condition="Skin.HasSetting(TVShelfTheme2)">Skin.SetBool(TVShelfTheme3)</onclick>
-          <onclick condition="Skin.HasSetting(TVShelfTheme3)">Skin.Reset(TVShelfTheme3)</onclick>
-          <onclick condition="Skin.HasSetting(TVShelfTheme3)">Skin.SetBool(TVShelfTheme4)</onclick>
-          <onclick condition="Skin.HasSetting(TVShelfTheme3)">Skin.SetBool(TVShelfThemePosters)</onclick>
-          <onclick condition="Skin.HasSetting(TVShelfTheme4)">Skin.Reset(TVShelfTheme4)</onclick>
-          <onclick condition="Skin.HasSetting(TVShelfTheme4)">Skin.Reset(TVShelfThemePosters)</onclick>
-          <onclick condition="Skin.HasSetting(TVShelfTheme4)">Skin.SetBool(TVShelfTheme1)</onclick>
+          <onclick condition="IsEmpty(Skin.String(TVShelfAutoItemsTheme)) | StringCompare(Skin.String(TVShelfAutoItemsTheme),1)">Skin.SetString(TVShelfAutoItemsTheme,2)</onclick>
+          <onclick condition="StringCompare(Skin.String(TVShelfAutoItemsTheme),2)">Skin.SetString(TVShelfAutoItemsTheme,3)</onclick>
+          <onclick condition="StringCompare(Skin.String(TVShelfAutoItemsTheme),3)">Skin.SetBool(TVShelfThemePosters)</onclick>
+          <onclick condition="StringCompare(Skin.String(TVShelfAutoItemsTheme),3)">Skin.SetString(TVShelfAutoItemsTheme,4)</onclick>
+          <onclick condition="StringCompare(Skin.String(TVShelfAutoItemsTheme),4)">Skin.Reset(TVShelfThemePosters)</onclick>
+          <onclick condition="StringCompare(Skin.String(TVShelfAutoItemsTheme),4)">Skin.SetString(TVShelfAutoItemsTheme,1)</onclick>
         </control>
         <control type="radiobutton" id="201" description="Image">
           <visible>!Skin.HasSetting(TVSectionHide) + Container(50).HasFocus(1002)</visible>
           <include>SettingsSubmenuButtons</include>
           <label>31984</label>
-          <onclick>Skin.Reset(TVShelf_Custom)</onclick>
-          <onclick>Skin.ToggleSetting(TVShelf_Image)</onclick>
-          <selected>Skin.HasSetting(TVShelf_Image)</selected>
+          <onclick>Skin.SetString(TVShelfItemsType,image)</onclick>
+          <selected>StringCompare(Skin.String(TVShelfItemsType),image)</selected>
         </control>
         <control type="button" id="202" description="Set image">
-          <visible>Skin.HasSetting(TVShelf_Image) + Container(50).HasFocus(1002)</visible>
+          <visible>StringCompare(Skin.String(TVShelfItemsType),image) + Container(50).HasFocus(1002)</visible>
           <include>SettingsSubmenuButtons</include>
           <label>- $LOCALIZE[1030]</label>
           <label2>$INFO[Skin.String(TVShelf_Icon)]</label2>
@@ -340,53 +334,46 @@
           <visible>!Skin.HasSetting(TVSectionHide) + Container(50).HasFocus(1002)</visible>
           <include>SettingsSubmenuButtons</include>
           <label>31985</label>
-          <onclick>Skin.Reset(TVShelf_Image)</onclick>
-          <onclick>Skin.ToggleSetting(TVShelf_Custom)</onclick>
-          <selected>Skin.HasSetting(TVShelf_Custom)</selected>
+          <onclick>Skin.SetString(TVShelfItemsType,custom)</onclick>
+          <selected>StringCompare(Skin.String(TVShelfItemsType),custom)</selected>
         </control>
         <control type="button" id="204" description="ADDONS">
-          <visible>Skin.HasSetting(TVShelf_Custom)</visible>
-          <visible>!Skin.HasSetting(TVSectionHide) + Container(50).HasFocus(1002)</visible>
+          <visible>StringCompare(Skin.String(TVShelfItemsType),custom) + Container(50).HasFocus(1002)</visible>
           <include>SettingsSubmenuButtons</include>
           <label>$LOCALIZE[24000] 1</label>
           <label2>$INFO[Skin.String(ShelfTV.1.Label)]</label2>
           <onclick>Skin.SetAddon(ShelfTV.1.Label,xbmc.python.pluginsource)</onclick>
         </control>
         <control type="button" id="205" description="ADDONS">
-          <visible>Skin.HasSetting(TVShelf_Custom)</visible>
-          <visible>!Skin.HasSetting(TVSectionHide) + Container(50).HasFocus(1002)</visible>
+          <visible>StringCompare(Skin.String(TVShelfItemsType),custom) + Container(50).HasFocus(1002)</visible>
           <include>SettingsSubmenuButtons</include>
           <label>$LOCALIZE[24000] 2</label>
           <label2>$INFO[Skin.String(ShelfTV.2.Label)]</label2>
           <onclick>Skin.SetAddon(ShelfTV.2.Label,xbmc.python.pluginsource)</onclick>
         </control>
         <control type="button" id="206" description="ADDONS">
-          <visible>Skin.HasSetting(TVShelf_Custom)</visible>
-          <visible>!Skin.HasSetting(TVSectionHide) + Container(50).HasFocus(1002)</visible>
+          <visible>StringCompare(Skin.String(TVShelfItemsType),custom) + Container(50).HasFocus(1002)</visible>
           <include>SettingsSubmenuButtons</include>
           <label>$LOCALIZE[24000] 3</label>
           <label2>$INFO[Skin.String(ShelfTV.3.Label)]</label2>
           <onclick>Skin.SetAddon(ShelfTV.3.Label,xbmc.python.pluginsource)</onclick>
         </control>
         <control type="button" id="207" description="ADDONS">
-          <visible>Skin.HasSetting(TVShelf_Custom)</visible>
-          <visible>!Skin.HasSetting(TVSectionHide) + Container(50).HasFocus(1002)</visible>
+          <visible>StringCompare(Skin.String(TVShelfItemsType),custom) + Container(50).HasFocus(1002)</visible>
           <include>SettingsSubmenuButtons</include>
           <label>$LOCALIZE[24000] 4</label>
           <label2>$INFO[Skin.String(ShelfTV.4.Label)]</label2>
           <onclick>Skin.SetAddon(ShelfTV.4.Label,xbmc.python.pluginsource)</onclick>
         </control>
         <control type="button" id="208" description="ADDONS">
-          <visible>Skin.HasSetting(TVShelf_Custom)</visible>
-          <visible>!Skin.HasSetting(TVSectionHide) + Container(50).HasFocus(1002)</visible>
+          <visible>StringCompare(Skin.String(TVShelfItemsType),custom) + Container(50).HasFocus(1002)</visible>
           <include>SettingsSubmenuButtons</include>
           <label>$LOCALIZE[24000] 5</label>
           <label2>$INFO[Skin.String(ShelfTV.5.Label)]</label2>
           <onclick>Skin.SetAddon(ShelfTV.5.Label,xbmc.python.pluginsource)</onclick>
         </control>
         <control type="button" id="209" description="FAVOURITES">
-          <visible>Skin.HasSetting(TVShelf_Custom)</visible>
-          <visible>!Skin.HasSetting(TVSectionHide) + Container(50).HasFocus(1002)</visible>
+          <visible>StringCompare(Skin.String(TVShelfItemsType),custom) + Container(50).HasFocus(1002)</visible>
           <include>SettingsSubmenuButtons</include>
           <label>$LOCALIZE[1036] 1</label>
           <label2>$INFO[Skin.String(ShelfTV.6.Label)]</label2>
@@ -394,8 +381,7 @@
           <onclick>RunScript(script.favourites,property=ShelfTV.6)</onclick>
         </control>
         <control type="button" id="210" description="FAVOURITES">
-          <visible>Skin.HasSetting(TVShelf_Custom)</visible>
-          <visible>!Skin.HasSetting(TVSectionHide) + Container(50).HasFocus(1002)</visible>
+          <visible>StringCompare(Skin.String(TVShelfItemsType),custom) + Container(50).HasFocus(1002)</visible>
           <include>SettingsSubmenuButtons</include>
           <label>$LOCALIZE[1036] 2</label>
           <label2>$INFO[Skin.String(ShelfTV.7.Label)]</label2>
@@ -403,8 +389,7 @@
           <onclick>RunScript(script.favourites,property=ShelfTV.7)</onclick>
         </control>
         <control type="button" id="211" description="FAVOURITES">
-          <visible>Skin.HasSetting(TVShelf_Custom)</visible>
-          <visible>!Skin.HasSetting(TVSectionHide) + Container(50).HasFocus(1002)</visible>
+          <visible>StringCompare(Skin.String(TVShelfItemsType),custom) + Container(50).HasFocus(1002)</visible>
           <include>SettingsSubmenuButtons</include>
           <label>$LOCALIZE[1036] 3</label>
           <label2>$INFO[Skin.String(ShelfTV.8.Label)]</label2>
@@ -412,8 +397,7 @@
           <onclick>RunScript(script.favourites,property=ShelfTV.8)</onclick>
         </control>
         <control type="button" id="212" description="FAVOURITES">
-          <visible>Skin.HasSetting(TVShelf_Custom)</visible>
-          <visible>!Skin.HasSetting(TVSectionHide) + Container(50).HasFocus(1002)</visible>
+          <visible>StringCompare(Skin.String(TVShelfItemsType),custom) + Container(50).HasFocus(1002)</visible>
           <include>SettingsSubmenuButtons</include>
           <label>$LOCALIZE[1036] 4</label>
           <label2>$INFO[Skin.String(ShelfTV.9.Label)]</label2>
@@ -421,8 +405,7 @@
           <onclick>RunScript(script.favourites,property=ShelfTV.9)</onclick>
         </control>
         <control type="button" id="213" description="FAVOURITES">
-          <visible>Skin.HasSetting(TVShelf_Custom)</visible>
-          <visible>!Skin.HasSetting(TVSectionHide) + Container(50).HasFocus(1002)</visible>
+          <visible>StringCompare(Skin.String(TVShelfItemsType),custom) + Container(50).HasFocus(1002)</visible>
           <include>SettingsSubmenuButtons</include>
           <label>$LOCALIZE[1036] 5</label>
           <label2>$INFO[Skin.String(ShelfTV.10.Label)]</label2>
@@ -802,28 +785,28 @@
           </control>
           <control type="group" description="TV Theme image">
             <control type="image">
-              <visible>!Skin.HasSetting(TVShelfTheme2) + !Skin.HasSetting(TVShelfTheme3) + !Skin.HasSetting(TVShelfTheme4)</visible>
+              <visible>IsEmpty(Skin.String(TVShelfAutoItemsTheme)) | StringCompare(Skin.String(TVShelfAutoItemsTheme),1)</visible>
               <include>SettingsAutoItemsThemePreview</include>
               <width>280</width>
               <height>202</height>
               <texture>help/ShelfTVTheme1.png</texture>
             </control>
             <control type="image">
-              <visible>Skin.HasSetting(TVShelfTheme2)</visible>
+              <visible>StringCompare(Skin.String(TVShelfAutoItemsTheme),2)</visible>
               <include>SettingsAutoItemsThemePreview</include>
               <width>280</width>
               <height>202</height>
               <texture>help/ShelfTVTheme2.png</texture>
             </control>
             <control type="image">
-              <visible>Skin.HasSetting(TVShelfTheme3)</visible>
+              <visible>StringCompare(Skin.String(TVShelfAutoItemsTheme),3)</visible>
               <include>SettingsAutoItemsThemePreview</include>
               <width>280</width>
               <height>202</height>
               <texture>help/ShelfTVTheme3.png</texture>
             </control>
             <control type="image">
-              <visible>Skin.HasSetting(TVShelfTheme4)</visible>
+              <visible>StringCompare(Skin.String(TVShelfAutoItemsTheme),4)</visible>
               <include>SettingsAutoItemsThemePreview</include>
               <width>185</width>
               <height>260</height>
