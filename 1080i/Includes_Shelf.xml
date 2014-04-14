@@ -666,8 +666,8 @@
         <onright>312</onright>
         <include>EpisodeShortcutsCommons</include>
         <content>
-          <include condition="!StringCompare(Skin.String(TVShelfItemsType),custom) + !StringCompare(Skin.String(TVShelfAutoItemsType),aired)">TV_RA_ItemsRecent</include>
-          <include condition="!StringCompare(Skin.String(TVShelfItemsType),custom) + StringCompare(Skin.String(TVShelfAutoItemsType),aired)">TV_RA_ItemsRecentAired</include>
+          <include condition="IsEmpty(Skin.String(TVShelfItemsType)) + IsEmpty(Skin.String(TVShelfAutoItemsType))">TV_RA_ItemsRecent</include>
+          <include condition="IsEmpty(Skin.String(TVShelfItemsType)) + StringCompare(Skin.String(TVShelfAutoItemsType),aired)">TV_RA_ItemsRecentAired</include>
           <include condition="StringCompare(Skin.String(TVShelfItemsType),custom)">TV_RA_ItemsCustom</include>
         </content>
       </control>
