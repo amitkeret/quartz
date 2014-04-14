@@ -1,3 +1,10 @@
+v 0.2.1
+- improved condition checks for default skin values
+
+v 0.2.0
+- support for service.skin.widgets
+- choice between recently added / recently aired in auto list
+
 v 0.1.0
 - initial mod separation (together with commit 47838c2)
-
+- theme support for tv shelf auto items
