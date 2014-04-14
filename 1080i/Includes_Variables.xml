@@ -46,7 +46,6 @@
     <value>$LOCALIZE[31127]1</value>
   </variable>
   <variable name="TVShelfAutoItemsLabel">
-    <value condition="StringCompare(Skin.String(TVShelfItemsType),image)"></value>
     <value condition="StringCompare(Skin.String(TVShelfItemsType),custom)">$LOCALIZE[111]</value>
     <value condition="StringCompare(Skin.String(TVShelfAutoItemsType),aired)">$LOCALIZE[31019]</value>
     <value>$LOCALIZE[20387]</value>
