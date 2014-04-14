@@ -115,7 +115,7 @@
     <height>402</height>
     <orientation>horizontal</orientation>
     <scrolltime>400</scrolltime>
-    <itemlayout condition="!Skin.HasSetting(MoviesShelf_Custom) + Library.HasContent(Movies)" height="387" width="254">
+    <itemlayout condition="Library.HasContent(Movies) + IsEmpty(Skin.String(MovieShelfItemsType))" height="387" width="254">
       <control type="image" description="Reflection">
         <posx>26</posx>
         <posy>330</posy>
@@ -133,7 +133,7 @@
         <aspectratio>scale</aspectratio>
       </control>
     </itemlayout>
-    <focusedlayout condition="!Skin.HasSetting(MoviesShelf_Custom) + Library.HasContent(Movies)" height="387" width="254">
+    <focusedlayout condition="Library.HasContent(Movies) + IsEmpty(Skin.String(MovieShelfItemsType))" height="387" width="254">
       <control type="group">
         <control type="image" description="Reflection">
           <posx>26</posx>
@@ -165,7 +165,7 @@
         </control>
       </control>
     </focusedlayout>
-    <itemlayout condition="Skin.HasSetting(MoviesShelf_Custom)" height="357" width="354">
+    <itemlayout condition="StringCompare(Skin.String(MovieShelfItemsType),custom)" height="357" width="354">
       <control type="image" description="Reflection">
         <posx>27</posx>
         <posy>330</posy>
@@ -183,7 +183,7 @@
         <aspectratio>scale</aspectratio>
       </control>
     </itemlayout>
-    <focusedlayout condition="Skin.HasSetting(MoviesShelf_Custom)" height="357" width="354">
+    <focusedlayout condition="StringCompare(Skin.String(MovieShelfItemsType),custom)" height="357" width="354">
       <control type="group">
         <control type="image" description="Reflection">
           <posx>27</posx>
@@ -427,22 +427,22 @@
         <label>[B]$VAR[MovieShelfAutoItemsLabel][/B]</label>
       </control>
       <control type="panel" id="311" description="TOP Shortcuts">
-        <visible>[Library.HasContent(Movies) | Skin.HasSetting(MoviesShelf_Custom)] + [ControlGroup(9000).HasFocus(301) | Control.HasFocus(311)]</visible>
+        <visible>[Library.HasContent(Movies) | StringCompare(Skin.String(MovieShelfItemsType),custom)] + [ControlGroup(9000).HasFocus(301) | Control.HasFocus(311)]</visible>
         <onup>noop</onup>
         <ondown>301</ondown>
         <onleft>311</onleft>
         <onright>311</onright>
         <include>MoviesShortcutsCommons</include>
         <content>
-          <include condition="!Skin.HasSetting(MoviesShelf_Custom) + !Skin.HasSetting(MovieShelfItemsType2)">Movies_RA_ItemsRecent</include>
-          <include condition="!Skin.HasSetting(MoviesShelf_Custom) + Skin.HasSetting(MovieShelfItemsType2)">Movies_RA_ItemsRecentAired</include>
-          <include condition="Skin.HasSetting(MoviesShelf_Custom)">Movies_RA_ItemsCustom</include>
+          <include condition="IsEmpty(Skin.String(MovieShelfItemsType)) + IsEmpty(Skin.String(MovieShelfAutoItemsType))">Movies_RA_ItemsRecent</include>
+          <include condition="IsEmpty(Skin.String(MovieShelfItemsType)) + StringCompare(Skin.String(MovieShelfAutoItemsType),aired)">Movies_RA_ItemsRecentAired</include>
+          <include condition="StringCompare(Skin.String(MovieShelfItemsType),custom)">Movies_RA_ItemsCustom</include>
         </content>
       </control>
       <control type="group" description="item hover box">
         <visible>Control.HasFocus(311)</visible>
         <control type="image">
-          <visible>Skin.HasSetting(MoviesShelf_Custom)</visible>
+          <visible>StringCompare(Skin.String(MovieShelfItemsType),custom)</visible>
           <include>ShelfHoverBoxRectangle</include>
           <animation condition="Container(311).Position(0)" effect="slide" start="0,0" end="0,0" time="220" easing="inout" reversible="true">Conditional</animation>
           <animation condition="Container(311).Position(1)" effect="slide" start="0,0" end="354,0" time="220" easing="inout" reversible="true">Conditional</animation>
@@ -451,7 +451,7 @@
           <animation condition="Container(311).Position(4)" effect="slide" start="0,0" end="1416,0" time="220" easing="inout" reversible="true">Conditional</animation>
         </control>
         <control type="image">
-          <visible>!Skin.HasSetting(MoviesShelf_Custom)</visible>
+          <visible>IsEmpty(Skin.String(MovieShelfItemsType))</visible>
           <include>ShelfHoverBoxPoster</include>
           <animation condition="Container(311).Position(0)" effect="slide" start="0,0" end="0,0" time="220" easing="inout" reversible="true">Conditional</animation>
           <animation condition="Container(311).Position(1)" effect="slide" start="0,0" end="254,0" time="220" easing="inout" reversible="true">Conditional</animation>

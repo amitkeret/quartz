@@ -155,92 +155,81 @@
         <pagecontrol>60</pagecontrol>
         <scrolltime tween="sine" easing="inout">280</scrolltime>
         <!--MOVIES-->
-        <control type="button" id="100" description="Movie Auto">
+        <control type="radiobutton" id="100" description="Movie Auto">
           <visible>Library.HasContent(Movies)</visible>
           <visible>!Skin.HasSetting(MoviesSectionHide) + Container(50).HasFocus(1001)</visible>
           <include>SettingsSubmenuButtons</include>
           <label>31986</label>
-          <label2>$VAR[MoviesShelfLabel2]</label2>
-          <onclick>Skin.Reset(MoviesShelf_Custom)</onclick>
-          <onclick>Skin.Reset(MoviesShelf_Image)</onclick>
+          <onclick>Skin.Reset(MovieShelfItemsType)</onclick>
+          <selected>IsEmpty(Skin.String(MovieShelfItemsType))</selected>
         </control>
         <control type="button" id="98" description="Movie Auto Type">
           <visible>!Skin.HasSetting(MoviesSectionHide) + Container(50).HasFocus(1001)</visible>
-          <visible>!Skin.HasSetting(MoviesShelf_Image) + !Skin.HasSetting(MoviesShelf_Custom)</visible>
+          <visible>IsEmpty(Skin.String(MovieShelfItemsType))</visible>
           <include>SettingsSubmenuButtons</include>
           <label>- $LOCALIZE[31121]</label>
           <label2>$VAR[MovieShelfAutoItemsLabel]</label2>
-          <onclick condition="!Skin.HasSetting(MovieShelfItemsType2)">Skin.SetBool(MovieShelfItemsType2)</onclick>
-          <onclick condition="!Skin.HasSetting(MovieShelfItemsType2)">Skin.Reset(MovieShelfItemsType1)</onclick>
-          <onclick condition="Skin.HasSetting(MovieShelfItemsType2)">Skin.SetBool(MovieShelfItemsType1)</onclick>
-          <onclick condition="Skin.HasSetting(MovieShelfItemsType2)">Skin.Reset(MovieShelfItemsType2)</onclick>
+          <onclick condition="IsEmpty(Skin.String(MovieShelfAutoItemsType))">Skin.SetString(MovieShelfAutoItemsType,aired)</onclick>
+          <onclick condition="StringCompare(Skin.String(MovieShelfAutoItemsType),aired)">Skin.Reset(MovieShelfAutoItemsType)</onclick>
         </control>
         <control type="radiobutton" id="101" description="Image">
           <visible>!Skin.HasSetting(MoviesSectionHide) + Container(50).HasFocus(1001)</visible>
           <include>SettingsSubmenuButtons</include>
           <label>31984</label>
-          <onclick>Skin.Reset(MoviesShelf_Custom)</onclick>
-          <onclick>Skin.ToggleSetting(MoviesShelf_Image)</onclick>
-          <selected>Skin.HasSetting(MoviesShelf_Image)</selected>
+          <onclick>Skin.SetString(MovieShelfItemsType,image)</onclick>
+          <selected>StringCompare(Skin.String(MovieShelfItemsType),image)</selected>
         </control>
         <control type="button" id="102" description="Set image">
-          <visible>Skin.HasSetting(MoviesShelf_Image) + Container(50).HasFocus(1001)</visible>
+          <visible>StringCompare(Skin.String(MovieShelfItemsType),image) + Container(50).HasFocus(1001)</visible>
           <include>SettingsSubmenuButtons</include>
           <label>- $LOCALIZE[1030]</label>
-          <label2>$INFO[Skin.String(MoviesShelf_Icon)]</label2>
-          <onclick>Skin.SetImage(MoviesShelf_Icon)</onclick>
+          <label2>$INFO[Skin.String(MovieShelf_Icon)]</label2>
+          <onclick>Skin.SetImage(MovieShelf_Icon)</onclick>
         </control>
         <control type="radiobutton" id="103" description="Custom">
           <visible>!Skin.HasSetting(MoviesSectionHide) + Container(50).HasFocus(1001)</visible>
           <include>SettingsSubmenuButtons</include>
           <label>31985</label>
-          <onclick>Skin.Reset(MoviesShelf_Image)</onclick>
-          <onclick>Skin.ToggleSetting(MoviesShelf_Custom)</onclick>
-          <selected>Skin.HasSetting(MoviesShelf_Custom)</selected>
+          <onclick>Skin.SetString(MovieShelfItemsType,custom)</onclick>
+          <selected>StringCompare(Skin.String(MovieShelfItemsType),custom)</selected>
         </control>
         <control type="button" id="104" description="ADDONS">
-          <visible>Skin.HasSetting(MoviesShelf_Custom)</visible>
-          <visible>!Skin.HasSetting(MoviesSectionHide) + Container(50).HasFocus(1001)</visible>
+          <visible>StringCompare(Skin.String(MovieShelfItemsType),custom) + Container(50).HasFocus(1001)</visible>
           <include>SettingsSubmenuButtons</include>
           <label>$LOCALIZE[24000] 1</label>
           <label2>$INFO[Skin.String(ShelfMovies.1.Label)]</label2>
           <onclick>Skin.SetAddon(ShelfMovies.1.Label,xbmc.python.pluginsource)</onclick>
         </control>
         <control type="button" id="105" description="ADDONS">
-          <visible>Skin.HasSetting(MoviesShelf_Custom)</visible>
-          <visible>!Skin.HasSetting(MoviesSectionHide) + Container(50).HasFocus(1001)</visible>
+          <visible>StringCompare(Skin.String(MovieShelfItemsType),custom) + Container(50).HasFocus(1001)</visible>
           <include>SettingsSubmenuButtons</include>
           <label>$LOCALIZE[24000] 2</label>
           <label2>$INFO[Skin.String(ShelfMovies.2.Label)]</label2>
           <onclick>Skin.SetAddon(ShelfMovies.2.Label,xbmc.python.pluginsource)</onclick>
         </control>
         <control type="button" id="106" description="ADDONS">
-          <visible>Skin.HasSetting(MoviesShelf_Custom)</visible>
-          <visible>!Skin.HasSetting(MoviesSectionHide) + Container(50).HasFocus(1001)</visible>
+          <visible>StringCompare(Skin.String(MovieShelfItemsType),custom) + Container(50).HasFocus(1001)</visible>
           <include>SettingsSubmenuButtons</include>
           <label>$LOCALIZE[24000] 3</label>
           <label2>$INFO[Skin.String(ShelfMovies.3.Label)]</label2>
           <onclick>Skin.SetAddon(ShelfMovies.3.Label,xbmc.python.pluginsource)</onclick>
         </control>
         <control type="button" id="107" description="ADDONS">
-          <visible>Skin.HasSetting(MoviesShelf_Custom)</visible>
-          <visible>!Skin.HasSetting(MoviesSectionHide) + Container(50).HasFocus(1001)</visible>
+          <visible>StringCompare(Skin.String(MovieShelfItemsType),custom) + Container(50).HasFocus(1001)</visible>
           <include>SettingsSubmenuButtons</include>
           <label>$LOCALIZE[24000] 4</label>
           <label2>$INFO[Skin.String(ShelfMovies.4.Label)]</label2>
           <onclick>Skin.SetAddon(ShelfMovies.4.Label,xbmc.python.pluginsource)</onclick>
         </control>
         <control type="button" id="108" description="ADDONS">
-          <visible>Skin.HasSetting(MoviesShelf_Custom)</visible>
-          <visible>!Skin.HasSetting(MoviesSectionHide) + Container(50).HasFocus(1001)</visible>
+          <visible>StringCompare(Skin.String(MovieShelfItemsType),custom) + Container(50).HasFocus(1001)</visible>
           <include>SettingsSubmenuButtons</include>
           <label>$LOCALIZE[24000] 5</label>
           <label2>$INFO[Skin.String(ShelfMovies.5.Label)]</label2>
           <onclick>Skin.SetAddon(ShelfMovies.5.Label,xbmc.python.pluginsource)</onclick>
         </control>
         <control type="button" id="109" description="FAVOURITES">
-          <visible>Skin.HasSetting(MoviesShelf_Custom)</visible>
-          <visible>!Skin.HasSetting(MoviesSectionHide) + Container(50).HasFocus(1001)</visible>
+          <visible>StringCompare(Skin.String(MovieShelfItemsType),custom) + Container(50).HasFocus(1001)</visible>
           <include>SettingsSubmenuButtons</include>
           <label>$LOCALIZE[1036] 1</label>
           <label2>$INFO[Skin.String(ShelfMovies.6.Label)]</label2>
@@ -248,8 +237,7 @@
           <onclick>RunScript(script.favourites,property=ShelfMovies.6)</onclick>
         </control>
         <control type="button" id="110" description="FAVOURITES">
-          <visible>Skin.HasSetting(MoviesShelf_Custom)</visible>
-          <visible>!Skin.HasSetting(MoviesSectionHide) + Container(50).HasFocus(1001)</visible>
+          <visible>StringCompare(Skin.String(MovieShelfItemsType),custom) + Container(50).HasFocus(1001)</visible>
           <include>SettingsSubmenuButtons</include>
           <label>$LOCALIZE[1036] 2</label>
           <label2>$INFO[Skin.String(ShelfMovies.7.Label)]</label2>
@@ -257,8 +245,7 @@
           <onclick>RunScript(script.favourites,property=ShelfMovies.7)</onclick>
         </control>
         <control type="button" id="112" description="FAVOURITES">
-          <visible>Skin.HasSetting(MoviesShelf_Custom)</visible>
-          <visible>!Skin.HasSetting(MoviesSectionHide) + Container(50).HasFocus(1001)</visible>
+          <visible>StringCompare(Skin.String(MovieShelfItemsType),custom) + Container(50).HasFocus(1001)</visible>
           <include>SettingsSubmenuButtons</include>
           <label>$LOCALIZE[1036] 3</label>
           <label2>$INFO[Skin.String(ShelfMovies.8.Label)]</label2>
@@ -266,8 +253,7 @@
           <onclick>RunScript(script.favourites,property=ShelfMovies.8)</onclick>
         </control>
         <control type="button" id="113" description="FAVOURITES">
-          <visible>Skin.HasSetting(MoviesShelf_Custom)</visible>
-          <visible>!Skin.HasSetting(MoviesSectionHide) + Container(50).HasFocus(1001)</visible>
+          <visible>StringCompare(Skin.String(MovieShelfItemsType),custom) + Container(50).HasFocus(1001)</visible>
           <include>SettingsSubmenuButtons</include>
           <label>$LOCALIZE[1036] 4</label>
           <label2>$INFO[Skin.String(ShelfMovies.9.Label)]</label2>
@@ -275,8 +261,7 @@
           <onclick>RunScript(script.favourites,property=ShelfMovies.9)</onclick>
         </control>
         <control type="button" id="114" description="FAVOURITES">
-          <visible>Skin.HasSetting(MoviesShelf_Custom)</visible>
-          <visible>!Skin.HasSetting(MoviesSectionHide) + Container(50).HasFocus(1001)</visible>
+          <visible>StringCompare(Skin.String(MovieShelfItemsType),custom) + Container(50).HasFocus(1001)</visible>
           <include>SettingsSubmenuButtons</include>
           <label>$LOCALIZE[1036] 5</label>
           <label2>$INFO[Skin.String(ShelfMovies.10.Label)]</label2>
