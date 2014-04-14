@@ -283,10 +283,10 @@
     <height>402</height>
     <orientation>horizontal</orientation>
     <scrolltime>400</scrolltime>
-    <itemlayout condition="Library.HasContent(TVShows) + [IsEmpty(Skin.String(TVShelfItemsType)) | StringCompare(Skin.String(TVShelfItemsType),auto)] + !Skin.HasSetting(TVShelfThemePosters)" height="357" width="444">
+    <itemlayout condition="Library.HasContent(TVShows) + IsEmpty(Skin.String(TVShelfItemsType)) + !Skin.HasSetting(TVShelfThemePosters)" height="357" width="444">
       <!-- thumbnail-based themes -->
       <control type="group" description="theme #1">
-        <visible>IsEmpty(Skin.String(TVShelfAutoItemsTheme)) | StringCompare(Skin.String(TVShelfAutoItemsTheme),1)</visible>
+        <visible>IsEmpty(Skin.String(TVShelfAutoItemsTheme))</visible>
         <include>tvAutoThemeControl_ThumbReflection</include>
         <include>tvAutoThemeControl_ThumbLarge</include>
         <include>tvAutoThemeControl_ThumbTxtBG2lines</include>
@@ -311,7 +311,7 @@
         <include>tvAutoThemeControl_ThumbBannerTop</include>
       </control>
     </itemlayout><!-- /thumbnail-based themes -->
-    <itemlayout condition="Library.HasContent(TVShows) + [IsEmpty(Skin.String(TVShelfItemsType)) | StringCompare(Skin.String(TVShelfItemsType),auto)] + Skin.HasSetting(TVShelfThemePosters)" height="387" width="254">
+    <itemlayout condition="Library.HasContent(TVShows) + IsEmpty(Skin.String(TVShelfItemsType)) + Skin.HasSetting(TVShelfThemePosters)" height="387" width="254">
       <!-- poster-based themes -->
       <control type="group"  description="theme #4">
         <visible>StringCompare(Skin.String(TVShelfAutoItemsTheme),4)</visible>
@@ -321,10 +321,10 @@
         <include>tvAutoThemeControl_PosterSeasonEpisode</include>
       </control>
     </itemlayout><!-- /poster-based themes -->
-    <focusedlayout condition="Library.HasContent(TVShows) + [IsEmpty(Skin.String(TVShelfItemsType)) | StringCompare(Skin.String(TVShelfItemsType),auto)] + !Skin.HasSetting(TVShelfThemePosters)" height="357" width="444">
+    <focusedlayout condition="Library.HasContent(TVShows) + IsEmpty(Skin.String(TVShelfItemsType)) + !Skin.HasSetting(TVShelfThemePosters)" height="357" width="444">
       <!-- thumbnail-based themes -->
       <control type="group"  description="theme #1">
-        <visible>IsEmpty(Skin.String(TVShelfAutoItemsTheme)) | StringCompare(Skin.String(TVShelfAutoItemsTheme),1)</visible>
+        <visible>IsEmpty(Skin.String(TVShelfAutoItemsTheme))</visible>
         <include>tvAutoThemeControl_ThumbReflection</include>
         <include>tvAutoThemeControl_ThumbLarge</include>
         <include>tvAutoThemeControl_ThumbTxtBG2lines</include>
@@ -355,7 +355,7 @@
         <include>tvAutoThemeControl_ThumbEpisodeName</include>
       </control>
     </focusedlayout><!-- /thumbnail-based themes -->
-    <focusedlayout condition="Library.HasContent(TVShows) + [IsEmpty(Skin.String(TVShelfItemsType)) | StringCompare(Skin.String(TVShelfItemsType),auto)] + Skin.HasSetting(TVShelfThemePosters)" height="387" width="254">
+    <focusedlayout condition="Library.HasContent(TVShows) + IsEmpty(Skin.String(TVShelfItemsType)) + Skin.HasSetting(TVShelfThemePosters)" height="387" width="254">
       <!-- poster-based themes -->
       <control type="group" description="theme #4">
         <visible>StringCompare(Skin.String(TVShelfAutoItemsTheme),4)</visible>

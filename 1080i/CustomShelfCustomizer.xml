@@ -289,32 +289,32 @@
           <visible>!Skin.HasSetting(TVSectionHide) + Container(50).HasFocus(1002)</visible>
           <include>SettingsSubmenuButtons</include>
           <label>31986</label>
-          <onclick>Skin.SetString(TVShelfItemsType,auto)</onclick>
-          <selected>IsEmpty(Skin.String(TVShelfItemsType)) | StringCompare(Skin.String(TVShelfItemsType),auto)</selected>
+          <onclick>Skin.Reset(TVShelfItemsType)</onclick>
+          <selected>IsEmpty(Skin.String(TVShelfItemsType))</selected>
         </control>
         <control type="button" id="298" description="TV Auto Type">
           <visible>Library.HasContent(TVShows)</visible>
           <visible>!Skin.HasSetting(TVSectionHide) + Container(50).HasFocus(1002)</visible>
-          <visible>IsEmpty(Skin.String(TVShelfItemsType)) | StringCompare(Skin.String(TVShelfItemsType),auto)</visible>
+          <visible>IsEmpty(Skin.String(TVShelfItemsType))</visible>
           <include>SettingsSubmenuButtons</include>
           <label>- $LOCALIZE[31121]</label>
           <label2>$VAR[TVShelfAutoItemsLabel]</label2>
-          <onclick condition="IsEmpty(Skin.String(TVShelfAutoItemsType)) | StringCompare(Skin.String(TVShelfAutoItemsType),added)">Skin.SetString(TVShelfAutoItemsType,aired)</onclick>
-          <onclick condition="StringCompare(Skin.String(TVShelfAutoItemsType),aired)">Skin.SetString(TVShelfAutoItemsType,added)</onclick>
+          <onclick condition="IsEmpty(Skin.String(TVShelfAutoItemsType))">Skin.SetString(TVShelfAutoItemsType,aired)</onclick>
+          <onclick condition="StringCompare(Skin.String(TVShelfAutoItemsType),aired)">Skin.Reset(TVShelfAutoItemsType)</onclick>
         </control>
         <control type="button" id="299" description="TV Auto Theme">
           <visible>Library.HasContent(TVShows)</visible>
           <visible>!Skin.HasSetting(TVSectionHide) + Container(50).HasFocus(1002)</visible>
-          <visible>IsEmpty(Skin.String(TVShelfItemsType)) | StringCompare(Skin.String(TVShelfItemsType),auto)</visible>
+          <visible>IsEmpty(Skin.String(TVShelfItemsType))</visible>
           <include>SettingsSubmenuButtons</include>
           <label>- $LOCALIZE[31126]</label>
           <label2>$VAR[TVShelfLabel3]</label2>
-          <onclick condition="IsEmpty(Skin.String(TVShelfAutoItemsTheme)) | StringCompare(Skin.String(TVShelfAutoItemsTheme),1)">Skin.SetString(TVShelfAutoItemsTheme,2)</onclick>
+          <onclick condition="IsEmpty(Skin.String(TVShelfAutoItemsTheme))">Skin.SetString(TVShelfAutoItemsTheme,2)</onclick>
           <onclick condition="StringCompare(Skin.String(TVShelfAutoItemsTheme),2)">Skin.SetString(TVShelfAutoItemsTheme,3)</onclick>
           <onclick condition="StringCompare(Skin.String(TVShelfAutoItemsTheme),3)">Skin.SetBool(TVShelfThemePosters)</onclick>
           <onclick condition="StringCompare(Skin.String(TVShelfAutoItemsTheme),3)">Skin.SetString(TVShelfAutoItemsTheme,4)</onclick>
           <onclick condition="StringCompare(Skin.String(TVShelfAutoItemsTheme),4)">Skin.Reset(TVShelfThemePosters)</onclick>
-          <onclick condition="StringCompare(Skin.String(TVShelfAutoItemsTheme),4)">Skin.SetString(TVShelfAutoItemsTheme,1)</onclick>
+          <onclick condition="StringCompare(Skin.String(TVShelfAutoItemsTheme),4)">Skin.Reset(TVShelfAutoItemsTheme)</onclick>
         </control>
         <control type="radiobutton" id="201" description="Image">
           <visible>!Skin.HasSetting(TVSectionHide) + Container(50).HasFocus(1002)</visible>
@@ -785,7 +785,7 @@
           </control>
           <control type="group" description="TV Theme image">
             <control type="image">
-              <visible>IsEmpty(Skin.String(TVShelfAutoItemsTheme)) | StringCompare(Skin.String(TVShelfAutoItemsTheme),1)</visible>
+              <visible>IsEmpty(Skin.String(TVShelfAutoItemsTheme))</visible>
               <include>SettingsAutoItemsThemePreview</include>
               <width>280</width>
               <height>202</height>
