@@ -26,18 +26,10 @@
     <value condition="Skin.HasSetting(MusicPlayingFanart)">$LOCALIZE[449]</value>
     <value>$LOCALIZE[13113]</value>
   </variable>
-  <variable name="MoviesShelfLabel2" description="Label2 media shelf movies">
-    <value condition="!IsEmpty(Skin.String(MovieShelfItemsType))">$LOCALIZE[16039]</value>
-    <value>$LOCALIZE[16041]</value>
-  </variable>
   <variable name="MovieShelfAutoItemsLabel">
     <value condition="StringCompare(Skin.String(MovieShelfItemsType),custom)">$LOCALIZE[111]</value>
     <value condition="StringCompare(Skin.String(MovieShelfAutoItemsType),aired)">$LOCALIZE[31018]</value>
     <value>$LOCALIZE[20386]</value>
-  </variable>
-  <variable name="TVShelfLabel2" description="Label2 media shelf TV">
-    <value condition="!IsEmpty(Skin.String(TVShelfItemsType))">$LOCALIZE[16039]</value>
-    <value>$LOCALIZE[16041]</value>
   </variable>
   <variable name="TVShelfLabel3" description="Label3 media shelf TV">
     <value condition="StringCompare(Skin.String(TVShelfAutoItemsTheme),2)">$LOCALIZE[31127]2</value>
