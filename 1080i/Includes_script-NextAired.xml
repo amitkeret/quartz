@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+  <variable name="TV_NextAired_fanart">
+    <value condition="Control.HasFocus(200)">$INFO[Container(200).ListItem.Property(Art(fanart))]</value>
+    <value condition="Control.HasFocus(201)">$INFO[Container(201).ListItem.Property(Art(fanart))]</value>
+    <value condition="Control.HasFocus(202)">$INFO[Container(202).ListItem.Property(Art(fanart))]</value>
+    <value condition="Control.HasFocus(203)">$INFO[Container(203).ListItem.Property(Art(fanart))]</value>
+    <value condition="Control.HasFocus(204)">$INFO[Container(204).ListItem.Property(Art(fanart))]</value>
+    <value condition="Control.HasFocus(205)">$INFO[Container(205).ListItem.Property(Art(fanart))]</value>
+    <value condition="Control.HasFocus(206)">$INFO[Container(206).ListItem.Property(Art(fanart))]</value>
+    <value condition="Control.HasFocus(207)">$INFO[Container(207).ListItem.Property(Art(fanart))]</value>
+    <value condition="Control.HasFocus(208)">$INFO[Container(208).ListItem.Property(Art(fanart))]</value>
+    <value condition="Control.HasFocus(209)">$INFO[Container(209).ListItem.Property(Art(fanart))]</value>
+    <value condition="Control.HasFocus(210)">$INFO[Container(210).ListItem.Property(Art(fanart))]</value>
+    <value condition="Control.HasFocus(211)">$INFO[Container(211).ListItem.Property(Art(fanart))]</value>
+    <value condition="Control.HasFocus(212)">$INFO[Container(212).ListItem.Property(Art(fanart))]</value>
+    <value condition="Control.HasFocus(213)">$INFO[Container(213).ListItem.Property(Art(fanart))]</value>
+    <value condition="Control.HasFocus(214)">$INFO[Container(214).ListItem.Property(Art(fanart))]</value>
+    <value condition="Control.HasFocus(215)">$INFO[Container(215).ListItem.Property(Art(fanart))]</value>
+	</variable>
+	<variable name="TV_NextAired_title">
+    <value condition="Control.HasFocus(200)">$INFO[Container(200).ListItem.Property(NextTitle)]</value>
+    <value condition="Control.HasFocus(201)">$INFO[Container(201).ListItem.Property(NextTitle)]</value>
+    <value condition="Control.HasFocus(202)">$INFO[Container(202).ListItem.Property(NextTitle)]</value>
+    <value condition="Control.HasFocus(203)">$INFO[Container(203).ListItem.Property(NextTitle)]</value>
+    <value condition="Control.HasFocus(204)">$INFO[Container(204).ListItem.Property(NextTitle)]</value>
+    <value condition="Control.HasFocus(205)">$INFO[Container(205).ListItem.Property(NextTitle)]</value>
+    <value condition="Control.HasFocus(206)">$INFO[Container(206).ListItem.Property(NextTitle)]</value>
+    <value condition="Control.HasFocus(207)">$INFO[Container(207).ListItem.Property(NextTitle)]</value>
+    <value condition="Control.HasFocus(208)">$INFO[Container(208).ListItem.Property(NextTitle)]</value>
+    <value condition="Control.HasFocus(209)">$INFO[Container(209).ListItem.Property(NextTitle)]</value>
+    <value condition="Control.HasFocus(210)">$INFO[Container(210).ListItem.Property(NextTitle)]</value>
+    <value condition="Control.HasFocus(211)">$INFO[Container(211).ListItem.Property(NextTitle)]</value>
+    <value condition="Control.HasFocus(212)">$INFO[Container(212).ListItem.Property(NextTitle)]</value>
+    <value condition="Control.HasFocus(213)">$INFO[Container(213).ListItem.Property(NextTitle)]</value>
+    <value condition="Control.HasFocus(214)">$INFO[Container(214).ListItem.Property(NextTitle)]</value>
+    <value condition="Control.HasFocus(215)">$INFO[Container(215).ListItem.Property(NextTitle)]</value>
+	</variable>
+	<variable name="TV_NextAired_episode_number">
+	  <value condition="Control.HasFocus(200)">$INFO[Container(200).ListItem.Property(NextNumber)]</value>
+    <value condition="Control.HasFocus(201)">$INFO[Container(201).ListItem.Property(NextNumber)]</value>
+    <value condition="Control.HasFocus(202)">$INFO[Container(202).ListItem.Property(NextNumber)]</value>
+    <value condition="Control.HasFocus(203)">$INFO[Container(203).ListItem.Property(NextNumber)]</value>
+    <value condition="Control.HasFocus(204)">$INFO[Container(204).ListItem.Property(NextNumber)]</value>
+    <value condition="Control.HasFocus(205)">$INFO[Container(205).ListItem.Property(NextNumber)]</value>
+    <value condition="Control.HasFocus(206)">$INFO[Container(206).ListItem.Property(NextNumber)]</value>
+    <value condition="Control.HasFocus(207)">$INFO[Container(207).ListItem.Property(NextNumber)]</value>
+    <value condition="Control.HasFocus(208)">$INFO[Container(208).ListItem.Property(NextNumber)]</value>
+    <value condition="Control.HasFocus(209)">$INFO[Container(209).ListItem.Property(NextNumber)]</value>
+    <value condition="Control.HasFocus(210)">$INFO[Container(210).ListItem.Property(NextNumber)]</value>
+    <value condition="Control.HasFocus(211)">$INFO[Container(211).ListItem.Property(NextNumber)]</value>
+    <value condition="Control.HasFocus(212)">$INFO[Container(212).ListItem.Property(NextNumber)]</value>
+    <value condition="Control.HasFocus(213)">$INFO[Container(213).ListItem.Property(NextNumber)]</value>
+    <value condition="Control.HasFocus(214)">$INFO[Container(214).ListItem.Property(NextNumber)]</value>
+    <value condition="Control.HasFocus(215)">$INFO[Container(215).ListItem.Property(NextNumber)]</value>
+	</variable>
+	<variable name="TV_NextAired_tvshow">
+	  <value condition="Control.HasFocus(200)">$INFO[Container(200).ListItem.Label]</value>
+    <value condition="Control.HasFocus(201)">$INFO[Container(201).ListItem.Label]</value>
+    <value condition="Control.HasFocus(202)">$INFO[Container(202).ListItem.Label]</value>
+    <value condition="Control.HasFocus(203)">$INFO[Container(203).ListItem.Label]</value>
+    <value condition="Control.HasFocus(204)">$INFO[Container(204).ListItem.Label]</value>
+    <value condition="Control.HasFocus(205)">$INFO[Container(205).ListItem.Label]</value>
+    <value condition="Control.HasFocus(206)">$INFO[Container(206).ListItem.Label]</value>
+    <value condition="Control.HasFocus(207)">$INFO[Container(207).ListItem.Label]</value>
+    <value condition="Control.HasFocus(208)">$INFO[Container(208).ListItem.Label]</value>
+    <value condition="Control.HasFocus(209)">$INFO[Container(209).ListItem.Label]</value>
+    <value condition="Control.HasFocus(210)">$INFO[Container(210).ListItem.Label]</value>
+    <value condition="Control.HasFocus(211)">$INFO[Container(211).ListItem.Label]</value>
+    <value condition="Control.HasFocus(212)">$INFO[Container(212).ListItem.Label]</value>
+    <value condition="Control.HasFocus(213)">$INFO[Container(213).ListItem.Label]</value>
+    <value condition="Control.HasFocus(214)">$INFO[Container(214).ListItem.Label]</value>
+    <value condition="Control.HasFocus(215)">$INFO[Container(215).ListItem.Label]</value>
+	</variable>
+	<variable name="TV_NextAired_date">
+    <value condition="Control.HasFocus(200)">$INFO[Container(200).ListItem.Property(NextDay)]</value>
+    <value condition="Control.HasFocus(201)">$INFO[Container(201).ListItem.Property(NextDay)]</value>
+    <value condition="Control.HasFocus(202)">$INFO[Container(202).ListItem.Property(NextDay)]</value>
+    <value condition="Control.HasFocus(203)">$INFO[Container(203).ListItem.Property(NextDay)]</value>
+    <value condition="Control.HasFocus(204)">$INFO[Container(204).ListItem.Property(NextDay)]</value>
+    <value condition="Control.HasFocus(205)">$INFO[Container(205).ListItem.Property(NextDay)]</value>
+    <value condition="Control.HasFocus(206)">$INFO[Container(206).ListItem.Property(NextDay)]</value>
+    <value condition="Control.HasFocus(207)">$INFO[Container(207).ListItem.Property(NextDay)]</value>
+    <value condition="Control.HasFocus(208)">$INFO[Container(208).ListItem.Property(NextDay)]</value>
+    <value condition="Control.HasFocus(209)">$INFO[Container(209).ListItem.Property(NextDay)]</value>
+    <value condition="Control.HasFocus(210)">$INFO[Container(210).ListItem.Property(NextDay)]</value>
+    <value condition="Control.HasFocus(211)">$INFO[Container(211).ListItem.Property(NextDay)]</value>
+    <value condition="Control.HasFocus(212)">$INFO[Container(212).ListItem.Property(NextDay)]</value>
+    <value condition="Control.HasFocus(213)">$INFO[Container(213).ListItem.Property(NextDay)]</value>
+    <value condition="Control.HasFocus(214)">$INFO[Container(214).ListItem.Property(NextDay)]</value>
+    <value condition="Control.HasFocus(215)">$INFO[Container(215).ListItem.Property(NextDay)]</value>
+	</variable>
+	<variable name="TV_NextAired_last_episode">
+    <value condition="Control.HasFocus(200)">$INFO[Container(200).ListItem.Property(LatestTitle)]</value>
+    <value condition="Control.HasFocus(201)">$INFO[Container(201).ListItem.Property(LatestTitle)]</value>
+    <value condition="Control.HasFocus(202)">$INFO[Container(202).ListItem.Property(LatestTitle)]</value>
+    <value condition="Control.HasFocus(203)">$INFO[Container(203).ListItem.Property(LatestTitle)]</value>
+    <value condition="Control.HasFocus(204)">$INFO[Container(204).ListItem.Property(LatestTitle)]</value>
+    <value condition="Control.HasFocus(205)">$INFO[Container(205).ListItem.Property(LatestTitle)]</value>
+    <value condition="Control.HasFocus(206)">$INFO[Container(206).ListItem.Property(LatestTitle)]</value>
+    <value condition="Control.HasFocus(207)">$INFO[Container(207).ListItem.Property(LatestTitle)]</value>
+    <value condition="Control.HasFocus(208)">$INFO[Container(208).ListItem.Property(LatestTitle)]</value>
+    <value condition="Control.HasFocus(209)">$INFO[Container(209).ListItem.Property(LatestTitle)]</value>
+    <value condition="Control.HasFocus(210)">$INFO[Container(210).ListItem.Property(LatestTitle)]</value>
+    <value condition="Control.HasFocus(211)">$INFO[Container(211).ListItem.Property(LatestTitle)]</value>
+    <value condition="Control.HasFocus(212)">$INFO[Container(212).ListItem.Property(LatestTitle)]</value>
+    <value condition="Control.HasFocus(213)">$INFO[Container(213).ListItem.Property(LatestTitle)]</value>
+    <value condition="Control.HasFocus(214)">$INFO[Container(214).ListItem.Property(LatestTitle)]</value>
+    <value condition="Control.HasFocus(215)">$INFO[Container(215).ListItem.Property(LatestTitle)]</value>
+	</variable>
+	<variable name="TV_NextAired_network">
+    <value condition="Control.HasFocus(200)">$INFO[Container(200).ListItem.Property(Network)]</value>
+    <value condition="Control.HasFocus(201)">$INFO[Container(201).ListItem.Property(Network)]</value>
+    <value condition="Control.HasFocus(202)">$INFO[Container(202).ListItem.Property(Network)]</value>
+    <value condition="Control.HasFocus(203)">$INFO[Container(203).ListItem.Property(Network)]</value>
+    <value condition="Control.HasFocus(204)">$INFO[Container(204).ListItem.Property(Network)]</value>
+    <value condition="Control.HasFocus(205)">$INFO[Container(205).ListItem.Property(Network)]</value>
+    <value condition="Control.HasFocus(206)">$INFO[Container(206).ListItem.Property(Network)]</value>
+    <value condition="Control.HasFocus(207)">$INFO[Container(207).ListItem.Property(Network)]</value>
+    <value condition="Control.HasFocus(208)">$INFO[Container(208).ListItem.Property(Network)]</value>
+    <value condition="Control.HasFocus(209)">$INFO[Container(209).ListItem.Property(Network)]</value>
+    <value condition="Control.HasFocus(210)">$INFO[Container(210).ListItem.Property(Network)]</value>
+    <value condition="Control.HasFocus(211)">$INFO[Container(211).ListItem.Property(Network)]</value>
+    <value condition="Control.HasFocus(212)">$INFO[Container(212).ListItem.Property(Network)]</value>
+    <value condition="Control.HasFocus(213)">$INFO[Container(213).ListItem.Property(Network)]</value>
+    <value condition="Control.HasFocus(214)">$INFO[Container(214).ListItem.Property(Network)]</value>
+    <value condition="Control.HasFocus(215)">$INFO[Container(215).ListItem.Property(Network)]</value>
+	</variable>
+	<variable name="TV_NextAired_artworkType">
+	  <value condition="StringCompare(Window(home).Property(TVGuide.ThumbType),0)">poster</value>
+	  <value condition="StringCompare(Window(home).Property(TVGuide.ThumbType),1)">banner</value>
+	  <value condition="StringCompare(Window(home).Property(TVGuide.ThumbType),2)">clearlogo</value>
+	</variable>
+	<include name="TV_NextAired_onload">
+	  <onload>ClearProperty(TVGuide.MondayList,Home)</onload>
+    <onload>ClearProperty(TVGuide.TuesdayList,Home)</onload>
+    <onload>ClearProperty(TVGuide.WednesdayList,Home)</onload>
+    <onload>ClearProperty(TVGuide.ThursdayList,Home)</onload>
+    <onload>ClearProperty(TVGuide.FridayList,Home)</onload>
+    <onload>ClearProperty(TVGuide.SaturdayList,Home)</onload>
+    <onload>ClearProperty(TVGuide.SundayList,Home)</onload>
+	</include>
+	<include name="TV_NextAired_commonControls">
+    <control type="image" description="fanart image">
+      <visible>!IsEmpty(Window(home).Property(TVGuide.BackgroundFanart))</visible>
+      <include>Dimensions_Fullscreen</include>
+      <aspectratio>stretch</aspectratio>
+      <texture background="true">$VAR[TV_NextAired_fanart]</texture>
+      <fadetime>300</fadetime>
+      <animation effect="fade" time="300">Visible</animation>
+      <animation effect="fade" time="300">Hidden</animation>
+    </control>
+    <control type="image" description="overlay image">
+      <visible>!IsEmpty(Window(home).Property(TVGuide.BackgroundFanart))</visible>
+      <include>Dimensions_Fullscreen</include>
+      <texture>img/Vignette_57.png</texture>
+      <aspectratio>stretch</aspectratio>
+    </control>
+    <control type="image" description="Vignette">
+      <posx>0</posx>
+      <posy>70</posy>
+      <width>1920</width>
+      <height>270</height>
+      <texture>img/Gradient.png</texture>
+      <aspectratio>stretch</aspectratio>
+    </control>
+    <control type="image" description="Vignette">
+      <posx>0</posx>
+      <posy>340</posy>
+      <width>2085</width>
+      <height>1</height>
+      <aspectratio>stretch</aspectratio>
+      <texture>img/Line1.png</texture>
+    </control>
+    <control type="group">
+      <include>VisibleFadeEffect</include>
+      <control type="label" description="tvshow">
+        <posx>200</posx>
+        <posy>160</posy>
+        <width>600</width>
+        <height>25</height>
+        <label>$VAR[TV_NextAired_tvshow]</label>
+        <font>size20</font>
+        <textcolor>Grey2</textcolor>
+        <align>left</align>
+        <autoscroll time="6000" delay="8000" repeat="8000">true</autoscroll>
+      </control>
+      <control type="label" description="episode title">
+        <posx>200</posx>
+        <posy>200</posy>
+        <width>600</width>
+        <height>40</height>
+        <label>$VAR[TV_NextAired_title]</label>
+        <font>size24B</font>
+        <textcolor>White2</textcolor>
+        <align>left</align>
+        <autoscroll time="6000" delay="8000" repeat="8000">true</autoscroll>
+      </control>
+      <control type="list">
+        <posx>800</posx>
+        <posy>148</posy>
+        <include>List49_Commons</include>
+        <content>
+          <item>
+            <label>Episode:</label>
+            <label2>$VAR[TV_NextAired_episode_number]</label2>
+            <onclick>noop</onclick>
+          </item>
+          <item>
+            <label>Airing:</label>
+            <label2>$VAR[TV_NextAired_date]</label2>
+            <onclick>noop</onclick>
+          </item>
+          <item>
+            <label>Network:</label>
+            <label2>$VAR[TV_NextAired_network]</label2>
+            <onclick>noop</onclick>
+          </item>
+          <item>
+            <label>Last episode:</label>
+            <label2>$VAR[TV_NextAired_last_episode]</label2>
+            <onclick>noop</onclick>
+          </item>
+        </content>
+      </control>
+    </control>
+    <control type="image" description="Background image">
+      <posx>100</posx>
+      <posy>356</posy>
+      <width>1720</width>
+      <height>713</height>
+      <texture border="60,60,60,60">img/ContextMenu.png</texture>
+    </control>
+    <control type="image" description="horizontal line">
+      <posx>0</posx>
+      <posy>450</posy>
+      <width>2200</width>
+      <height>1</height>
+      <texture>img/Line.png</texture>
+    </control>
+    <control type="image" description="vertical line">
+      <posx>385</posx>
+      <posy>320</posy>
+      <width>2</width>
+      <height>830</height>
+      <texture>img/LineV.png</texture>
+    </control>
+    <control type="image" description="vertical line">
+      <posx>614</posx>
+      <posy>320</posy>
+      <width>2</width>
+      <height>830</height>
+      <texture>img/LineV.png</texture>
+    </control>
+    <control type="image" description="vertical line">
+      <posx>844</posx>
+      <posy>320</posy>
+      <width>2</width>
+      <height>830</height>
+      <texture>img/LineV.png</texture>
+    </control>
+    <control type="image" description="vertical line">
+      <posx>1075</posx>
+      <posy>320</posy>
+      <width>2</width>
+      <height>830</height>
+      <texture>img/LineV.png</texture>
+    </control>
+    <control type="image" description="vertical line">
+      <posx>1304</posx>
+      <posy>320</posy>
+      <width>2</width>
+      <height>830</height>
+      <texture>img/LineV.png</texture>
+    </control>
+    <control type="image" description="vertical line">
+      <posx>1535</posx>
+      <posy>320</posy>
+      <width>2</width>
+      <height>830</height>
+      <texture>img/LineV.png</texture>
+    </control>
+  </include>
+  <include name="TV_NextAired_commonControlsBottom">
+    <control type="group" description="Side menu 9000 group">
+      <visible allowhiddenfocus="true">ControlGroup(9000).HasFocus()</visible>
+      <include>DialogOpenCloseVisible</include>
+      <control type="image" description="List back">
+        <posx>459</posx>
+        <posy>168</posy>
+        <width>1002</width>
+        <height>762</height>
+        <aspectratio>stretch</aspectratio>
+        <texture border="136,127,128,139">img/Dialog.png</texture>
+      </control>
+      <control type="grouplist" id="9000">
+        <include>9000GrouplistParameters</include>
+        <control type="image" id="2" description="Logo">
+					<height>150</height>
+					<include>9000Buttons</include>
+					<aspectratio>keep</aspectratio>
+					<texture>$INFO[System.AddonIcon(script.tv.show.next.aired)]</texture>
+				</control>
+        <control type="button" id="8" description="Settings">
+					<textwidth>500</textwidth>
+          <include>9000Buttons</include>
+					<label>Addon settings</label>
+					<onright>200</onright>
+					<onup>10</onup>
+					<ondown>9</ondown>
+				</control>
+				<control type="button" id="9" description="download posters">
+          <onright>200</onright>
+          <onup>8</onup>
+          <ondown>10</ondown>
+          <textwidth>500</textwidth>
+          <include>9000Buttons</include>
+          <label>Update TV info</label>
+          <onclick>RunScript(script.tv.show.next.aired,force=True)</onclick>
+        </control>
+        <control type="button" id="10" description="download posters">
+          <visible>System.HasAddon(script.artwork.downloader)</visible>
+          <onright>200</onright>
+          <onup>9</onup>
+          <ondown>8</ondown>
+          <textwidth>500</textwidth>
+          <include>9000Buttons</include>
+          <label>Download $VAR[TV_NextAired_artworkType]s</label>
+          <onclick>RunScript(script.artwork.downloader,mediatype=tvshow,mode=custom,$VAR[TV_NextAired_artworkType])</onclick>
+        </control>
+      </control>
+    </control>
+    <control type="group">
+      <include>MediaHeader</include>
+      <control type="label" description="Heading">
+        <include>Heading</include>
+        <label>$INFO[System.AddonTitle(script.tv.show.next.aired)]</label>
+      </control>
+    </control>
+  </include>
+</includes>
