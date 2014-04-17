@@ -23,6 +23,7 @@
   <include file="Includes_WPWeekendForecast.xml" />
   <include file="Includes_WPHourlyForecast.xml" />
   <include file="Includes_WPMapsVideo.xml" />
+  <include file="Includes_script-NextAired.xml" />
   <include name="VisibleFadeEffect">
     <animation effect="fade" time="200">Visible</animation>
     <animation effect="fade" time="200">Hidden</animation>
