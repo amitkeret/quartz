@@ -202,22 +202,22 @@
         <include>List49_Commons</include>
         <content>
           <item>
-            <label>Episode:</label>
+            <label>$LOCALIZE[20359]:</label>
             <label2>$VAR[TV_NextAired_episode_number]</label2>
             <onclick>noop</onclick>
           </item>
           <item>
-            <label>Airing:</label>
+            <label>$LOCALIZE[31207]:</label>
             <label2>$VAR[TV_NextAired_date]</label2>
             <onclick>noop</onclick>
           </item>
           <item>
-            <label>Network:</label>
+            <label>$LOCALIZE[705]:</label>
             <label2>$VAR[TV_NextAired_network]</label2>
             <onclick>noop</onclick>
           </item>
           <item>
-            <label>Last episode:</label>
+            <label>$LOCALIZE[31208]:</label>
             <label2>$VAR[TV_NextAired_last_episode]</label2>
             <onclick>noop</onclick>
           </item>
@@ -304,7 +304,7 @@
         <control type="button" id="8" description="Settings">
 					<textwidth>500</textwidth>
           <include>9000Buttons</include>
-					<label>Addon settings</label>
+					<label>5</label>
 					<onright>200</onright>
 					<onup>10</onup>
 					<ondown>9</ondown>
@@ -315,7 +315,7 @@
           <ondown>10</ondown>
           <textwidth>500</textwidth>
           <include>9000Buttons</include>
-          <label>Update TV info</label>
+          <label>31206</label>
           <onclick>RunScript(script.tv.show.next.aired,force=True)</onclick>
         </control>
         <control type="button" id="10" description="download posters">
@@ -325,7 +325,7 @@
           <ondown>8</ondown>
           <textwidth>500</textwidth>
           <include>9000Buttons</include>
-          <label>Download $VAR[TV_NextAired_artworkType]s</label>
+          <label>$LOCALIZE[33003] $VAR[TV_NextAired_artworkType]</label>
           <onclick>RunScript(script.artwork.downloader,mediatype=tvshow,mode=custom,$VAR[TV_NextAired_artworkType])</onclick>
         </control>
       </control>
