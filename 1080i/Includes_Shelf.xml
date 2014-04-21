@@ -304,7 +304,7 @@
       </control>
       <control type="group" description="theme #3">
         <visible>StringCompare(Skin.String(TVShelfAutoItemsTheme),3)</visible>
-        <include>tvAutoThemeControl_ThumbReflection</include>
+        <include>tvAutoThemeControl_ThumbReflectionSmall</include>
         <include>tvAutoThemeControl_ThumbSmall</include>
         <include>tvAutoThemeControl_ThumbTxtBG1line</include>
         <include>tvAutoThemeControl_ThumbSeasonEpisode</include>
@@ -347,7 +347,7 @@
       </control>
       <control type="group" description="theme #3">
         <visible>StringCompare(Skin.String(TVShelfAutoItemsTheme),3)</visible>
-        <include>tvAutoThemeControl_ThumbReflection</include>
+        <include>tvAutoThemeControl_ThumbReflectionSmall</include>
         <include>tvAutoThemeControl_ThumbSmall</include>
         <include>tvAutoThemeControl_ThumbTxtBG1line</include>
         <include>tvAutoThemeControl_ThumbSeasonEpisode</include>
@@ -1590,6 +1590,16 @@
       <posy>330</posy>
       <width>393</width>
       <height>303</height>
+      <texture fallback="DefaultVideo.png" background="true" diffuse="img/ReflectionShelf.png" flipy="true">$INFO[ListItem.Thumb]</texture>
+      <aspectratio scalediffuse="false">scale</aspectratio>
+    </control>
+  </include>
+  <include name="tvAutoThemeControl_ThumbReflectionSmall">
+    <control type="image" description="Reflection">
+      <posx>27</posx>
+      <posy>330</posy>
+      <width>393</width>
+      <height>228</height>
       <texture fallback="DefaultVideo.png" background="true" diffuse="img/ReflectionShelf.png" flipy="true">$INFO[ListItem.Thumb]</texture>
       <aspectratio scalediffuse="false">scale</aspectratio>
     </control>

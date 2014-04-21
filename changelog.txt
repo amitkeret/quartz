@@ -1,3 +1,6 @@
+v 0.3.2
+- fix reflection thumbnail size for shelf theme #3
+
 v 0.3.1
 - Frodo patch: conditional buttons
 - Added disc # indicators
