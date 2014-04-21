@@ -425,7 +425,7 @@
             <width>562</width>
             <height>30</height>
             <align>left</align>
-            <label>$INFO[ListItem.Album]</label>
+            <label>$VAR[Music_SongMediaInfo_AlbumDisc]</label>
           </control>
           <control type="label" description="Genre value 2">
             <font>size20</font>

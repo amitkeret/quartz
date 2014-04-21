@@ -139,4 +139,8 @@
     <value condition="SubString(ListItem.FilenameAndPath,3dbd) | SubString(ListItem.FilenameAndPath,SBS.)">badges/flags/3D.png</value>
     <value condition="SubString(ListItem.FilenameAndPath,Anaglyph)">badges/flags/3D-Anaglyph.png</value>
   </variable>
+  <variable name="Music_SongMediaInfo_AlbumDisc">
+    <value condition="!IsEmpty(ListItem.DiscNumber)">$INFO[ListItem.Album] ($LOCALIZE[427] $INFO[ListItem.DiscNumber])</value>
+    <value>$INFO[ListItem.Album]</value>
+  </variable>
 </includes>
