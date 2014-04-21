@@ -1,3 +1,7 @@
+v 0.3.1
+- Frodo patch: conditional buttons
+- Added disc # indicators
+
 v 0.3.0
 - support for script.tv.show.next.aired
 
