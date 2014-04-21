@@ -171,6 +171,7 @@
           <label2>$VAR[MovieShelfAutoItemsLabel]</label2>
           <onclick condition="IsEmpty(Skin.String(MovieShelfAutoItemsType))">Skin.SetString(MovieShelfAutoItemsType,aired)</onclick>
           <onclick condition="StringCompare(Skin.String(MovieShelfAutoItemsType),aired)">Skin.Reset(MovieShelfAutoItemsType)</onclick>
+          <onclick condition="IsEmpty(Skin.String(MovieShelfAutoItemsType))">Skin.SetString(MovieShelfAutoItemsType,aired)</onclick>
         </control>
         <control type="radiobutton" id="101" description="Image">
           <visible>!Skin.HasSetting(MoviesSectionHide) + Container(50).HasFocus(1001)</visible>
@@ -286,6 +287,7 @@
           <label2>$VAR[TVShelfAutoItemsLabel]</label2>
           <onclick condition="IsEmpty(Skin.String(TVShelfAutoItemsType))">Skin.SetString(TVShelfAutoItemsType,aired)</onclick>
           <onclick condition="StringCompare(Skin.String(TVShelfAutoItemsType),aired)">Skin.Reset(TVShelfAutoItemsType)</onclick>
+          <onclick condition="IsEmpty(Skin.String(TVShelfAutoItemsType))">Skin.SetString(TVShelfAutoItemsType,aired)</onclick>
         </control>
         <control type="button" id="299" description="TV Auto Theme">
           <visible>Library.HasContent(TVShows)</visible>
@@ -295,11 +297,12 @@
           <label>- $LOCALIZE[31126]</label>
           <label2>$VAR[TVShelfLabel3]</label2>
           <onclick condition="IsEmpty(Skin.String(TVShelfAutoItemsTheme))">Skin.SetString(TVShelfAutoItemsTheme,2)</onclick>
-          <onclick condition="StringCompare(Skin.String(TVShelfAutoItemsTheme),2)">Skin.SetString(TVShelfAutoItemsTheme,3)</onclick>
-          <onclick condition="StringCompare(Skin.String(TVShelfAutoItemsTheme),3)">Skin.SetBool(TVShelfThemePosters)</onclick>
-          <onclick condition="StringCompare(Skin.String(TVShelfAutoItemsTheme),3)">Skin.SetString(TVShelfAutoItemsTheme,4)</onclick>
           <onclick condition="StringCompare(Skin.String(TVShelfAutoItemsTheme),4)">Skin.Reset(TVShelfThemePosters)</onclick>
           <onclick condition="StringCompare(Skin.String(TVShelfAutoItemsTheme),4)">Skin.Reset(TVShelfAutoItemsTheme)</onclick>
+          <onclick condition="StringCompare(Skin.String(TVShelfAutoItemsTheme),3)">Skin.SetBool(TVShelfThemePosters)</onclick>
+          <onclick condition="StringCompare(Skin.String(TVShelfAutoItemsTheme),3)">Skin.SetString(TVShelfAutoItemsTheme,4)</onclick>
+          <onclick condition="StringCompare(Skin.String(TVShelfAutoItemsTheme),2)">Skin.SetString(TVShelfAutoItemsTheme,3)</onclick>
+          <onclick condition="IsEmpty(Skin.String(TVShelfAutoItemsTheme))">Skin.SetString(TVShelfAutoItemsTheme,2)</onclick>
         </control>
         <control type="radiobutton" id="201" description="Image">
           <visible>!Skin.HasSetting(TVSectionHide) + Container(50).HasFocus(1002)</visible>
