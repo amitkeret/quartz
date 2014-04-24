@@ -146,6 +146,24 @@
         <onleft>3000</onleft>
         <pagecontrol>3001</pagecontrol>
         <scrolltime tween="sine" easing="inout">280</scrolltime>
+        <control type="radiobutton" id="3207" description="Additional view modes">
+          <include>SkinSettingsButton</include>
+          <label>31993</label>
+          <onclick>Skin.ToggleSetting(AddViews)</onclick>
+          <selected>Skin.HasSetting(AddViews)</selected>
+        </control>
+        <control type="radiobutton" id="3213" description="Unwatched/In progress badge">
+          <include>SkinSettingsButton</include>
+          <label>Hide Unwatched / In-Progress badges</label>
+          <onclick>Skin.ToggleSetting(HideBadge_Unwatched)</onclick>
+          <selected>Skin.HasSetting(HideBadge_Unwatched)</selected>
+        </control>
+        <control type="radiobutton" id="3214" description="3D badge">
+          <include>SkinSettingsButton</include>
+          <label>Hide 3D badges</label>
+          <onclick>Skin.ToggleSetting(HideBadge_3D)</onclick>
+          <selected>Skin.HasSetting(HideBadge_3D)</selected>
+        </control>
         <control type="radiobutton" id="3205" description="Options dialog">
           <include>SkinSettingsButton</include>
           <label>$LOCALIZE[31996]</label>
@@ -166,12 +184,6 @@
           <label2>$LOCALIZE[31991]</label2>
           <onclick>Skin.ToggleSetting(PostersHide)</onclick>
         </control>-->
-        <control type="radiobutton" id="3207" description="Additional view modes">
-          <include>SkinSettingsButton</include>
-          <label>31993</label>
-          <onclick>Skin.ToggleSetting(AddViews)</onclick>
-          <selected>Skin.HasSetting(AddViews)</selected>
-        </control>
       </control>
       <control type="grouplist" id="3013" description="Category Homepage">
         <visible>Container(3000).HasFocus(3104)</visible>

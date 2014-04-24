@@ -1686,13 +1686,7 @@
         <itemgap>15</itemgap>
         <align>right</align>
         <orientation>horizontal</orientation>
-        <control type="image">
-          <include>3D_Badge_visibility</include>
-          <height>24</height>
-          <width>45</width>
-          <aspectratio>keep</aspectratio>
-          <texture>$VAR[3D_badge_texture]</texture>
-        </control>
+        <include>3D_Badge31</include>
         <control type="image">
           <visible>IntegerGreaterThan(ListItem.VideoResolution,700)</visible>
           <height>24</height>
@@ -2559,13 +2553,7 @@
               <include>Genre500Commons</include>
               <label>[COLOR=Grey]$LOCALIZE[20074]:[/COLOR] $INFO[ListItem.MPAA]</label>
             </control>
-            <control type="image">
-              <include>3D_Badge_visibility</include>
-              <width>40</width>
-              <height>39</height>
-              <aspectratio>keep</aspectratio>
-              <texture>$VAR[3D_badge_texture]</texture>
-            </control>
+            <include>3D_Badge41</include>
           </control>
           <control type="grouplist">
             <posx>0</posx>

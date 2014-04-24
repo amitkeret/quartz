@@ -575,6 +575,7 @@
   </include>
   <include name="Watched_Marks">
     <control type="image">
+      <visible>!Skin.HasSetting(HideBadge_Unwatched)</visible>
       <visible>Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Movies) | Container.Content(episodes)</visible>
       <posx>4</posx>
       <posy>0</posy>
@@ -619,29 +620,45 @@
       <texture>$INFO[ListItem.VideoResolution,badges/,.png]</texture>
     </control>
   </include>
+  <include name="3D_Badge_Common">
+    <include>3D_Badge_visibility</include>
+    <aspectratio>keep</aspectratio>
+    <texture>$VAR[3D_badge_texture]</texture>
+  </include>
   <include name="3D_Badge_visibility">
+    <visible>!Skin.HasSetting(HideBadge_3D)</visible>
     <visible>SubString(ListItem.FilenameAndPath,3dbd) | SubString(ListItem.FilenameAndPath,SBS.) | SubString(ListItem.FilenameAndPath,Anaglyph)</visible>
   </include>
 	<include name="3D_Badge">
     <control type="image">
-      <include>3D_Badge_visibility</include>
+      <include>3D_Badge_Common</include>
       <posx>130r</posx>
       <posy>0</posy>
       <height>81</height>
       <width>42</width>
-      <aspectratio>keep</aspectratio>
-      <texture>$VAR[3D_badge_texture]</texture>
+    </control>
+  </include>
+  <include name="3D_Badge31">
+    <control type="image">
+      <include>3D_Badge_Common</include>
+      <height>24</height>
+      <width>45</width>
+    </control>
+  </include>
+  <include name="3D_Badge41">
+    <control type="image">
+      <include>3D_Badge_Common</include>
+      <width>40</width>
+      <height>39</height>
     </control>
   </include>
   <include name="3D_Badge51">
     <control type="image">
-      <include>3D_Badge_visibility</include>
+      <include>3D_Badge_Common</include>
       <posx>133r</posx>
       <posy>0</posy>
       <height>111</height>
       <width>45</width>
-      <aspectratio>keep</aspectratio>
-      <texture>$VAR[3D_badge_texture]</texture>
     </control>
   </include>
   <include name="Unwatched_Badge">
