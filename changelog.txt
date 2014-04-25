@@ -1,3 +1,8 @@
+v 0.4.0
+- Overhaul for skin settings, now has categories
+- TV Next Aired better layout, code cleanup
+- Unwatched/3D badges visibility settings
+
 v 0.3.2
 - fix reflection thumbnail size for shelf theme #3
 

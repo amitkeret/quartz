@@ -21,3 +21,4 @@ This version adds verious tweaks, with emphasis on support for 3rd-party add-ons
 - **Theme support** on home screen
     - TV episode thumbs, 3 options
     - TV episode posters/thumbnails
+- Toggle visibility for Unwatched/3D badges
