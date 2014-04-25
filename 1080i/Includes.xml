@@ -383,4 +383,20 @@
       <texture background="true">$INFO[ListItem.Property(Fanart_Image)]</texture>
     </control>
   </include>
+  <include name="SkinSettingsButton">
+    <width max="880">auto</width>
+    <height>81</height>
+    <textoffsetx>20</textoffsetx>
+    <texturefocus border="5">img/ButtonFO.png</texturefocus>
+    <textoffsetx>20</textoffsetx>
+    <align>left</align>
+    <aligny>center</aligny>
+    <font>size23</font>
+  </include>
+  <include name="SkinSettingsImage">
+    <animation effect="fade" time="200">VisibleChange</animation>
+    <posx>1470</posx>
+    <width>400</width>
+    <aspectratio>keep</aspectratio>
+  </include>
 </includes>
