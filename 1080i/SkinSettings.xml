@@ -128,15 +128,20 @@
         <scrolltime tween="sine" easing="inout">280</scrolltime>
         <control type="button" id="3202" description="Lyrics">
           <include>SkinSettingsButton</include>
-          <label>$LOCALIZE[24020] $LOCALIZE[31132]</label>
+          <label>$LOCALIZE[24020] $LOCALIZE[24013] $LOCALIZE[24000]</label>
           <label2>$INFO[Skin.String(LyricPath)]</label2>
           <onclick>Skin.SetAddon(LyricPath,xbmc.python.lyrics)</onclick>
         </control>
         <control type="button" id="3203" description="Subtitles">
           <include>SkinSettingsButton</include>
-          <label>$LOCALIZE[24020] $LOCALIZE[31133]</label>
+          <label>$LOCALIZE[24020] $LOCALIZE[24012] $LOCALIZE[24000]</label>
           <label2>$INFO[Skin.String(SubtitleScript_Path)]</label2>
           <onclick>Skin.SetAddon(SubtitleScript_Path,xbmc.python.subtitles)</onclick>
+        </control>
+        <control type="button" id="3215" description="Skin Widgets">
+          <include>SkinSettingsButton</include>
+          <label>$LOCALIZE[24020] $LOCALIZE[31132] $LOCALIZE[24000]</label>
+          <onclick>Addon.OpenSettings(service.skin.widgets)</onclick>
         </control>
       </control>
       <control type="grouplist" id="3012" description="Category Views">
@@ -249,7 +254,7 @@
         <label>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</label>
       </control>
       <control type="image" description="Logo">
-        <visible>Control.HasFocus(3202) | Control.HasFocus(3203)</visible>
+        <visible>Control.HasFocus(3202) | Control.HasFocus(3203) | Control.HasFocus(3215)</visible>
         <include>SkinSettingsImage</include>
         <posy>348</posy>
         <height>384</height>
