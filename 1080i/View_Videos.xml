@@ -1853,30 +1853,58 @@
               <label>[B]$INFO[ListItem.Property(UnwatchedEpisodes)][/B]</label>
             </control>
           </focusedlayout>
-		  <itemlayout height="225" width="900">
+          <itemlayout height="225" width="900">
+            <control type="image">
+              <posx>63</posx>
+              <posy>168</posy>
+              <width>771</width>
+              <height>144</height>
+              <texture flipy="true" diffuse="img/Reflection0.png" background="true">$VAR[Banner]</texture>
+              <aspectratio>keep</aspectratio>
+            </control>
             <control type="image">
               <posx>63</posx>
               <posy>24</posy>
               <width>771</width>
               <height>144</height>
-              <texture background="true">$INFO[ListItem.Icon]</texture>
-			  <bordertexture border="3">img/ThumbBorder3.png</bordertexture>
-			  <bordersize>1</bordersize>
+              <texture background="true">$VAR[Banner]</texture>
               <aspectratio>keep</aspectratio>
+            </control>
+            <control type="image">
+              <posx>63</posx>
+              <posy>24</posy>
+              <width>771</width>
+              <height>144</height>
+              <texture border="3">img/CoverOverlay0.png</texture>
+              <aspectratio>stretch</aspectratio>
             </control>
           </itemlayout>
           <focusedlayout height="225" width="900">
             <control type="image">
               <posx>63</posx>
+              <posy>168</posy>
+              <width>771</width>
+              <height>144</height>
+              <texture flipy="true" diffuse="img/Reflection0.png" background="true">$VAR[Banner]</texture>
+              <aspectratio>keep</aspectratio>
+            </control>
+            <control type="image">
+              <posx>63</posx>
               <posy>24</posy>
               <width>771</width>
               <height>144</height>
-              <texture background="true">$INFO[ListItem.Icon]</texture>
-              <bordertexture border="3">img/ThumbBorder3.png</bordertexture>
-			  <bordersize>1</bordersize>
-			  <aspectratio>keep</aspectratio>
+              <texture background="true">$VAR[Banner]</texture>
+              <aspectratio>keep</aspectratio>
             </control>
-			<control type="label">
+            <control type="image">
+              <posx>63</posx>
+              <posy>24</posy>
+              <width>771</width>
+              <height>144</height>
+              <texture border="3">img/CoverOverlay0.png</texture>
+              <aspectratio>stretch</aspectratio>
+            </control>
+            <control type="label">
               <animation effect="fade" start="0" end="100" time="300" delay="200">Focus</animation>
               <posx>450</posx>
               <posy>180</posy>
