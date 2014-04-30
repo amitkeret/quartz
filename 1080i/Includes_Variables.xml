@@ -5,6 +5,7 @@
   </variable>
   <variable name="Banner" description="TV Banners">
     <value condition="!IsEmpty(ListItem.Art(banner))">$INFO[ListItem.Art(banner)]</value>
+    <value condition="!IsEmpty(ListItem.Art(tvshow.banner))">$INFO[ListItem.Art(tvshow.banner)]</value>
     <value condition="!IsEmpty(ListItem.Property(Fanart_Image))">$INFO[ListItem.Property(Fanart_Image)]</value>
     <value>$INFO[ListItem.Icon]</value>
   </variable>
