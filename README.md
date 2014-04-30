@@ -2,7 +2,10 @@
 This is a mod of the original [Quartz]() skin by pecinko.
 
 ## Changes from the original skin
-This version adds verious tweaks, with emphasis on support for 3rd-party add-ons and improvement in customization options.
+1. Emphasis on support for 3rd-party add-ons
+1. Improvements in customization options
+1. The **Skin Settings** interface follows the system settings' layout and design
+1. Various tweaks, check changelog.txt for complete list
 
 ### Supported addons
 - [Skin Widgets](http://forum.xbmc.org/showthread.php?tid=142389)
@@ -12,9 +15,12 @@ This version adds verious tweaks, with emphasis on support for 3rd-party add-ons
 - [TV Show Next Aired](http://forum.xbmc.org/showthread.php?tid=186090)
     - Script will startup silenty, if available
     - Support for both *Monday-week* and *Today-week* views
-- [Artwork Downloader](http://forum.xbmc.org/showthread.php?tid=114633) (incomplete)
+- [Artwork Downloader](http://forum.xbmc.org/showthread.php?tid=114633), access from:
+    - Movies / TV Shows lists (side-dialog)
+    - VideoInfo page
+    - TV Show Next Aired options dialog
 - [In-progress Reset](https://github.com/amitkeret/script.module.inprogressreset), via
-    - Context menu item
+    - Side-dialog item
     - VideoInfo page button
 
 ### Customizations
