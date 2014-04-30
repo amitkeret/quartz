@@ -37,6 +37,13 @@
           <label>$LOCALIZE[21429]: $LOCALIZE[21430]</label>
           <altlabel>$LOCALIZE[21429]: $LOCALIZE[21431]</altlabel>
         </control>
+        <control type="button" id="696" description="InProgressReset">
+          <visible>[Container.Content(Episodes) | Container.Content(Movies) ] + system.hasaddon(script.module.inprogressreset) + !SubString(ListItem.PercentPlayed,0,left)</visible>
+          <include>9000Buttons</include>
+          <label>31210</label>
+          <onclick>Dialog.Close(all,true)</onclick>
+          <onclick>RunScript(script.module.inprogressreset,DBID=$INFO[ListItem.DBID])</onclick>
+        </control>
         <control type="button" id="697" description="Artwork Downloader">
           <visible>System.HasAddon(script.artwork.downloader)</visible>
           <visible>Container.Content(tvshows) | Container.Content(movies) | Container.Content(musicvideos)</visible>
