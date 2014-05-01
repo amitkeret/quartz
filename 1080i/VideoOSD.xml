@@ -289,7 +289,7 @@
           <posx>430</posx>
           <posy>66</posy>
           <width>900</width>
-          <height>900</height>
+          <height>970</height>
           <aspectratio>stretch</aspectratio>
           <texture border="136,127,128,139">img/Dialog.png</texture>
         </control>
@@ -345,6 +345,12 @@
             <include>9000Buttons</include>
             <label>$LOCALIZE[292] &amp; $LOCALIZE[287]</label>
             <onclick>ActivateWindow(OSDAudioSettings)</onclick>
+          </control>
+          <control type="button" id="255">
+            <visible>VideoPlayer.IsStereoscopic</visible>
+            <include>9000Buttons</include>
+            <label>36501</label>
+            <onclick>StereoMode</onclick>
           </control>
           <control type="button" id="705">
             <visible>!VideoPlayer.Content(LiveTV)</visible>

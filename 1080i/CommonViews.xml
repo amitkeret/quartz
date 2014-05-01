@@ -627,7 +627,7 @@
   </include>
   <include name="3D_Badge_visibility">
     <visible>!Skin.HasSetting(HideBadge_3D)</visible>
-    <visible>SubString(ListItem.FilenameAndPath,3dbd) | SubString(ListItem.FilenameAndPath,SBS.) | SubString(ListItem.FilenameAndPath,Anaglyph)</visible>
+    <visible>ListItem.IsStereoscopic | SubString(ListItem.FilenameAndPath,3dbd) | SubString(ListItem.FilenameAndPath,SBS.) | SubString(ListItem.FilenameAndPath,Anaglyph)</visible>
   </include>
 	<include name="3D_Badge">
     <control type="image">
