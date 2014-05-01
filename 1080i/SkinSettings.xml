@@ -334,7 +334,7 @@
         <include>SkinSettingsImage</include>
         <posy>348</posy>
         <height>384</height>
-        <texture>help/BadgeUnwatchedOFF.png</texture>
+        <texture>help/OptionsMenuOFF.png</texture>
       </control>
       <control type="image" description="Views">
         <visible>Control.HasFocus(3214)</visible>
@@ -348,7 +348,7 @@
         <include>SkinSettingsImage</include>
         <posy>348</posy>
         <height>384</height>
-        <texture>help/Badge3DOFF.png</texture>
+        <texture>help/OptionsMenuOFF.png</texture>
       </control>
       <control type="image" description="HomeMenu">
         <visible>Control.HasFocus(3208)</visible>
