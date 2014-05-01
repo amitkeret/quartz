@@ -43,6 +43,7 @@
           <itemlayout width="802" height="81">
             <include>Watched_Marks</include>
             <include>HD_Badge</include>
+            <include>Stream_Badge</include>
             <include>3D_Badge</include>
             <include>ArrowNF</include>
             <control type="label" description="Main Label">
@@ -65,6 +66,7 @@
           <focusedlayout width="802" height="81">
             <include>Watched_Marks</include>
             <include>HD_Badge</include>
+            <include>Stream_Badge</include>
             <include>3D_Badge</include>
             <include>ArrowFO</include>
             <control type="label" description="Main Label">
@@ -855,6 +857,7 @@
           <itemlayout width="802" height="81">
             <include>Watched_Marks</include>
             <include>HD_Badge</include>
+            <include>Stream_Badge</include>
             <include>3D_Badge</include>
             <include>Sets</include>
             <include>Unwatched_Badge</include>
@@ -880,6 +883,7 @@
           <focusedlayout width="802" height="81">
             <include>Watched_Marks</include>
             <include>HD_Badge</include>
+            <include>Stream_Badge</include>
             <include>3D_Badge</include>
             <include>SetsFO</include>
             <include>Unwatched_BadgeFO</include>
@@ -1056,6 +1060,7 @@
           <itemlayout width="802" height="81">
             <include>Watched_Marks</include>
             <include>HD_Badge</include>
+            <include>Stream_Badge</include>
             <include>3D_Badge</include>
             <include>Sets</include>
             <include>Unwatched_Badge</include>
@@ -1074,6 +1079,7 @@
           <focusedlayout width="802" height="81">
             <include>Watched_Marks</include>
             <include>HD_Badge</include>
+            <include>Stream_Badge</include>
             <include>3D_Badge</include>
             <include>SetsFO</include>
             <include>Unwatched_BadgeFO</include>

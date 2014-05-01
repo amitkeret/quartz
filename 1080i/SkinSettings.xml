@@ -169,6 +169,12 @@
           <onclick>Skin.ToggleSetting(HideBadge_3D)</onclick>
           <selected>Skin.HasSetting(HideBadge_3D)</selected>
         </control>
+        <control type="radiobutton" id="3216" description="Stream badge">
+          <include>SkinSettingsButton</include>
+          <label>$LOCALIZE[31975]</label>
+          <onclick>Skin.ToggleSetting(HideBadge_Stream)</onclick>
+          <selected>Skin.HasSetting(HideBadge_Stream)</selected>
+        </control>
         <control type="radiobutton" id="3205" description="Options dialog">
           <include>SkinSettingsButton</include>
           <label>$LOCALIZE[31996]</label>
@@ -345,6 +351,20 @@
       </control>
       <control type="image" description="Views">
         <visible>Control.HasFocus(3214) + Skin.HasSetting(HideBadge_3D)</visible>
+        <include>SkinSettingsImage</include>
+        <posy>348</posy>
+        <height>384</height>
+        <texture>help/OptionsMenuOFF.png</texture>
+      </control>
+      <control type="image" description="Views">
+        <visible>Control.HasFocus(3216)</visible>
+        <include>SkinSettingsImage</include>
+        <posy>198</posy>
+        <height>684</height>
+        <texture>help/BadgeStream.png</texture>
+      </control>
+      <control type="image" description="Views">
+        <visible>Control.HasFocus(3216) + Skin.HasSetting(HideBadge_Stream)</visible>
         <include>SkinSettingsImage</include>
         <posy>348</posy>
         <height>384</height>

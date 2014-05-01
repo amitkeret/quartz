@@ -620,6 +620,30 @@
       <texture>$INFO[ListItem.VideoResolution,badges/,.png]</texture>
     </control>
   </include>
+  <include name="Stream_Badge">
+    <control type="image">
+      <visible>!Skin.HasSetting(HideBadge_Stream)</visible>
+      <visible>SubString(ListItem.FilenameAndPath,.strm,Right)</visible>
+      <posx>76r</posx>
+      <posy>23</posy>
+      <height>32</height>
+      <width>32</width>
+      <aspectratio>keep</aspectratio>
+      <texture>badges/flags/Stream.png</texture>
+    </control>
+  </include>
+  <include name="Stream_Badge51">
+    <control type="image">
+      <visible>!Skin.HasSetting(HideBadge_Stream)</visible>
+      <visible>SubString(ListItem.FilenameAndPath,.strm,Right)</visible>
+      <posx>79r</posx>
+      <posy>0</posy>
+      <height>111</height>
+      <width>35</width>
+      <aspectratio>keep</aspectratio>
+      <texture>badges/flags/Stream.png</texture>
+    </control>
+  </include>
   <include name="3D_Badge_Common">
     <include>3D_Badge_visibility</include>
     <aspectratio>keep</aspectratio>
@@ -905,6 +929,7 @@
     <itemlayout condition="container.content(episodes) | container.content(musicvideos)" width="802" height="111">
       <include>ListBG</include>
       <include>HD_Badge51</include>
+      <include>Stream_Badge51</include>
       <include>3D_Badge51</include>
       <control type="image" description="SCALE">
         <posx>9</posx>
@@ -962,6 +987,7 @@
     <focusedlayout condition="container.content(episodes) | container.content(musicvideos)" width="802" height="111">
       <include>ListBG</include>
       <include>HD_Badge51</include>
+      <include>Stream_Badge51</include>
       <include>3D_Badge51</include>
       <control type="image" description="SCALE">
         <posx>9</posx>
@@ -1139,6 +1165,7 @@
       <include>ListBG</include>
       <include>Watched_Marks51</include>
       <include>HD_Badge51</include>
+      <include>Stream_Badge51</include>
       <include>3D_Badge51</include>
       <include>Sets51</include>
       <control type="group">
@@ -1189,6 +1216,7 @@
       <include>ListBG</include>
       <include>Watched_Marks51</include>
       <include>HD_Badge51</include>
+      <include>Stream_Badge51</include>
       <include>3D_Badge51</include>
       <include>SetsFO51</include>
       <control type="group">
@@ -1276,6 +1304,7 @@
     <itemlayout condition="container.content(episodes) | container.content(musicvideos)" width="802" height="111">
       <include>ListBG</include>
       <include>HD_Badge51</include>
+      <include>Stream_Badge51</include>
       <include>3D_Badge51</include>
       <control type="image" description="SCALE">
         <posx>9</posx>
@@ -1333,6 +1362,7 @@
     <focusedlayout condition="container.content(episodes) | container.content(musicvideos)" width="802" height="111">
       <include>ListBG</include>
       <include>HD_Badge51</include>
+      <include>Stream_Badge51</include>
       <include>3D_Badge51</include>
       <control type="image" description="SCALE">
         <posx>9</posx>
@@ -1393,6 +1423,7 @@
       <include>ListBG</include>
       <include>Watched_Marks51</include>
       <include>HD_Badge51</include>
+      <include>Stream_Badge51</include>
       <include>3D_Badge51</include>
       <control type="label" description="Main Label">
         <visible>Container.Content(episodes) + IntegerGreaterThan(ListItem.VideoResolution,700)</visible>
@@ -1434,6 +1465,7 @@
       <include>ListBG</include>
       <include>Watched_Marks51</include>
       <include>HD_Badge51</include>
+      <include>Stream_Badge51</include>
       <include>3D_Badge51</include>
       <control type="label" description="Main Label">
         <visible>Container.Content(episodes) + IntegerGreaterThan(ListItem.VideoResolution,700)</visible>
