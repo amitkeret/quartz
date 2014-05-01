@@ -1,4 +1,4 @@
-<addon id="skin.quartz.mod" version="0.4.1" name="Quartz Modded" provider-name="amitkeret">
+<addon id="skin.quartz.mod" version="0.5.0" name="Quartz Modded" provider-name="amitkeret">
   <requires>
     <import addon="xbmc.gui" version="4.0.0"/>
     <import addon="script.favourites" version="4.0.4"/>

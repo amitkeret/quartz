@@ -27,4 +27,4 @@ This is a mod of the original [Quartz]() skin by pecinko.
 - **Theme support** on home screen
     - TV episode thumbs, 3 options
     - TV episode posters/thumbnails
-- Toggle visibility for Unwatched/3D badges
+- Toggle visibility for Unwatched/3D/Stream badges
