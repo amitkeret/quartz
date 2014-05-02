@@ -1050,20 +1050,7 @@
       <include>Sets51</include>
       <control type="group">
         <animation condition="IsEmpty(ListItem.Label2) + IsEmpty(ListItem.Duration)" effect="slide" start="0,0" end="0,18" time="0" reversible="true">Conditional</animation>
-        <control type="label" description="Main Label">
-          <visible>![ListItem.IsFolder | IntegerGreaterThan(ListItem.VideoResolution,700)]</visible>
-          <posx>45</posx>
-          <width>717</width>
-          <include>51MainLabel</include>
-          <label>$INFO[ListItem.Label]</label>
-        </control>
-        <control type="label" description="Main Label">
-          <visible>IntegerGreaterThan(ListItem.VideoResolution,700) | ListItem.IsFolder</visible>
-          <posx>45</posx>
-          <width>630</width>
-          <include>51MainLabel</include>
-          <label>$INFO[ListItem.Label]</label>
-        </control>
+        <include>FileListsTitleConditionalWidth1</include>
       </control>
       <control type="group">
         <visible>!Control.IsVisible(51)</visible>
@@ -1101,20 +1088,7 @@
       <include>SetsFO51</include>
       <control type="group">
         <animation condition="IsEmpty(ListItem.Label2) + IsEmpty(ListItem.Duration)" effect="slide" start="0,0" end="0,18" time="0" reversible="true">Conditional</animation>
-        <control type="label" description="Main Label">
-          <visible>![ListItem.IsFolder | IntegerGreaterThan(ListItem.VideoResolution,700)]</visible>
-          <posx>45</posx>
-          <width>717</width>
-          <include>51MainLabelFO</include>
-          <label>$INFO[ListItem.Label]</label>
-        </control>
-        <control type="label" description="Main Label">
-          <visible>IntegerGreaterThan(ListItem.VideoResolution,700) | ListItem.IsFolder</visible>
-          <posx>45</posx>
-          <width>630</width>
-          <include>51MainLabelFO</include>
-          <label>$INFO[ListItem.Label]</label>
-        </control>
+        <include>FileListsTitleConditionalWidth1</include>
       </control>
       <control type="group">
         <visible>!Control.IsVisible(51)</visible>
@@ -1210,20 +1184,7 @@
         <texture>$VAR[Overlay]</texture>
         <aspectratio>keep</aspectratio>
       </control>
-      <control type="label" description="Main Label">
-        <visible>IntegerGreaterThan(ListItem.VideoResolution,700)</visible>
-        <posx>210</posx>
-        <width>480</width>
-        <include>51MainLabel</include>
-        <label>$INFO[ListItem.Label]</label>
-      </control>
-      <control type="label" description="Main Label">
-        <visible>!IntegerGreaterThan(ListItem.VideoResolution,700)</visible>
-        <posx>210</posx>
-        <width>540</width>
-        <include>51MainLabel</include>
-        <label>$INFO[ListItem.Label]</label>
-      </control>
+      <include>FileListsTitleConditionalWidth2</include>
       <control type="label" description="Label2">
         <visible>container.content(episodes)</visible>
         <posx>210</posx>
@@ -1268,20 +1229,7 @@
         <texture>$VAR[Overlay]</texture>
         <aspectratio>keep</aspectratio>
       </control>
-      <control type="label" description="Main Label">
-        <visible>IntegerGreaterThan(ListItem.VideoResolution,700)</visible>
-        <posx>210</posx>
-        <width>480</width>
-        <include>51MainLabelFO</include>
-        <label>$INFO[ListItem.Label]</label>
-      </control>
-      <control type="label" description="Main Label">
-        <visible>!IntegerGreaterThan(ListItem.VideoResolution,700)</visible>
-        <posx>210</posx>
-        <width>540</width>
-        <include>51MainLabelFO</include>
-        <label>$INFO[ListItem.Label]</label>
-      </control>
+      <include>FileListsTitleConditionalWidth2</include>
       <control type="label" description="Label2">
         <visible>container.content(episodes)</visible>
         <posx>210</posx>
@@ -1305,20 +1253,7 @@
       <include>HD_Badge51</include>
       <include>Stream_Badge51</include>
       <include>3D_Badge51</include>
-      <control type="label" description="Main Label">
-        <visible>Container.Content(episodes) + IntegerGreaterThan(ListItem.VideoResolution,700)</visible>
-        <posx>45</posx>
-        <width>630</width>
-        <include>51MainLabel</include>
-        <label>$INFO[ListItem.Label]</label>
-      </control>
-      <control type="label" description="Main Label">
-        <visible>!Container.content(episodes) | !IntegerGreaterThan(ListItem.VideoResolution,700)</visible>
-        <posx>45</posx>
-        <width>712</width>
-        <include>51MainLabel</include>
-        <label>$INFO[ListItem.Label]</label>
-      </control>
+      <include>FileListsTitleConditionalWidth1</include>
       <control type="label" description="Label2">
         <visible>container.content(episodes)</visible>
         <posx>45</posx>
@@ -1347,20 +1282,7 @@
       <include>HD_Badge51</include>
       <include>Stream_Badge51</include>
       <include>3D_Badge51</include>
-      <control type="label" description="Main Label">
-        <visible>Container.Content(episodes) + IntegerGreaterThan(ListItem.VideoResolution,700)</visible>
-        <posx>45</posx>
-        <width>630</width>
-        <include>51MainLabelFO</include>
-        <label>$INFO[ListItem.Label]</label>
-      </control>
-      <control type="label" description="Main Label">
-        <visible>!Container.content(episodes) | !IntegerGreaterThan(ListItem.VideoResolution,700)</visible>
-        <posx>45</posx>
-        <width>712</width>
-        <include>51MainLabelFO</include>
-        <label>$INFO[ListItem.Label]</label>
-      </control>
+      <include>FileListsTitleConditionalWidth1</include>
       <control type="label" description="Label2">
         <visible>container.content(episodes)</visible>
         <posx>45</posx>
@@ -1718,5 +1640,48 @@
     <texturebg>img/ItemBG.png</texturebg>
     <midtexture>img/ItemBG2.png</midtexture>
     <info>ListItem.Progress</info>
+  </include>
+  <include name="FileListsTitleConditionalWidth1">
+    <control type="label" description="Main Label">
+      <visible>!Skin.HasSetting(HideBadge_3D) + ListItem.IsStereoscopic | SubString(ListItem.FilenameAndPath,3dbd) | SubString(ListItem.FilenameAndPath,SBS.) | SubString(ListItem.FilenameAndPath,Anaglyph)</visible>
+      <width>615</width>
+      <include>52MainLabel</include>
+      <label>$INFO[ListItem.Label]</label>
+    </control>
+    <control type="label" description="Main Label">
+      <visible>![ListItem.IsStereoscopic | SubString(ListItem.FilenameAndPath,3dbd) | SubString(ListItem.FilenameAndPath,SBS.) | SubString(ListItem.FilenameAndPath,Anaglyph)] + [IntegerGreaterThan(ListItem.VideoResolution,700) | [!Skin.HasSetting(HideBadge_Stream) + SubString(ListItem.FilenameAndPath,.strm,Right)] | ListItem.IsFolder]</visible>
+      <width>665</width>
+      <include>52MainLabel</include>
+      <label>$INFO[ListItem.Label]</label>
+    </control>
+    <control type="label" description="Main Label">
+      <visible>![ListItem.IsStereoscopic | SubString(ListItem.FilenameAndPath,3dbd) | SubString(ListItem.FilenameAndPath,SBS.) | SubString(ListItem.FilenameAndPath,Anaglyph)] + ![IntegerGreaterThan(ListItem.VideoResolution,700) | SubString(ListItem.FilenameAndPath,.strm,Right) | ListItem.IsFolder]</visible>
+      <width>712</width>
+      <include>52MainLabel</include>
+      <label>$INFO[ListItem.Label]</label>
+    </control>
+  </include>
+  <include name="FileListsTitleConditionalWidth2">
+    <control type="label" description="Main Label">
+      <visible>!Skin.HasSetting(HideBadge_3D) + ListItem.IsStereoscopic | SubString(ListItem.FilenameAndPath,3dbd) | SubString(ListItem.FilenameAndPath,SBS.) | SubString(ListItem.FilenameAndPath,Anaglyph)</visible>
+      <posx>210</posx>
+      <width>445</width>
+      <include>51MainLabelFO</include>
+      <label>$INFO[ListItem.Label]</label>
+    </control>
+    <control type="label" description="Main Label">
+      <visible>![ListItem.IsStereoscopic | SubString(ListItem.FilenameAndPath,3dbd) | SubString(ListItem.FilenameAndPath,SBS.) | SubString(ListItem.FilenameAndPath,Anaglyph)] + [IntegerGreaterThan(ListItem.VideoResolution,700) | [!Skin.HasSetting(HideBadge_Stream) + SubString(ListItem.FilenameAndPath,.strm,Right)] | ListItem.IsFolder]</visible>
+      <posx>210</posx>
+      <width>495</width>
+      <include>51MainLabelFO</include>
+      <label>$INFO[ListItem.Label]</label>
+    </control>
+    <control type="label" description="Main Label">
+      <visible>![ListItem.IsStereoscopic | SubString(ListItem.FilenameAndPath,3dbd) | SubString(ListItem.FilenameAndPath,SBS.) | SubString(ListItem.FilenameAndPath,Anaglyph)] + ![IntegerGreaterThan(ListItem.VideoResolution,700) | SubString(ListItem.FilenameAndPath,.strm,Right) | ListItem.IsFolder]</visible>
+      <posx>210</posx>
+      <width>540</width>
+      <include>51MainLabelFO</include>
+      <label>$INFO[ListItem.Label]</label>
+    </control>
   </include>
 </includes>

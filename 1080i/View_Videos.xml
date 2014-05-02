@@ -46,17 +46,7 @@
             <include>Stream_Badge</include>
             <include>3D_Badge</include>
             <include>ArrowNF</include>
-            <control type="label" description="Main Label">
-              <visible>IntegerGreaterThan(ListItem.VideoResolution,700) | ListItem.IsFolder</visible>
-              <include>52MainLabel</include>
-              <label>$INFO[ListItem.Label]</label>
-            </control>
-            <control type="label" description="Main Label">
-              <visible>![IntegerGreaterThan(ListItem.VideoResolution,700) | ListItem.IsFolder]</visible>
-              <width>711</width>
-              <include>52MainLabel</include>
-              <label>$INFO[ListItem.Label]</label>
-            </control>
+            <include>FileListsTitleConditionalWidth1</include>
             <control type="label" description="Label2">
               <visible>container.content(songs) | container.content(musicvideos)</visible>
               <include>52Label2</include>
@@ -69,17 +59,7 @@
             <include>Stream_Badge</include>
             <include>3D_Badge</include>
             <include>ArrowFO</include>
-            <control type="label" description="Main Label">
-              <visible>IntegerGreaterThan(ListItem.VideoResolution,700) | ListItem.IsFolder</visible>
-              <include>52MainLabelFO</include>
-              <label>$INFO[ListItem.Label]</label>
-            </control>
-            <control type="label" description="Main Label">
-              <visible>![IntegerGreaterThan(ListItem.VideoResolution,700) | ListItem.IsFolder]</visible>
-              <width>711</width>
-              <include>52MainLabelFO</include>
-              <label>$INFO[ListItem.Label]</label>
-            </control>
+            <include>FileListsTitleConditionalWidth1</include>
             <control type="label" description="Label2">
               <visible>container.content(songs) | container.content(musicvideos)</visible>
               <include>52Label2FO</include>
@@ -861,17 +841,7 @@
             <include>3D_Badge</include>
             <include>Sets</include>
             <include>Unwatched_Badge</include>
-            <control type="label" description="Main Label">
-              <visible>!IntegerGreaterThan(ListItem.VideoResolution,700)</visible>
-              <width>720</width>
-              <include>52MainLabel</include>
-              <label>$INFO[ListItem.Label]</label>
-            </control>
-            <control type="label" description="Main Label">
-              <visible>IntegerGreaterThan(ListItem.VideoResolution,700)</visible>
-              <include>52MainLabel</include>
-              <label>$INFO[ListItem.Label]</label>
-            </control>
+            <include>FileListsTitleConditionalWidth1</include>
             <control type="label" description="Label2">
               <visible>container.content(musicvideos)</visible>
               <include>52Label2</include>
@@ -887,17 +857,7 @@
             <include>3D_Badge</include>
             <include>SetsFO</include>
             <include>Unwatched_BadgeFO</include>
-            <control type="label" description="Main Label">
-              <visible>!IntegerGreaterThan(ListItem.VideoResolution,700)</visible>
-              <width>720</width>
-              <include>52MainLabelFO</include>
-              <label>$INFO[ListItem.Label]</label>
-            </control>
-            <control type="label" description="Main Label">
-              <visible>IntegerGreaterThan(ListItem.VideoResolution,700)</visible>
-              <include>52MainLabelFO</include>
-              <label>$INFO[ListItem.Label]</label>
-            </control>
+            <include>FileListsTitleConditionalWidth1</include>
             <control type="label" description="Label2">
               <visible>container.content(musicvideos)</visible>
               <include>52Label2FO</include>
@@ -1064,17 +1024,7 @@
             <include>3D_Badge</include>
             <include>Sets</include>
             <include>Unwatched_Badge</include>
-            <control type="label" description="Main Label">
-              <visible>!IntegerGreaterThan(ListItem.VideoResolution,700)</visible>
-              <width>720</width>
-              <include>52MainLabel</include>
-              <label>$INFO[ListItem.Label]</label>
-            </control>
-            <control type="label" description="Main Label">
-              <visible>IntegerGreaterThan(ListItem.VideoResolution,700)</visible>
-              <include>52MainLabel</include>
-              <label>$INFO[ListItem.Label]</label>
-            </control>
+            <include>FileListsTitleConditionalWidth1</include>
           </itemlayout>
           <focusedlayout width="802" height="81">
             <include>Watched_Marks</include>
@@ -1083,17 +1033,7 @@
             <include>3D_Badge</include>
             <include>SetsFO</include>
             <include>Unwatched_BadgeFO</include>
-            <control type="label" description="Main Label">
-              <visible>!IntegerGreaterThan(ListItem.VideoResolution,700)</visible>
-              <width>720</width>
-              <include>52MainLabelFO</include>
-              <label>$INFO[ListItem.Label]</label>
-            </control>
-            <control type="label" description="Main Label">
-              <visible>IntegerGreaterThan(ListItem.VideoResolution,700)</visible>
-              <include>52MainLabelFO</include>
-              <label>$INFO[ListItem.Label]</label>
-            </control>
+            <include>FileListsTitleConditionalWidth1</include>
           </focusedlayout>
         </control>
       </control>
