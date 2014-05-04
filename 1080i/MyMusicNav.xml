@@ -185,7 +185,7 @@
       <control type="group" description="Container and frame">
         <control type="panel" id="53" description="Panel">
           <visible>Skin.HasSetting(AddViews)</visible>
-          <visible>Container.Content(Albums) | Container.Content(Addons)</visible>
+          <visible>Container.Content(Artists) | Container.Content(Albums) | Container.Content(Addons)</visible>
           <viewtype label="536">Icons</viewtype>
           <posx>60</posx>
           <posy>210</posy>
