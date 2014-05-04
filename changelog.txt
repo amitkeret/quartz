@@ -1,3 +1,8 @@
+v 0.5.1
+- added "Icons" view to artists section
+- updated badge help imagery
+- FIX filename length to accommodate for badges
+
 v 0.5.0
 - New badge for Internet Streaming files (.strm)
 - better badge help images

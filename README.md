@@ -19,6 +19,8 @@ This is a mod of the original [Quartz]() skin by pecinko.
     - Movies / TV Shows lists (side-dialog)
     - VideoInfo page
     - TV Show Next Aired options dialog
+- Online streams (.strm files) support
+    - Streams that were added to library (eg. through [1Channel](http://addons.xbmchub.com/show/plugin.video.1channel/)) show a [Stream badge](https://github.com/amitkeret/skin.quartz.mod/blob/master/media/help/BadgeStream.png)
 - [In-progress Reset](https://github.com/amitkeret/script.module.inprogressreset), via
     - Side-dialog item
     - VideoInfo page button
