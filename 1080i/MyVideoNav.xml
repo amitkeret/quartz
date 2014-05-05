@@ -38,7 +38,7 @@
           <altlabel>$LOCALIZE[21429]: $LOCALIZE[21431]</altlabel>
         </control>
         <control type="radiobutton" id="20" description="Media Filter">
-          <visible>Container.CanFilterAdvanced</visible>
+          <visible>Container.CanFilterAdvanced + Skin.HasSetting(AdvanceFilter)</visible>
           <include>9000Buttons</include>
           <label>$LOCALIZE[587]</label>
           <selected>Container.Filtered</selected>
