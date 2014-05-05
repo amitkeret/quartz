@@ -1,3 +1,7 @@
+v 0.6.0
+- Advanced media filtering
+- FIX using strings from original addons
+
 v 0.5.1
 - added "Icons" view to artists section
 - updated badge help imagery
