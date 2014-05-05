@@ -53,6 +53,7 @@
             <width>810</width>
             <height>36</height>
             <font>size17</font>
+            <textcolor>Grey</textcolor>
             <info>ListItem.Label</info>
           </control>
           <control type="label">
@@ -61,7 +62,7 @@
             <height>30</height>
             <width>810</width>
             <font>size18</font>
-            <textcolor>Silver</textcolor>
+            <textcolor>Grey</textcolor>
             <info>ListItem.Label2</info>
           </control>
         </itemlayout>

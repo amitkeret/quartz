@@ -51,11 +51,13 @@
             <control type="label" description="Main Label">
               <visible>!ListItem.IsFolder</visible>
               <width>765</width>
+              <textcolor>Grey</textcolor>
               <include>52MainLabel</include>
               <label>$INFO[ListItem.Label]</label>
             </control>
             <control type="label" description="Main Label">
               <visible>ListItem.IsFolder</visible>
+              <textcolor>Grey</textcolor>
               <include>52MainLabel</include>
               <label>$INFO[ListItem.Label]</label>
             </control>
