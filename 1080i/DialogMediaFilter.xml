@@ -44,7 +44,8 @@
         <description>Default Button</description>
         <posx>0</posx>
         <posy>0</posy>
-        <include>9000Buttons</include>
+        <font>size22</font>
+        <align>left</align>
       </control>
       <control type="radiobutton" id="8">
         <description>Default RadioButton</description>
