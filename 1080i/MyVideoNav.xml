@@ -37,6 +37,14 @@
           <label>$LOCALIZE[21429]: $LOCALIZE[21430]</label>
           <altlabel>$LOCALIZE[21429]: $LOCALIZE[21431]</altlabel>
         </control>
+        <control type="radiobutton" id="20" description="Media Filter">
+          <visible>Container.CanFilterAdvanced</visible>
+          <include>9000Buttons</include>
+          <label>$LOCALIZE[587]</label>
+          <selected>Container.Filtered</selected>
+          <onclick>right</onclick>
+          <onclick>Filter</onclick>
+        </control>
         <control type="button" id="696" description="InProgressReset">
           <visible>[Container.Content(Episodes) | Container.Content(Movies) ] + system.hasaddon(script.module.inprogressreset) + !SubString(ListItem.PercentPlayed,0,left)</visible>
           <include>9000Buttons</include>
