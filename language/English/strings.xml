@@ -101,10 +101,10 @@
   <string id="31203">Choose Your Song</string>
   <string id="31204">Section Links</string>
   <string id="31205">Lyrics Source</string>
-  <string id="31206">Update TV info</string>
+  <string id="31206"></string>  <!-- blanked 2014-05-05 -->
   <string id="31207">Airing</string>
   <string id="31208">Last episode</string>
-  <string id="31209">Download artwork</string>
+  <string id="31209"></string>  <!-- blanked 2014-05-05 -->
   <string id="31210">Reset Progress</string>
         
   <!-- Extra labels -->

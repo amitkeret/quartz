@@ -315,7 +315,7 @@
           <ondown>10</ondown>
           <textwidth>500</textwidth>
           <include>9000Buttons</include>
-          <label>31206</label>
+          <label>$ADDON[script.tv.show.next.aired 32007]</label>
           <onclick>RunScript(script.tv.show.next.aired,force=True)</onclick>
         </control>
         <control type="button" id="10" description="download posters">

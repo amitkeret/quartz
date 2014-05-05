@@ -56,7 +56,7 @@
           <visible>System.HasAddon(script.artwork.downloader)</visible>
           <visible>Container.Content(tvshows) | Container.Content(movies) | Container.Content(musicvideos)</visible>
           <include>9000Buttons</include>
-          <label>31209</label>
+          <label>$LOCALIZE[33003] $ADDON[script.artwork.downloader 32133]</label>
           <onclick condition="Container.Content(tvshows)">RunScript(script.artwork.downloader,mediatype=tvshow,dbid=$INFO[ListItem.DBID])</onclick>
           <onclick condition="Container.Content(movies)">RunScript(script.artwork.downloader,mediatype=movie,dbid=$INFO[ListItem.DBID])</onclick>
           <onclick condition="Container.Content(musicvideos)">RunScript(script.artwork.downloader,mediatype=musicvideos,dbid=$INFO[ListItem.DBID])</onclick>
