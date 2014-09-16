@@ -4,7 +4,7 @@
   <controls>
     <include>MiniBackground</include>
     <include>Header</include>
-    
+
     <control type="image" description="Line Split">
       <posx>474</posx>
       <posy>60</posy>
@@ -81,7 +81,7 @@
         </item>
       </content>
     </control>
-    
+
     <control type="group" id="3001" description="Right panel">
       <posx>540</posx>
       <posy>165</posy>
@@ -137,12 +137,6 @@
           <label>$LOCALIZE[24020] $LOCALIZE[24013] $LOCALIZE[24000]</label>
           <label2>$INFO[Skin.String(LyricPath)]</label2>
           <onclick>Skin.SetAddon(LyricPath,xbmc.python.lyrics)</onclick>
-        </control>
-        <control type="button" id="3203" description="Subtitles">
-          <include>SkinSettingsButton</include>
-          <label>$LOCALIZE[24020] $LOCALIZE[24012] $LOCALIZE[24000]</label>
-          <label2>$INFO[Skin.String(SubtitleScript_Path)]</label2>
-          <onclick>Skin.SetAddon(SubtitleScript_Path,xbmc.python.subtitles)</onclick>
         </control>
         <control type="button" id="3215" description="Skin Widgets">
           <include>SkinSettingsButton</include>
@@ -236,7 +230,7 @@
         </control>
       </control>
     </control>
-        
+
     <control type="group" description="Left panel">
       <posy>0</posy>
       <control type="image" description="PVR">
@@ -426,6 +420,6 @@
         <texture>help/Warning.png</texture>
       </control>
     </control>
-    
+
   </controls>
 </window>
