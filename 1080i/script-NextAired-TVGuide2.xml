@@ -4,41 +4,41 @@
   <include>TV_NextAired_onload</include>
   <controls>
     <include>TV_NextAired_commonControls</include>
-		<control type="grouplist" id="2000">
-			<posx>164</posx>
-			<posy>400</posy>
-			<width>1590</width>
-			<height>630</height>
-			<orientation>horizontal</orientation>
-			<align>center</align>
-			<itemgap>20</itemgap>
-			<control type="group" description="Yesterday">
-				<visible>!StringCompare(Window(Home).Property(NextAired.200.Wday),)</visible>
-				<width>210</width>
-				<height>630</height>
-				<control type="label">
-					<posx>0</posx>
-					<posy>13</posy>
-					<width>210</width>
-					<height>20</height>
-					<label>$INFO[Window(Home).Property(NextAired.Yesterday)]</label>
-					<align>center</align>
-					<aligny>center</aligny>
-					<textcolor>Grey2</textcolor>
-				</control>
-				<control type="panel" id="200">
-					<posx>0</posx>
-					<posy>60</posy>
-					<width>210</width>
-					<height>550</height>
-					<scrolltime>200</scrolltime>
-					<onup>200</onup>
-					<ondown>200</ondown>
-					<onleft condition="!Skin.HasSetting(ViewOptions_Hide)">9000</onleft>
-					<onright>201</onright>
-					<include>TV_NextAired_commonLayout</include>
-				</control>
-				<control type="image" dscription="top gradient">
+                <control type="grouplist" id="2000">
+                        <posx>164</posx>
+                        <posy>400</posy>
+                        <width>1590</width>
+                        <height>630</height>
+                        <orientation>horizontal</orientation>
+                        <align>center</align>
+                        <itemgap>20</itemgap>
+                        <control type="group" description="Yesterday">
+                                <visible>!StringCompare(Window(Home).Property(NextAired.200.Wday),)</visible>
+                                <width>210</width>
+                                <height>630</height>
+                                <control type="label">
+                                        <posx>0</posx>
+                                        <posy>13</posy>
+                                        <width>210</width>
+                                        <height>20</height>
+                                        <label>$INFO[Window(Home).Property(NextAired.YesterdayText)]</label>
+                                        <align>center</align>
+                                        <aligny>center</aligny>
+                                        <textcolor>Grey2</textcolor>
+                                </control>
+                                <control type="panel" id="200">
+                                        <posx>0</posx>
+                                        <posy>60</posy>
+                                        <width>210</width>
+                                        <height>550</height>
+                                        <scrolltime>200</scrolltime>
+                                        <onup>200</onup>
+                                        <ondown>200</ondown>
+                                        <onleft condition="!Skin.HasSetting(ViewOptions_Hide)">9000</onleft>
+                                        <onright>201</onright>
+                                        <include>TV_NextAired_commonLayout</include>
+                                </control>
+                                <control type="image" dscription="top gradient">
           <animation effect="fade" time="200">VisibleChange</animation>
           <visible>Container(200).HasPrevious</visible>
           <posx>0</posx>
@@ -47,8 +47,8 @@
           <width>210</width>
           <texture flipy="true">img/DefaultGradient.png</texture>
           <aspectratio>stretch</aspectratio>
-				</control>
-				<control type="image" dscription="bottom gradient">
+                                </control>
+                                <control type="image" dscription="bottom gradient">
           <animation effect="fade" time="200">VisibleChange</animation>
           <visible>Container(200).HasNext</visible>
           <posx>0</posx>
@@ -57,9 +57,9 @@
           <width>210</width>
           <texture>img/DefaultGradient.png</texture>
           <aspectratio>stretch</aspectratio>
-				</control>
-				<control type="image" dscription="more arrow">
-				  <animation effect="fade" time="200">VisibleChange</animation>
+                                </control>
+                                <control type="image" dscription="more arrow">
+                                  <animation effect="fade" time="200">VisibleChange</animation>
           <visible>Container(200).HasNext</visible>
           <posx>0</posx>
           <posy>610</posy>
@@ -69,35 +69,35 @@
           <aligny>center</aligny>
           <texture>img/ArrowDownFO.png</texture>
           <aspectratio>keep</aspectratio>
-				</control>
-			</control>
-			<control type="group" description="Today">
-				<visible>!StringCompare(Window(Home).Property(NextAired.201.Wday),)</visible>
-				<width>210</width>
-				<height>630</height>
-				<control type="label">
-					<posx>0</posx>
-					<posy>13</posy>
-					<width>210</width>
-					<height>20</height>
-					<label>$INFO[Window(Home).Property(NextAired.Today)]</label>
-					<align>center</align>
-					<aligny>center</aligny>
-					<textcolor>Grey2</textcolor>
-				</control>
-				<control type="panel" id="201">
-					<posx>0</posx>
-					<posy>60</posy>
-					<width>210</width>
-					<height>550</height>
-					<scrolltime>200</scrolltime>
-					<onup>201</onup>
-					<ondown>201</ondown>
-					<onleft>200</onleft>
-					<onright>202</onright>
-					<include>TV_NextAired_commonLayout</include>
-				</control>
-				<control type="image" dscription="top gradient">
+                                </control>
+                        </control>
+                        <control type="group" description="Today">
+                                <visible>!StringCompare(Window(Home).Property(NextAired.201.Wday),)</visible>
+                                <width>210</width>
+                                <height>630</height>
+                                <control type="label">
+                                        <posx>0</posx>
+                                        <posy>13</posy>
+                                        <width>210</width>
+                                        <height>20</height>
+                                        <label>$INFO[Window(Home).Property(NextAired.TodayText)]</label>
+                                        <align>center</align>
+                                        <aligny>center</aligny>
+                                        <textcolor>Grey2</textcolor>
+                                </control>
+                                <control type="panel" id="201">
+                                        <posx>0</posx>
+                                        <posy>60</posy>
+                                        <width>210</width>
+                                        <height>550</height>
+                                        <scrolltime>200</scrolltime>
+                                        <onup>201</onup>
+                                        <ondown>201</ondown>
+                                        <onleft>200</onleft>
+                                        <onright>202</onright>
+                                        <include>TV_NextAired_commonLayout</include>
+                                </control>
+                                <control type="image" dscription="top gradient">
           <animation effect="fade" time="200">VisibleChange</animation>
           <visible>Container(201).HasPrevious</visible>
           <posx>0</posx>
@@ -106,8 +106,8 @@
           <width>210</width>
           <texture flipy="true">img/DefaultGradient.png</texture>
           <aspectratio>stretch</aspectratio>
-				</control>
-				<control type="image" dscription="bottom gradient">
+                                </control>
+                                <control type="image" dscription="bottom gradient">
           <animation effect="fade" time="200">VisibleChange</animation>
           <visible>Container(201).HasNext</visible>
           <posx>0</posx>
@@ -116,9 +116,9 @@
           <width>210</width>
           <texture>img/DefaultGradient.png</texture>
           <aspectratio>stretch</aspectratio>
-				</control>
-				<control type="image" dscription="more arrow">
-				  <animation effect="fade" time="200">VisibleChange</animation>
+                                </control>
+                                <control type="image" dscription="more arrow">
+                                  <animation effect="fade" time="200">VisibleChange</animation>
           <visible>Container(201).HasNext</visible>
           <posx>0</posx>
           <posy>610</posy>
@@ -128,35 +128,35 @@
           <aligny>center</aligny>
           <texture>img/ArrowDownFO.png</texture>
           <aspectratio>keep</aspectratio>
-				</control>
-			</control>
-			<control type="group" description="Tomorrow">
-				<visible>!StringCompare(Window(Home).Property(NextAired.202.Wday),)</visible>
-				<width>210</width>
-				<height>630</height>
-				<control type="label">
-					<posx>0</posx>
-					<posy>13</posy>
-					<width>210</width>
-					<height>20</height>
-					<label>$INFO[Window(Home).Property(NextAired.Tomorrow)]</label>
-					<align>center</align>
-					<aligny>center</aligny>
-					<textcolor>Grey2</textcolor>
-				</control>
-				<control type="panel" id="202">
-					<posx>0</posx>
-					<posy>60</posy>
-					<width>210</width>
-					<height>550</height>
-					<scrolltime>200</scrolltime>
-					<onup>202</onup>
-					<ondown>202</ondown>
-					<onleft>201</onleft>
-					<onright>203</onright>
-					<include>TV_NextAired_commonLayout</include>
-				</control>
-				<control type="image" dscription="top gradient">
+                                </control>
+                        </control>
+                        <control type="group" description="Tomorrow">
+                                <visible>!StringCompare(Window(Home).Property(NextAired.202.Wday),)</visible>
+                                <width>210</width>
+                                <height>630</height>
+                                <control type="label">
+                                        <posx>0</posx>
+                                        <posy>13</posy>
+                                        <width>210</width>
+                                        <height>20</height>
+                                        <label>$INFO[Window(Home).Property(NextAired.TomorrowText)]</label>
+                                        <align>center</align>
+                                        <aligny>center</aligny>
+                                        <textcolor>Grey2</textcolor>
+                                </control>
+                                <control type="panel" id="202">
+                                        <posx>0</posx>
+                                        <posy>60</posy>
+                                        <width>210</width>
+                                        <height>550</height>
+                                        <scrolltime>200</scrolltime>
+                                        <onup>202</onup>
+                                        <ondown>202</ondown>
+                                        <onleft>201</onleft>
+                                        <onright>203</onright>
+                                        <include>TV_NextAired_commonLayout</include>
+                                </control>
+                                <control type="image" dscription="top gradient">
           <animation effect="fade" time="200">VisibleChange</animation>
           <visible>Container(202).HasPrevious</visible>
           <posx>0</posx>
@@ -165,8 +165,8 @@
           <width>210</width>
           <texture flipy="true">img/DefaultGradient.png</texture>
           <aspectratio>stretch</aspectratio>
-				</control>
-				<control type="image" dscription="bottom gradient">
+                                </control>
+                                <control type="image" dscription="bottom gradient">
           <animation effect="fade" time="200">VisibleChange</animation>
           <visible>Container(202).HasNext</visible>
           <posx>0</posx>
@@ -175,9 +175,9 @@
           <width>210</width>
           <texture>img/DefaultGradient.png</texture>
           <aspectratio>stretch</aspectratio>
-				</control>
-				<control type="image" dscription="more arrow">
-				  <animation effect="fade" time="200">VisibleChange</animation>
+                                </control>
+                                <control type="image" dscription="more arrow">
+                                  <animation effect="fade" time="200">VisibleChange</animation>
           <visible>Container(202).HasNext</visible>
           <posx>0</posx>
           <posy>610</posy>
@@ -187,35 +187,35 @@
           <aligny>center</aligny>
           <texture>img/ArrowDownFO.png</texture>
           <aspectratio>keep</aspectratio>
-				</control>
-			</control>
-			<control type="group" description="Today+2">
-				<visible>!StringCompare(Window(Home).Property(NextAired.203.Wday),)</visible>
-				<width>210</width>
-				<height>630</height>
-				<control type="label">
-					<posx>0</posx>
-					<posy>13</posy>
-					<width>210</width>
-					<height>20</height>
-					<label>$INFO[Window(Home).Property(NextAired.203.Weekday)]</label>
-					<align>center</align>
-					<aligny>center</aligny>
-					<textcolor>Grey2</textcolor>
-				</control>
-				<control type="panel" id="203">
-					<posx>0</posx>
-					<posy>60</posy>
-					<width>210</width>
-					<height>550</height>
-					<scrolltime>200</scrolltime>
-					<onup>203</onup>
-					<ondown>203</ondown>
-					<onleft>202</onleft>
-					<onright>204</onright>
-					<include>TV_NextAired_commonLayout</include>
-				</control>
-				<control type="image" dscription="top gradient">
+                                </control>
+                        </control>
+                        <control type="group" description="Today+2">
+                                <visible>!StringCompare(Window(Home).Property(NextAired.203.Wday),)</visible>
+                                <width>210</width>
+                                <height>630</height>
+                                <control type="label">
+                                        <posx>0</posx>
+                                        <posy>13</posy>
+                                        <width>210</width>
+                                        <height>20</height>
+                                        <label>$INFO[Window(Home).Property(NextAired.203.Weekday)]</label>
+                                        <align>center</align>
+                                        <aligny>center</aligny>
+                                        <textcolor>Grey2</textcolor>
+                                </control>
+                                <control type="panel" id="203">
+                                        <posx>0</posx>
+                                        <posy>60</posy>
+                                        <width>210</width>
+                                        <height>550</height>
+                                        <scrolltime>200</scrolltime>
+                                        <onup>203</onup>
+                                        <ondown>203</ondown>
+                                        <onleft>202</onleft>
+                                        <onright>204</onright>
+                                        <include>TV_NextAired_commonLayout</include>
+                                </control>
+                                <control type="image" dscription="top gradient">
           <animation effect="fade" time="200">VisibleChange</animation>
           <visible>Container(203).HasPrevious</visible>
           <posx>0</posx>
@@ -224,8 +224,8 @@
           <width>210</width>
           <texture flipy="true">img/DefaultGradient.png</texture>
           <aspectratio>stretch</aspectratio>
-				</control>
-				<control type="image" dscription="bottom gradient">
+                                </control>
+                                <control type="image" dscription="bottom gradient">
           <animation effect="fade" time="200">VisibleChange</animation>
           <visible>Container(203).HasNext</visible>
           <posx>0</posx>
@@ -234,9 +234,9 @@
           <width>210</width>
           <texture>img/DefaultGradient.png</texture>
           <aspectratio>stretch</aspectratio>
-				</control>
-				<control type="image" dscription="more arrow">
-				  <animation effect="fade" time="200">VisibleChange</animation>
+                                </control>
+                                <control type="image" dscription="more arrow">
+                                  <animation effect="fade" time="200">VisibleChange</animation>
           <visible>Container(203).HasNext</visible>
           <posx>0</posx>
           <posy>610</posy>
@@ -246,35 +246,35 @@
           <aligny>center</aligny>
           <texture>img/ArrowDownFO.png</texture>
           <aspectratio>keep</aspectratio>
-				</control>
-			</control>
-			<control type="group" description="Today+3">
-				<visible>!StringCompare(Window(Home).Property(NextAired.204.Wday),)</visible>
-				<width>210</width>
-				<height>630</height>
-				<control type="label">
-					<posx>0</posx>
-					<posy>13</posy>
-					<width>210</width>
-					<height>20</height>
-					<label>$INFO[Window(Home).Property(NextAired.204.Weekday)]</label>
-					<align>center</align>
-					<aligny>center</aligny>
-					<textcolor>Grey2</textcolor>
-				</control>
-				<control type="panel" id="204">
-					<posx>0</posx>
-					<posy>60</posy>
-					<width>210</width>
-					<height>550</height>
-					<scrolltime>200</scrolltime>
-					<onup>204</onup>
-					<ondown>204</ondown>
-					<onleft>203</onleft>
-					<onright>205</onright>
-					<include>TV_NextAired_commonLayout</include>
-				</control>
-				<control type="image" dscription="top gradient">
+                                </control>
+                        </control>
+                        <control type="group" description="Today+3">
+                                <visible>!StringCompare(Window(Home).Property(NextAired.204.Wday),)</visible>
+                                <width>210</width>
+                                <height>630</height>
+                                <control type="label">
+                                        <posx>0</posx>
+                                        <posy>13</posy>
+                                        <width>210</width>
+                                        <height>20</height>
+                                        <label>$INFO[Window(Home).Property(NextAired.204.Weekday)]</label>
+                                        <align>center</align>
+                                        <aligny>center</aligny>
+                                        <textcolor>Grey2</textcolor>
+                                </control>
+                                <control type="panel" id="204">
+                                        <posx>0</posx>
+                                        <posy>60</posy>
+                                        <width>210</width>
+                                        <height>550</height>
+                                        <scrolltime>200</scrolltime>
+                                        <onup>204</onup>
+                                        <ondown>204</ondown>
+                                        <onleft>203</onleft>
+                                        <onright>205</onright>
+                                        <include>TV_NextAired_commonLayout</include>
+                                </control>
+                                <control type="image" dscription="top gradient">
           <animation effect="fade" time="200">VisibleChange</animation>
           <visible>Container(204).HasPrevious</visible>
           <posx>0</posx>
@@ -283,8 +283,8 @@
           <width>210</width>
           <texture flipy="true">img/DefaultGradient.png</texture>
           <aspectratio>stretch</aspectratio>
-				</control>
-				<control type="image" dscription="bottom gradient">
+                                </control>
+                                <control type="image" dscription="bottom gradient">
           <animation effect="fade" time="200">VisibleChange</animation>
           <visible>Container(204).HasNext</visible>
           <posx>0</posx>
@@ -293,9 +293,9 @@
           <width>210</width>
           <texture>img/DefaultGradient.png</texture>
           <aspectratio>stretch</aspectratio>
-				</control>
-				<control type="image" dscription="more arrow">
-				  <animation effect="fade" time="200">VisibleChange</animation>
+                                </control>
+                                <control type="image" dscription="more arrow">
+                                  <animation effect="fade" time="200">VisibleChange</animation>
           <visible>Container(204).HasNext</visible>
           <posx>0</posx>
           <posy>610</posy>
@@ -305,35 +305,35 @@
           <aligny>center</aligny>
           <texture>img/ArrowDownFO.png</texture>
           <aspectratio>keep</aspectratio>
-				</control>
-			</control>
-			<control type="group" description="Today+4">
-				<visible>!StringCompare(Window(Home).Property(NextAired.205.Wday),)</visible>
-				<width>210</width>
-				<height>630</height>
-				<control type="label">
-					<posx>0</posx>
-					<posy>13</posy>
-					<width>210</width>
-					<height>20</height>
-					<label>$INFO[Window(Home).Property(NextAired.205.Weekday)]</label>
-					<align>center</align>
-					<aligny>center</aligny>
-					<textcolor>Grey2</textcolor>
-				</control>
-				<control type="panel" id="205">
-					<posx>0</posx>
-					<posy>60</posy>
-					<width>210</width>
-					<height>550</height>
-					<scrolltime>200</scrolltime>
-					<onup>205</onup>
-					<ondown>205</ondown>
-					<onleft>204</onleft>
-					<onright>206</onright>
-					<include>TV_NextAired_commonLayout</include>
-				</control>
-				<control type="image" dscription="top gradient">
+                                </control>
+                        </control>
+                        <control type="group" description="Today+4">
+                                <visible>!StringCompare(Window(Home).Property(NextAired.205.Wday),)</visible>
+                                <width>210</width>
+                                <height>630</height>
+                                <control type="label">
+                                        <posx>0</posx>
+                                        <posy>13</posy>
+                                        <width>210</width>
+                                        <height>20</height>
+                                        <label>$INFO[Window(Home).Property(NextAired.205.Weekday)]</label>
+                                        <align>center</align>
+                                        <aligny>center</aligny>
+                                        <textcolor>Grey2</textcolor>
+                                </control>
+                                <control type="panel" id="205">
+                                        <posx>0</posx>
+                                        <posy>60</posy>
+                                        <width>210</width>
+                                        <height>550</height>
+                                        <scrolltime>200</scrolltime>
+                                        <onup>205</onup>
+                                        <ondown>205</ondown>
+                                        <onleft>204</onleft>
+                                        <onright>206</onright>
+                                        <include>TV_NextAired_commonLayout</include>
+                                </control>
+                                <control type="image" dscription="top gradient">
           <animation effect="fade" time="200">VisibleChange</animation>
           <visible>Container(205).HasPrevious</visible>
           <posx>0</posx>
@@ -342,8 +342,8 @@
           <width>210</width>
           <texture flipy="true">img/DefaultGradient.png</texture>
           <aspectratio>stretch</aspectratio>
-				</control>
-				<control type="image" dscription="bottom gradient">
+                                </control>
+                                <control type="image" dscription="bottom gradient">
           <animation effect="fade" time="200">VisibleChange</animation>
           <visible>Container(205).HasNext</visible>
           <posx>0</posx>
@@ -352,9 +352,9 @@
           <width>210</width>
           <texture>img/DefaultGradient.png</texture>
           <aspectratio>stretch</aspectratio>
-				</control>
-				<control type="image" dscription="more arrow">
-				  <animation effect="fade" time="200">VisibleChange</animation>
+                                </control>
+                                <control type="image" dscription="more arrow">
+                                  <animation effect="fade" time="200">VisibleChange</animation>
           <visible>Container(205).HasNext</visible>
           <posx>0</posx>
           <posy>610</posy>
@@ -364,35 +364,35 @@
           <aligny>center</aligny>
           <texture>img/ArrowDownFO.png</texture>
           <aspectratio>keep</aspectratio>
-				</control>
-			</control>
-			<control type="group" description="Today+5">
-				<visible>!StringCompare(Window(Home).Property(NextAired.206.Wday),)</visible>
-				<width>210</width>
-				<height>630</height>
-				<control type="label">
-					<posx>0</posx>
-					<posy>13</posy>
-					<width>210</width>
-					<height>20</height>
-					<label>$INFO[Window(Home).Property(NextAired.206.Weekday)]</label>
-					<align>center</align>
-					<aligny>center</aligny>
-					<textcolor>Grey2</textcolor>
-				</control>
-				<control type="panel" id="206">
-					<posx>0</posx>
-					<posy>60</posy>
-					<width>210</width>
-					<height>550</height>
-					<scrolltime>200</scrolltime>
-					<onup>206</onup>
-					<ondown>206</ondown>
-					<onleft>205</onleft>
-					<onright>207</onright>
-					<include>TV_NextAired_commonLayout</include>
-				</control>
-				<control type="image" dscription="top gradient">
+                                </control>
+                        </control>
+                        <control type="group" description="Today+5">
+                                <visible>!StringCompare(Window(Home).Property(NextAired.206.Wday),)</visible>
+                                <width>210</width>
+                                <height>630</height>
+                                <control type="label">
+                                        <posx>0</posx>
+                                        <posy>13</posy>
+                                        <width>210</width>
+                                        <height>20</height>
+                                        <label>$INFO[Window(Home).Property(NextAired.206.Weekday)]</label>
+                                        <align>center</align>
+                                        <aligny>center</aligny>
+                                        <textcolor>Grey2</textcolor>
+                                </control>
+                                <control type="panel" id="206">
+                                        <posx>0</posx>
+                                        <posy>60</posy>
+                                        <width>210</width>
+                                        <height>550</height>
+                                        <scrolltime>200</scrolltime>
+                                        <onup>206</onup>
+                                        <ondown>206</ondown>
+                                        <onleft>205</onleft>
+                                        <onright>207</onright>
+                                        <include>TV_NextAired_commonLayout</include>
+                                </control>
+                                <control type="image" dscription="top gradient">
           <animation effect="fade" time="200">VisibleChange</animation>
           <visible>Container(206).HasPrevious</visible>
           <posx>0</posx>
@@ -401,8 +401,8 @@
           <width>210</width>
           <texture flipy="true">img/DefaultGradient.png</texture>
           <aspectratio>stretch</aspectratio>
-				</control>
-				<control type="image" dscription="bottom gradient">
+                                </control>
+                                <control type="image" dscription="bottom gradient">
           <animation effect="fade" time="200">VisibleChange</animation>
           <visible>Container(206).HasNext</visible>
           <posx>0</posx>
@@ -411,9 +411,9 @@
           <width>210</width>
           <texture>img/DefaultGradient.png</texture>
           <aspectratio>stretch</aspectratio>
-				</control>
-				<control type="image" dscription="more arrow">
-				  <animation effect="fade" time="200">VisibleChange</animation>
+                                </control>
+                                <control type="image" dscription="more arrow">
+                                  <animation effect="fade" time="200">VisibleChange</animation>
           <visible>Container(206).HasNext</visible>
           <posx>0</posx>
           <posy>610</posy>
@@ -423,35 +423,35 @@
           <aligny>center</aligny>
           <texture>img/ArrowDownFO.png</texture>
           <aspectratio>keep</aspectratio>
-				</control>
-			</control>
-			<control type="group" description="Today+6">
-				<visible>!StringCompare(Window(Home).Property(NextAired.207.Wday),)</visible>
-				<width>210</width>
-				<height>630</height>
-				<control type="label">
-					<posx>0</posx>
-					<posy>13</posy>
-					<width>210</width>
-					<height>20</height>
-					<label>$INFO[Window(Home).Property(NextAired.207.Weekday)]</label>
-					<align>center</align>
-					<aligny>center</aligny>
-					<textcolor>Grey2</textcolor>
-				</control>
-				<control type="panel" id="207">
-					<posx>0</posx>
-					<posy>60</posy>
-					<width>210</width>
-					<height>550</height>
-					<scrolltime>200</scrolltime>
-					<onup>207</onup>
-					<ondown>207</ondown>
-					<onleft>206</onleft>
-					<onright>208</onright>
-					<include>TV_NextAired_commonLayout</include>
-				</control>
-				<control type="image" dscription="top gradient">
+                                </control>
+                        </control>
+                        <control type="group" description="Today+6">
+                                <visible>!StringCompare(Window(Home).Property(NextAired.207.Wday),)</visible>
+                                <width>210</width>
+                                <height>630</height>
+                                <control type="label">
+                                        <posx>0</posx>
+                                        <posy>13</posy>
+                                        <width>210</width>
+                                        <height>20</height>
+                                        <label>$INFO[Window(Home).Property(NextAired.207.Weekday)]</label>
+                                        <align>center</align>
+                                        <aligny>center</aligny>
+                                        <textcolor>Grey2</textcolor>
+                                </control>
+                                <control type="panel" id="207">
+                                        <posx>0</posx>
+                                        <posy>60</posy>
+                                        <width>210</width>
+                                        <height>550</height>
+                                        <scrolltime>200</scrolltime>
+                                        <onup>207</onup>
+                                        <ondown>207</ondown>
+                                        <onleft>206</onleft>
+                                        <onright>208</onright>
+                                        <include>TV_NextAired_commonLayout</include>
+                                </control>
+                                <control type="image" dscription="top gradient">
           <animation effect="fade" time="200">VisibleChange</animation>
           <visible>Container(207).HasPrevious</visible>
           <posx>0</posx>
@@ -460,8 +460,8 @@
           <width>210</width>
           <texture flipy="true">img/DefaultGradient.png</texture>
           <aspectratio>stretch</aspectratio>
-				</control>
-				<control type="image" dscription="bottom gradient">
+                                </control>
+                                <control type="image" dscription="bottom gradient">
           <animation effect="fade" time="200">VisibleChange</animation>
           <visible>Container(207).HasNext</visible>
           <posx>0</posx>
@@ -470,9 +470,9 @@
           <width>210</width>
           <texture>img/DefaultGradient.png</texture>
           <aspectratio>stretch</aspectratio>
-				</control>
-				<control type="image" dscription="more arrow">
-				  <animation effect="fade" time="200">VisibleChange</animation>
+                                </control>
+                                <control type="image" dscription="more arrow">
+                                  <animation effect="fade" time="200">VisibleChange</animation>
           <visible>Container(207).HasNext</visible>
           <posx>0</posx>
           <posy>610</posy>
@@ -482,35 +482,35 @@
           <aligny>center</aligny>
           <texture>img/ArrowDownFO.png</texture>
           <aspectratio>keep</aspectratio>
-				</control>
-			</control>
-			<control type="group" description="Today+7">
-				<visible>!StringCompare(Window(Home).Property(NextAired.208.Wday),)</visible>
-				<width>210</width>
-				<height>630</height>
-				<control type="label">
-					<posx>0</posx>
-					<posy>13</posy>
-					<width>210</width>
-					<height>20</height>
-					<label>$INFO[Window(Home).Property(NextAired.208.Wday)], $INFO[Window(Home).Property(NextAired.208.Date)]</label>
-					<align>center</align>
-					<aligny>center</aligny>
-					<textcolor>Grey2</textcolor>
-				</control>
-				<control type="panel" id="208">
-					<posx>0</posx>
-					<posy>60</posy>
-					<width>210</width>
-					<height>550</height>
-					<scrolltime>200</scrolltime>
-					<onup>208</onup>
-					<ondown>208</ondown>
-					<onleft>207</onleft>
-					<onright>209</onright>
-					<include>TV_NextAired_commonLayout</include>
-				</control>
-				<control type="image" dscription="top gradient">
+                                </control>
+                        </control>
+                        <control type="group" description="Today+7">
+                                <visible>!StringCompare(Window(Home).Property(NextAired.208.Wday),)</visible>
+                                <width>210</width>
+                                <height>630</height>
+                                <control type="label">
+                                        <posx>0</posx>
+                                        <posy>13</posy>
+                                        <width>210</width>
+                                        <height>20</height>
+                                        <label>$INFO[Window(Home).Property(NextAired.208.Wday)], $INFO[Window(Home).Property(NextAired.208.Date)]</label>
+                                        <align>center</align>
+                                        <aligny>center</aligny>
+                                        <textcolor>Grey2</textcolor>
+                                </control>
+                                <control type="panel" id="208">
+                                        <posx>0</posx>
+                                        <posy>60</posy>
+                                        <width>210</width>
+                                        <height>550</height>
+                                        <scrolltime>200</scrolltime>
+                                        <onup>208</onup>
+                                        <ondown>208</ondown>
+                                        <onleft>207</onleft>
+                                        <onright>209</onright>
+                                        <include>TV_NextAired_commonLayout</include>
+                                </control>
+                                <control type="image" dscription="top gradient">
           <animation effect="fade" time="200">VisibleChange</animation>
           <visible>Container(208).HasPrevious</visible>
           <posx>0</posx>
@@ -519,8 +519,8 @@
           <width>210</width>
           <texture flipy="true">img/DefaultGradient.png</texture>
           <aspectratio>stretch</aspectratio>
-				</control>
-				<control type="image" dscription="bottom gradient">
+                                </control>
+                                <control type="image" dscription="bottom gradient">
           <animation effect="fade" time="200">VisibleChange</animation>
           <visible>Container(208).HasNext</visible>
           <posx>0</posx>
@@ -529,9 +529,9 @@
           <width>210</width>
           <texture>img/DefaultGradient.png</texture>
           <aspectratio>stretch</aspectratio>
-				</control>
-				<control type="image" dscription="more arrow">
-				  <animation effect="fade" time="200">VisibleChange</animation>
+                                </control>
+                                <control type="image" dscription="more arrow">
+                                  <animation effect="fade" time="200">VisibleChange</animation>
           <visible>Container(208).HasNext</visible>
           <posx>0</posx>
           <posy>610</posy>
@@ -541,35 +541,35 @@
           <aligny>center</aligny>
           <texture>img/ArrowDownFO.png</texture>
           <aspectratio>keep</aspectratio>
-				</control>
-			</control>
-			<control type="group" description="Today+8">
-				<visible>!StringCompare(Window(Home).Property(NextAired.209.Wday),)</visible>
-				<width>210</width>
-				<height>630</height>
-				<control type="label">
-					<posx>0</posx>
-					<posy>13</posy>
-					<width>210</width>
-					<height>20</height>
-					<label>$INFO[Window(Home).Property(NextAired.209.Wday)], $INFO[Window(Home).Property(NextAired.209.Date)]</label>
-					<align>center</align>
-					<aligny>center</aligny>
-					<textcolor>Grey2</textcolor>
-				</control>
-				<control type="panel" id="209">
-					<posx>0</posx>
-					<posy>60</posy>
-					<width>210</width>
-					<height>550</height>
-					<scrolltime>200</scrolltime>
-					<onup>209</onup>
-					<ondown>209</ondown>
-					<onleft>208</onleft>
-					<onright>210</onright>
-					<include>TV_NextAired_commonLayout</include>
-				</control>
-				<control type="image" dscription="top gradient">
+                                </control>
+                        </control>
+                        <control type="group" description="Today+8">
+                                <visible>!StringCompare(Window(Home).Property(NextAired.209.Wday),)</visible>
+                                <width>210</width>
+                                <height>630</height>
+                                <control type="label">
+                                        <posx>0</posx>
+                                        <posy>13</posy>
+                                        <width>210</width>
+                                        <height>20</height>
+                                        <label>$INFO[Window(Home).Property(NextAired.209.Wday)], $INFO[Window(Home).Property(NextAired.209.Date)]</label>
+                                        <align>center</align>
+                                        <aligny>center</aligny>
+                                        <textcolor>Grey2</textcolor>
+                                </control>
+                                <control type="panel" id="209">
+                                        <posx>0</posx>
+                                        <posy>60</posy>
+                                        <width>210</width>
+                                        <height>550</height>
+                                        <scrolltime>200</scrolltime>
+                                        <onup>209</onup>
+                                        <ondown>209</ondown>
+                                        <onleft>208</onleft>
+                                        <onright>210</onright>
+                                        <include>TV_NextAired_commonLayout</include>
+                                </control>
+                                <control type="image" dscription="top gradient">
           <animation effect="fade" time="200">VisibleChange</animation>
           <visible>Container(209).HasPrevious</visible>
           <posx>0</posx>
@@ -578,8 +578,8 @@
           <width>210</width>
           <texture flipy="true">img/DefaultGradient.png</texture>
           <aspectratio>stretch</aspectratio>
-				</control>
-				<control type="image" dscription="bottom gradient">
+                                </control>
+                                <control type="image" dscription="bottom gradient">
           <animation effect="fade" time="200">VisibleChange</animation>
           <visible>Container(209).HasNext</visible>
           <posx>0</posx>
@@ -588,9 +588,9 @@
           <width>210</width>
           <texture>img/DefaultGradient.png</texture>
           <aspectratio>stretch</aspectratio>
-				</control>
-				<control type="image" dscription="more arrow">
-				  <animation effect="fade" time="200">VisibleChange</animation>
+                                </control>
+                                <control type="image" dscription="more arrow">
+                                  <animation effect="fade" time="200">VisibleChange</animation>
           <visible>Container(209).HasNext</visible>
           <posx>0</posx>
           <posy>610</posy>
@@ -600,35 +600,35 @@
           <aligny>center</aligny>
           <texture>img/ArrowDownFO.png</texture>
           <aspectratio>keep</aspectratio>
-				</control>
-			</control>
-			<control type="group" description="Today+9">
-				<visible>!StringCompare(Window(Home).Property(NextAired.210.Wday),)</visible>
-				<width>210</width>
-				<height>630</height>
-				<control type="label">
-					<posx>0</posx>
-					<posy>13</posy>
-					<width>210</width>
-					<height>20</height>
-					<label>$INFO[Window(Home).Property(NextAired.210.Wday)], $INFO[Window(Home).Property(NextAired.210.Date)]</label>
-					<align>center</align>
-					<aligny>center</aligny>
-					<textcolor>Grey2</textcolor>
-				</control>
-				<control type="panel" id="210">
-					<posx>0</posx>
-					<posy>60</posy>
-					<width>210</width>
-					<height>550</height>
-					<scrolltime>200</scrolltime>
-					<onup>210</onup>
-					<ondown>210</ondown>
-					<onleft>209</onleft>
-					<onright>211</onright>
-					<include>TV_NextAired_commonLayout</include>
-				</control>
-				<control type="image" dscription="top gradient">
+                                </control>
+                        </control>
+                        <control type="group" description="Today+9">
+                                <visible>!StringCompare(Window(Home).Property(NextAired.210.Wday),)</visible>
+                                <width>210</width>
+                                <height>630</height>
+                                <control type="label">
+                                        <posx>0</posx>
+                                        <posy>13</posy>
+                                        <width>210</width>
+                                        <height>20</height>
+                                        <label>$INFO[Window(Home).Property(NextAired.210.Wday)], $INFO[Window(Home).Property(NextAired.210.Date)]</label>
+                                        <align>center</align>
+                                        <aligny>center</aligny>
+                                        <textcolor>Grey2</textcolor>
+                                </control>
+                                <control type="panel" id="210">
+                                        <posx>0</posx>
+                                        <posy>60</posy>
+                                        <width>210</width>
+                                        <height>550</height>
+                                        <scrolltime>200</scrolltime>
+                                        <onup>210</onup>
+                                        <ondown>210</ondown>
+                                        <onleft>209</onleft>
+                                        <onright>211</onright>
+                                        <include>TV_NextAired_commonLayout</include>
+                                </control>
+                                <control type="image" dscription="top gradient">
           <animation effect="fade" time="200">VisibleChange</animation>
           <visible>Container(210).HasPrevious</visible>
           <posx>0</posx>
@@ -637,8 +637,8 @@
           <width>210</width>
           <texture flipy="true">img/DefaultGradient.png</texture>
           <aspectratio>stretch</aspectratio>
-				</control>
-				<control type="image" dscription="bottom gradient">
+                                </control>
+                                <control type="image" dscription="bottom gradient">
           <animation effect="fade" time="200">VisibleChange</animation>
           <visible>Container(210).HasNext</visible>
           <posx>0</posx>
@@ -647,9 +647,9 @@
           <width>210</width>
           <texture>img/DefaultGradient.png</texture>
           <aspectratio>stretch</aspectratio>
-				</control>
-				<control type="image" dscription="more arrow">
-				  <animation effect="fade" time="200">VisibleChange</animation>
+                                </control>
+                                <control type="image" dscription="more arrow">
+                                  <animation effect="fade" time="200">VisibleChange</animation>
           <visible>Container(210).HasNext</visible>
           <posx>0</posx>
           <posy>610</posy>
@@ -659,35 +659,35 @@
           <aligny>center</aligny>
           <texture>img/ArrowDownFO.png</texture>
           <aspectratio>keep</aspectratio>
-				</control>
-			</control>
-			<control type="group" description="Today+10">
-				<visible>!StringCompare(Window(Home).Property(NextAired.211.Wday),)</visible>
-				<width>210</width>
-				<height>630</height>
-				<control type="label">
-					<posx>0</posx>
-					<posy>13</posy>
-					<width>210</width>
-					<height>20</height>
-					<label>$INFO[Window(Home).Property(NextAired.211.Wday)], $INFO[Window(Home).Property(NextAired.211.Date)]</label>
-					<align>center</align>
-					<aligny>center</aligny>
-					<textcolor>Grey2</textcolor>
-				</control>
-				<control type="panel" id="211">
-					<posx>0</posx>
-					<posy>60</posy>
-					<width>210</width>
-					<height>550</height>
-					<scrolltime>200</scrolltime>
-					<onup>211</onup>
-					<ondown>211</ondown>
-					<onleft>210</onleft>
-					<onright>212</onright>
-					<include>TV_NextAired_commonLayout</include>
-				</control>
-				<control type="image" dscription="top gradient">
+                                </control>
+                        </control>
+                        <control type="group" description="Today+10">
+                                <visible>!StringCompare(Window(Home).Property(NextAired.211.Wday),)</visible>
+                                <width>210</width>
+                                <height>630</height>
+                                <control type="label">
+                                        <posx>0</posx>
+                                        <posy>13</posy>
+                                        <width>210</width>
+                                        <height>20</height>
+                                        <label>$INFO[Window(Home).Property(NextAired.211.Wday)], $INFO[Window(Home).Property(NextAired.211.Date)]</label>
+                                        <align>center</align>
+                                        <aligny>center</aligny>
+                                        <textcolor>Grey2</textcolor>
+                                </control>
+                                <control type="panel" id="211">
+                                        <posx>0</posx>
+                                        <posy>60</posy>
+                                        <width>210</width>
+                                        <height>550</height>
+                                        <scrolltime>200</scrolltime>
+                                        <onup>211</onup>
+                                        <ondown>211</ondown>
+                                        <onleft>210</onleft>
+                                        <onright>212</onright>
+                                        <include>TV_NextAired_commonLayout</include>
+                                </control>
+                                <control type="image" dscription="top gradient">
           <animation effect="fade" time="200">VisibleChange</animation>
           <visible>Container(211).HasPrevious</visible>
           <posx>0</posx>
@@ -696,8 +696,8 @@
           <width>210</width>
           <texture flipy="true">img/DefaultGradient.png</texture>
           <aspectratio>stretch</aspectratio>
-				</control>
-				<control type="image" dscription="bottom gradient">
+                                </control>
+                                <control type="image" dscription="bottom gradient">
           <animation effect="fade" time="200">VisibleChange</animation>
           <visible>Container(211).HasNext</visible>
           <posx>0</posx>
@@ -706,9 +706,9 @@
           <width>210</width>
           <texture>img/DefaultGradient.png</texture>
           <aspectratio>stretch</aspectratio>
-				</control>
-				<control type="image" dscription="more arrow">
-				  <animation effect="fade" time="200">VisibleChange</animation>
+                                </control>
+                                <control type="image" dscription="more arrow">
+                                  <animation effect="fade" time="200">VisibleChange</animation>
           <visible>Container(211).HasNext</visible>
           <posx>0</posx>
           <posy>610</posy>
@@ -718,35 +718,35 @@
           <aligny>center</aligny>
           <texture>img/ArrowDownFO.png</texture>
           <aspectratio>keep</aspectratio>
-				</control>
-			</control>
-			<control type="group" description="Today+11">
-				<visible>!StringCompare(Window(Home).Property(NextAired.212.Wday),)</visible>
-				<width>210</width>
-				<height>630</height>
-				<control type="label">
-					<posx>0</posx>
-					<posy>13</posy>
-					<width>210</width>
-					<height>20</height>
-					<label>$INFO[Window(Home).Property(NextAired.212.Wday)], $INFO[Window(Home).Property(NextAired.212.Date)]</label>
-					<align>center</align>
-					<aligny>center</aligny>
-					<textcolor>Grey2</textcolor>
-				</control>
-				<control type="panel" id="212">
-					<posx>0</posx>
-					<posy>60</posy>
-					<width>210</width>
-					<height>550</height>
-					<scrolltime>200</scrolltime>
-					<onup>212</onup>
-					<ondown>212</ondown>
-					<onleft>211</onleft>
-					<onright>213</onright>
-					<include>TV_NextAired_commonLayout</include>
-				</control>
-				<control type="image" dscription="top gradient">
+                                </control>
+                        </control>
+                        <control type="group" description="Today+11">
+                                <visible>!StringCompare(Window(Home).Property(NextAired.212.Wday),)</visible>
+                                <width>210</width>
+                                <height>630</height>
+                                <control type="label">
+                                        <posx>0</posx>
+                                        <posy>13</posy>
+                                        <width>210</width>
+                                        <height>20</height>
+                                        <label>$INFO[Window(Home).Property(NextAired.212.Wday)], $INFO[Window(Home).Property(NextAired.212.Date)]</label>
+                                        <align>center</align>
+                                        <aligny>center</aligny>
+                                        <textcolor>Grey2</textcolor>
+                                </control>
+                                <control type="panel" id="212">
+                                        <posx>0</posx>
+                                        <posy>60</posy>
+                                        <width>210</width>
+                                        <height>550</height>
+                                        <scrolltime>200</scrolltime>
+                                        <onup>212</onup>
+                                        <ondown>212</ondown>
+                                        <onleft>211</onleft>
+                                        <onright>213</onright>
+                                        <include>TV_NextAired_commonLayout</include>
+                                </control>
+                                <control type="image" dscription="top gradient">
           <animation effect="fade" time="200">VisibleChange</animation>
           <visible>Container(212).HasPrevious</visible>
           <posx>0</posx>
@@ -755,8 +755,8 @@
           <width>210</width>
           <texture flipy="true">img/DefaultGradient.png</texture>
           <aspectratio>stretch</aspectratio>
-				</control>
-				<control type="image" dscription="bottom gradient">
+                                </control>
+                                <control type="image" dscription="bottom gradient">
           <animation effect="fade" time="200">VisibleChange</animation>
           <visible>Container(212).HasNext</visible>
           <posx>0</posx>
@@ -765,9 +765,9 @@
           <width>210</width>
           <texture>img/DefaultGradient.png</texture>
           <aspectratio>stretch</aspectratio>
-				</control>
-				<control type="image" dscription="more arrow">
-				  <animation effect="fade" time="200">VisibleChange</animation>
+                                </control>
+                                <control type="image" dscription="more arrow">
+                                  <animation effect="fade" time="200">VisibleChange</animation>
           <visible>Container(212).HasNext</visible>
           <posx>0</posx>
           <posy>610</posy>
@@ -777,35 +777,35 @@
           <aligny>center</aligny>
           <texture>img/ArrowDownFO.png</texture>
           <aspectratio>keep</aspectratio>
-				</control>
-			</control>
-			<control type="group" description="Today+13">
-				<visible>!StringCompare(Window(Home).Property(NextAired.213.Wday),)</visible>
-				<width>210</width>
-				<height>630</height>
-				<control type="label">
-					<posx>0</posx>
-					<posy>13</posy>
-					<width>210</width>
-					<height>20</height>
-					<label>$INFO[Window(Home).Property(NextAired.213.Wday)], $INFO[Window(Home).Property(NextAired.213.Date)]</label>
-					<align>center</align>
-					<aligny>center</aligny>
-					<textcolor>Grey2</textcolor>
-				</control>
-				<control type="panel" id="213">
-					<posx>0</posx>
-					<posy>60</posy>
-					<width>210</width>
-					<height>550</height>
-					<scrolltime>200</scrolltime>
-					<onup>213</onup>
-					<ondown>213</ondown>
-					<onleft>212</onleft>
-					<onright>214</onright>
-					<include>TV_NextAired_commonLayout</include>
-				</control>
-				<control type="image" dscription="top gradient">
+                                </control>
+                        </control>
+                        <control type="group" description="Today+13">
+                                <visible>!StringCompare(Window(Home).Property(NextAired.213.Wday),)</visible>
+                                <width>210</width>
+                                <height>630</height>
+                                <control type="label">
+                                        <posx>0</posx>
+                                        <posy>13</posy>
+                                        <width>210</width>
+                                        <height>20</height>
+                                        <label>$INFO[Window(Home).Property(NextAired.213.Wday)], $INFO[Window(Home).Property(NextAired.213.Date)]</label>
+                                        <align>center</align>
+                                        <aligny>center</aligny>
+                                        <textcolor>Grey2</textcolor>
+                                </control>
+                                <control type="panel" id="213">
+                                        <posx>0</posx>
+                                        <posy>60</posy>
+                                        <width>210</width>
+                                        <height>550</height>
+                                        <scrolltime>200</scrolltime>
+                                        <onup>213</onup>
+                                        <ondown>213</ondown>
+                                        <onleft>212</onleft>
+                                        <onright>214</onright>
+                                        <include>TV_NextAired_commonLayout</include>
+                                </control>
+                                <control type="image" dscription="top gradient">
           <animation effect="fade" time="200">VisibleChange</animation>
           <visible>Container(213).HasPrevious</visible>
           <posx>0</posx>
@@ -814,8 +814,8 @@
           <width>210</width>
           <texture flipy="true">img/DefaultGradient.png</texture>
           <aspectratio>stretch</aspectratio>
-				</control>
-				<control type="image" dscription="bottom gradient">
+                                </control>
+                                <control type="image" dscription="bottom gradient">
           <animation effect="fade" time="200">VisibleChange</animation>
           <visible>Container(213).HasNext</visible>
           <posx>0</posx>
@@ -824,9 +824,9 @@
           <width>210</width>
           <texture>img/DefaultGradient.png</texture>
           <aspectratio>stretch</aspectratio>
-				</control>
-				<control type="image" dscription="more arrow">
-				  <animation effect="fade" time="200">VisibleChange</animation>
+                                </control>
+                                <control type="image" dscription="more arrow">
+                                  <animation effect="fade" time="200">VisibleChange</animation>
           <visible>Container(213).HasNext</visible>
           <posx>0</posx>
           <posy>610</posy>
@@ -836,35 +836,35 @@
           <aligny>center</aligny>
           <texture>img/ArrowDownFO.png</texture>
           <aspectratio>keep</aspectratio>
-				</control>
-			</control>
-			<control type="group" description="Today+13">
-				<visible>!StringCompare(Window(Home).Property(NextAired.214.Wday),)</visible>
-				<width>210</width>
-				<height>630</height>
-				<control type="label">
-					<posx>0</posx>
-					<posy>13</posy>
-					<width>210</width>
-					<height>20</height>
-					<label>$INFO[Window(Home).Property(NextAired.214.Wday)], $INFO[Window(Home).Property(NextAired.214.Date)]</label>
-					<align>center</align>
-					<aligny>center</aligny>
-					<textcolor>Grey2</textcolor>
-				</control>
-				<control type="panel" id="214">
-					<posx>0</posx>
-					<posy>60</posy>
-					<width>210</width>
-					<height>550</height>
-					<scrolltime>200</scrolltime>
-					<onup>214</onup>
-					<ondown>214</ondown>
-					<onleft>213</onleft>
-					<onright>215</onright>
-					<include>TV_NextAired_commonLayout</include>
-				</control>
-				<control type="image" dscription="top gradient">
+                                </control>
+                        </control>
+                        <control type="group" description="Today+13">
+                                <visible>!StringCompare(Window(Home).Property(NextAired.214.Wday),)</visible>
+                                <width>210</width>
+                                <height>630</height>
+                                <control type="label">
+                                        <posx>0</posx>
+                                        <posy>13</posy>
+                                        <width>210</width>
+                                        <height>20</height>
+                                        <label>$INFO[Window(Home).Property(NextAired.214.Wday)], $INFO[Window(Home).Property(NextAired.214.Date)]</label>
+                                        <align>center</align>
+                                        <aligny>center</aligny>
+                                        <textcolor>Grey2</textcolor>
+                                </control>
+                                <control type="panel" id="214">
+                                        <posx>0</posx>
+                                        <posy>60</posy>
+                                        <width>210</width>
+                                        <height>550</height>
+                                        <scrolltime>200</scrolltime>
+                                        <onup>214</onup>
+                                        <ondown>214</ondown>
+                                        <onleft>213</onleft>
+                                        <onright>215</onright>
+                                        <include>TV_NextAired_commonLayout</include>
+                                </control>
+                                <control type="image" dscription="top gradient">
           <animation effect="fade" time="200">VisibleChange</animation>
           <visible>Container(214).HasPrevious</visible>
           <posx>0</posx>
@@ -873,8 +873,8 @@
           <width>210</width>
           <texture flipy="true">img/DefaultGradient.png</texture>
           <aspectratio>stretch</aspectratio>
-				</control>
-				<control type="image" dscription="bottom gradient">
+                                </control>
+                                <control type="image" dscription="bottom gradient">
           <animation effect="fade" time="200">VisibleChange</animation>
           <visible>Container(214).HasNext</visible>
           <posx>0</posx>
@@ -883,9 +883,9 @@
           <width>210</width>
           <texture>img/DefaultGradient.png</texture>
           <aspectratio>stretch</aspectratio>
-				</control>
-				<control type="image" dscription="more arrow">
-				  <animation effect="fade" time="200">VisibleChange</animation>
+                                </control>
+                                <control type="image" dscription="more arrow">
+                                  <animation effect="fade" time="200">VisibleChange</animation>
           <visible>Container(214).HasNext</visible>
           <posx>0</posx>
           <posy>610</posy>
@@ -895,35 +895,35 @@
           <aligny>center</aligny>
           <texture>img/ArrowDownFO.png</texture>
           <aspectratio>keep</aspectratio>
-				</control>
-			</control>
-			<control type="group" description="Today+14">
-				<visible>!StringCompare(Window(Home).Property(NextAired.215.Wday),)</visible>
-				<width>210</width>
-				<height>630</height>
-				<control type="label">
-					<posx>0</posx>
-					<posy>13</posy>
-					<width>210</width>
-					<height>20</height>
-					<label>$INFO[Window(Home).Property(NextAired.215.Wday)], $INFO[Window(Home).Property(NextAired.215.Date)]</label>
-					<align>center</align>
-					<aligny>center</aligny>
-					<textcolor>Grey2</textcolor>
-				</control>
-				<control type="panel" id="215">
-					<posx>0</posx>
-					<posy>60</posy>
-					<width>210</width>
-					<height>550</height>
-					<scrolltime>200</scrolltime>
-					<onup>215</onup>
-					<ondown>215</ondown>
-					<onleft>214</onleft>
-					<onright>200</onright>
-					<include>TV_NextAired_commonLayout</include>
-				</control>
-				<control type="image" dscription="top gradient">
+                                </control>
+                        </control>
+                        <control type="group" description="Today+14">
+                                <visible>!StringCompare(Window(Home).Property(NextAired.215.Wday),)</visible>
+                                <width>210</width>
+                                <height>630</height>
+                                <control type="label">
+                                        <posx>0</posx>
+                                        <posy>13</posy>
+                                        <width>210</width>
+                                        <height>20</height>
+                                        <label>$INFO[Window(Home).Property(NextAired.215.Wday)], $INFO[Window(Home).Property(NextAired.215.Date)]</label>
+                                        <align>center</align>
+                                        <aligny>center</aligny>
+                                        <textcolor>Grey2</textcolor>
+                                </control>
+                                <control type="panel" id="215">
+                                        <posx>0</posx>
+                                        <posy>60</posy>
+                                        <width>210</width>
+                                        <height>550</height>
+                                        <scrolltime>200</scrolltime>
+                                        <onup>215</onup>
+                                        <ondown>215</ondown>
+                                        <onleft>214</onleft>
+                                        <onright>200</onright>
+                                        <include>TV_NextAired_commonLayout</include>
+                                </control>
+                                <control type="image" dscription="top gradient">
           <animation effect="fade" time="200">VisibleChange</animation>
           <visible>Container(215).HasPrevious</visible>
           <posx>0</posx>
@@ -932,8 +932,8 @@
           <width>210</width>
           <texture flipy="true">img/DefaultGradient.png</texture>
           <aspectratio>stretch</aspectratio>
-				</control>
-				<control type="image" dscription="bottom gradient">
+                                </control>
+                                <control type="image" dscription="bottom gradient">
           <animation effect="fade" time="200">VisibleChange</animation>
           <visible>Container(215).HasNext</visible>
           <posx>0</posx>
@@ -942,9 +942,9 @@
           <width>210</width>
           <texture>img/DefaultGradient.png</texture>
           <aspectratio>stretch</aspectratio>
-				</control>
-				<control type="image" dscription="more arrow">
-				  <animation effect="fade" time="200">VisibleChange</animation>
+                                </control>
+                                <control type="image" dscription="more arrow">
+                                  <animation effect="fade" time="200">VisibleChange</animation>
           <visible>Container(215).HasNext</visible>
           <posx>0</posx>
           <posy>610</posy>
@@ -954,9 +954,9 @@
           <aligny>center</aligny>
           <texture>img/ArrowDownFO.png</texture>
           <aspectratio>keep</aspectratio>
-				</control>
-			</control>
-		</control>
-		<include>TV_NextAired_commonControlsBottom</include>
+                                </control>
+                        </control>
+                </control>
+                <include>TV_NextAired_commonControlsBottom</include>
   </controls>
 </window>
