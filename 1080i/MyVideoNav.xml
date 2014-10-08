@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
   <defaultcontrol always="true">50</defaultcontrol>
-  
+
   <views>50,51,52,54,501,53,502,55,56,57,58,59,500,510</views>
   <onload condition="System.HasAddon(script.tvtunes)">XBMC.RunScript(script.tvtunes,backend=True&amp;loop=False)</onload>
   <controls>
@@ -37,7 +37,7 @@
           <label>$LOCALIZE[21429]: $LOCALIZE[21430]</label>
           <altlabel>$LOCALIZE[21429]: $LOCALIZE[21431]</altlabel>
         </control>
-        <control type="radiobutton" id="20" description="Media Filter">
+        <control type="radiobutton" id="694" description="Media Filter">
           <visible>Container.CanFilterAdvanced + Skin.HasSetting(AdvanceFilter)</visible>
           <include>9000Buttons</include>
           <label>$LOCALIZE[587]</label>
@@ -45,14 +45,14 @@
           <onclick>right</onclick>
           <onclick>Filter</onclick>
         </control>
-        <control type="button" id="696" description="InProgressReset">
+        <control type="button" id="695" description="InProgressReset">
           <visible>[Container.Content(Episodes) | Container.Content(Movies) ] + system.hasaddon(script.module.inprogressreset) + !SubString(ListItem.PercentPlayed,0,left)</visible>
           <include>9000Buttons</include>
           <label>31210</label>
           <onclick>Dialog.Close(all,true)</onclick>
           <onclick>RunScript(script.module.inprogressreset,DBID=$INFO[ListItem.DBID])</onclick>
         </control>
-        <control type="button" id="697" description="Artwork Downloader">
+        <control type="button" id="696" description="Artwork Downloader">
           <visible>System.HasAddon(script.artwork.downloader)</visible>
           <visible>Container.Content(tvshows) | Container.Content(movies) | Container.Content(musicvideos)</visible>
           <include>9000Buttons</include>
@@ -60,6 +60,17 @@
           <onclick condition="Container.Content(tvshows)">RunScript(script.artwork.downloader,mediatype=tvshow,dbid=$INFO[ListItem.DBID])</onclick>
           <onclick condition="Container.Content(movies)">RunScript(script.artwork.downloader,mediatype=movie,dbid=$INFO[ListItem.DBID])</onclick>
           <onclick condition="Container.Content(musicvideos)">RunScript(script.artwork.downloader,mediatype=musicvideos,dbid=$INFO[ListItem.DBID])</onclick>
+        </control>
+        <control type="togglebutton" id="20" description="Update library">
+          <include>9000Buttons</include>
+          <label>653</label>
+          <altlabel>13353</altlabel>
+          <usealttexture>library.isscanningmusic</usealttexture>
+        </control>
+        <control type="button" id="697" description="Playlist">
+          <include>9000Buttons</include>
+          <label>$LOCALIZE[31040]</label>
+          <onclick>ActivateWindow(videoplaylist)</onclick>
         </control>
         <control type="button" id="698" description="Browse files">
           <include>9000Buttons</include>

@@ -1,8 +1,7 @@
-<addon id="skin.quartz.mod" version="0.6.0" name="Quartz Modded" provider-name="amitkeret">
+<addon id="skin.quartz.mod" version="0.7.0" name="Quartz Modded" provider-name="amitkeret">
   <requires>
-    <import addon="xbmc.gui" version="4.0.0"/>
+    <import addon="xbmc.gui" version="5.0.1"/>
     <import addon="script.favourites" version="4.0.4"/>
-    <import addon="service.skin.widgets" version="0.0.13"/>
   </requires>
   <extension
     point="xbmc.gui.skin"
@@ -12,7 +11,7 @@
   </extension>
   <extension point="xbmc.addon.metadata">
     <platform>all</platform>
-    <summary>Apple TV style skin</summary>
-    <description>Modded version of Quartz skin by pecinko. Skin graphics by Baswazz.</description>
+    <summary lang="en">Apple TV style skin</summary>
+    <description lang="en">Modded version of Quartz skin by pecinko. Skin graphics by Baswazz.</description>
   </extension>
 </addon>

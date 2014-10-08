@@ -168,7 +168,7 @@
       </control>
       <control type="group" description="Media info">
         <visible>container.content(movies) | container.content(tvshows) | container.content(seasons)</visible>
-        <visible>!SubString(ListItem.Path,videodb://1/7)</visible>
+        <visible>!SubString(ListItem.Path,videodb://movies/sets/)</visible>
         <animation effect="fade" time="400">Visible</animation>
         <animation effect="fade" time="0">Hidden</animation>
         <posx>112</posx>
@@ -218,15 +218,15 @@
           </control>
           <control type="image">
             <posx>0</posx>
-            <posy>46</posy>
+            <posy>44</posy>
             <height>1</height>
             <width>758</width>
             <texture>img/LineST.png</texture>
           </control>
           <control type="textbox" description="Plot51">
-            <height>213</height>
+            <height>210</height>
             <include>Plot51Commons</include>
-            <label fallback="31979">$VAR[Plots]</label>
+            <label>$VAR[Plots]</label>
           </control>
           <control type="image">
             <posx>0</posx>
@@ -271,7 +271,7 @@
       </control>
       <control type="group" description="Media info">
         <visible>container.content(movies) | container.content(tvshows) | container.content(seasons)</visible>
-        <visible>SubString(ListItem.Path,videodb://1/7)</visible>
+        <visible>SubString(ListItem.Path,videodb://movies/sets/)</visible>
         <animation effect="fade" time="400">Visible</animation>
         <animation effect="fade" time="0">Hidden</animation>
         <control type="group" description="Thumbs no info">
@@ -353,10 +353,10 @@
         <control type="group" description="Posters">
           <posx>60</posx>
           <posy>240</posy>
-          <animation effect="zoom" start="100" end="62" time="400" center="518,-234" easing="in" reversible="false" condition="System.IdleTime(2) + !SubString(ListItem.Path,videodb://1/7)">Conditional</animation>
-          <animation effect="zoom" start="62" end="100" time="50" center="518,-234" easing="in" reversible="false" condition="![System.IdleTime(2) + !SubString(ListItem.Path,videodb://1/7)]">Conditional</animation>
-          <animation effect="fade" start="100" end="0" time="260" reversible="false" condition="System.IdleTime(2) + !IsEmpty(ListItem.Property(fanart_image)) + !SubString(ListItem.Path,videodb://1/7)">Conditional</animation>
-          <animation effect="fade" start="0" end="100" time="340" reversible="false" condition="![System.IdleTime(2) + !IsEmpty(ListItem.Property(fanart_image)) + !SubString(ListItem.Path,videodb://1/7)]">Conditional</animation>
+          <animation effect="zoom" start="100" end="62" time="400" center="518,-234" easing="in" reversible="false" condition="System.IdleTime(2) + !SubString(ListItem.Path,videodb://movies/sets/)">Conditional</animation>
+          <animation effect="zoom" start="62" end="100" time="50" center="518,-234" easing="in" reversible="false" condition="![System.IdleTime(2) + !SubString(ListItem.Path,videodb://movies/sets/)]">Conditional</animation>
+          <animation effect="fade" start="100" end="0" time="260" reversible="false" condition="System.IdleTime(2) + !IsEmpty(ListItem.Property(fanart_image)) + !SubString(ListItem.Path,videodb://movies/sets/)">Conditional</animation>
+          <animation effect="fade" start="0" end="100" time="340" reversible="false" condition="![System.IdleTime(2) + !IsEmpty(ListItem.Property(fanart_image)) + !SubString(ListItem.Path,videodb://movies/sets/)]">Conditional</animation>
           <control type="image" description="Thumb Reflection">
             <posx>180</posx>
             <posy>729</posy>
@@ -386,7 +386,7 @@
           </control>
         </control>
         <control type="group" description="Fanart">
-          <visible>System.IdleTime(1) + !SubString(ListItem.Path,videodb://1/7)</visible>
+          <visible>System.IdleTime(1) + !SubString(ListItem.Path,videodb://movies/sets/)</visible>
           <posx>114</posx>
           <posy>85</posy>
           <animation effect="fade" start="0" end="100" time="1000" easing="out" condition="System.IdleTime(2)">Conditional</animation>
@@ -420,7 +420,7 @@
           </control>
         </control>
         <control type="group" description="Media info">
-          <visible>System.IdleTime(2) + !SubString(ListItem.Path,videodb://1/7)</visible>
+          <visible>System.IdleTime(2) + !SubString(ListItem.Path,videodb://movies/sets/)</visible>
           <animation effect="fade" start="0" end="100" time="1000" easing="out" condition="System.IdleTime(2)">Conditional</animation>
           <animation effect="fade" start="100" end="0" time="0" condition="!System.IdleTime(2)">Conditional</animation>
           <posx>112</posx>
@@ -761,8 +761,9 @@
           <posx>390</posx>
           <posy>300</posy>
           <control type="textbox" description="Plot51">
-            <width>470</width>
-            <height>500</height>
+            <posy>63</posy>
+			<width>470</width>
+            <height>490</height>
             <include>Plot51Commons</include>
             <label>$VAR[Plots]</label>
           </control>
@@ -884,7 +885,7 @@
         <onright>noop</onright>
       </control>
     </control>
-    <control type="group" description="Poster Fanart">
+    <control type="group" description="Fanart 2">
       <visible>Control.IsVisible(59)</visible>
       <control type="group" description="Furniture">
         <control type="image" description="fanart">
@@ -953,7 +954,7 @@
               <posx>0</posx>
               <posy>68</posy>
               <width>540</width>
-              <height>252</height>
+              <height>250</height>
               <font>size20</font>
               <align>justify</align>
               <aligny>bottom</aligny>
@@ -1200,7 +1201,7 @@
         <posx>360</posx>
         <posy>891</posy>
         <width>1200</width>
-        <height>132</height>
+        <height>130</height>
         <font>size20</font>
         <align>justify</align>
         <aligny>bottom</aligny>
@@ -1607,7 +1608,7 @@
         <label>$INFO[ListItem.label][COLOR=Grey]$VAR[TopLabel,  ][/COLOR]</label>
       </control>
       <control type="image" description="Overlay">
-        <visible>![container.content(tvshows) | container.content(seasons) | SubString(ListItem.Path,videodb://1/7)]</visible>
+        <visible>![container.content(tvshows) | container.content(seasons) | SubString(ListItem.Path,videodb://movies/sets/)]</visible>
         <posx>66</posx>
         <posy>124</posy>
         <height>32</height>
@@ -1616,7 +1617,7 @@
         <texture>$VAR[Overlay]</texture>
       </control>
       <control type="image" description="Sets">
-        <visible>SubString(ListItem.Path,videodb://1/7)</visible>
+        <visible>SubString(ListItem.Path,videodb://movies/sets/)</visible>
         <posx>50</posx>
         <posy>123</posy>
         <height>33</height>
@@ -2188,7 +2189,7 @@
           <posx>70</posx>
           <posy>0</posy>
           <control type="image" description="Overlay">
-            <visible>!SubString(ListItem.Path,videodb://1/7)</visible>
+            <visible>!SubString(ListItem.Path,videodb://movies/sets/)</visible>
             <posx>-40</posx>
             <posy>376</posy>
             <height>32</height>
@@ -2197,7 +2198,7 @@
             <texture>$VAR[Overlay]</texture>
           </control>
           <control type="image" description="Sets">
-            <visible>SubString(ListItem.Path,videodb://1/7)</visible>
+            <visible>SubString(ListItem.Path,videodb://movies/sets/)</visible>
             <posx>-57</posx>
             <posy>376</posy>
             <height>33</height>
@@ -2219,7 +2220,7 @@
             </control>
             <control type="textbox" description="Plot51">
               <width>690</width>
-              <height>420</height>
+              <height>440</height>
               <include>Plot51Commons</include>
               <label fallback="31979">$VAR[Plots]</label>
             </control>
@@ -2324,16 +2325,6 @@
           </control>
         </control>
       </control>
-      <control type="image" description="Bottom fade">
-        <visible>!Container.Row(2)</visible>
-        <include>VisibleFadeEffect</include>
-        <posx>0</posx>
-        <posy>1000</posy>
-        <width>1920</width>
-        <height>80</height>
-        <texture>img/Gradient.png</texture>
-        <aspectratio>stretch</aspectratio>
-      </control>
       <control type="scrollbar" id="60">
         <posx>30r</posx>
         <posy>360</posy>
@@ -2381,8 +2372,9 @@
             <posy>330</posy>
             <width>202</width>
             <height>303</height>
-            <texture background="true" diffuse="img/ReflectionShelf.png" flipy="true">$INFO[ListItem.Icon]</texture>
+            <texture background="true" flipy="true">$INFO[ListItem.Icon]</texture>
             <aspectratio>scale</aspectratio>
+			<colordiffuse>45FFFFFF</colordiffuse>
           </control>
           <control type="image" description="Thumb">
             <posx>26</posx>
@@ -2409,8 +2401,9 @@
               <posy>330</posy>
               <width>202</width>
               <height>303</height>
-              <texture background="true" diffuse="img/ReflectionShelf.png" flipy="true">$INFO[ListItem.Icon]</texture>
+              <texture background="true" flipy="true">$INFO[ListItem.Icon]</texture>
               <aspectratio>scale</aspectratio>
+			  <colordiffuse>45FFFFFF</colordiffuse>
             </control>
             <control type="image" description="Thumb">
               <posx>26</posx>
@@ -2452,6 +2445,14 @@
         <texture flipx="true">img/DefaultGradientH.png</texture>
         <aspectratio>stretch</aspectratio>
       </control>
+	  <control type="image" description="Thumb">
+		  <posx>0</posx>
+		  <posy>1030</posy>
+		  <width>1920</width>
+		  <height>60</height>
+		  <texture>img/DefaultGradient.png</texture>
+		  <aspectratio>stretch</aspectratio>
+		</control>
       <control type="image">
         <visible>Control.HasFocus(500)</visible>
         <include>VisibleFadeEffect</include>
@@ -2501,7 +2502,7 @@
             <posy>51</posy>
             <posx>0</posx>
             <width>802</width>
-            <height>132</height>
+            <height>130</height>
             <font>size20</font>
             <textcolor>Silver</textcolor>
             <align>justify</align>
@@ -2575,7 +2576,7 @@
         <showonepage>false</showonepage>
       </control>
     </control>
-    <control type="group">
+    <control type="group" description="Fanart 3">
       <visible>Control.IsVisible(510)</visible>
       <control type="image">
         <include>Dimensions_Fullscreen</include>

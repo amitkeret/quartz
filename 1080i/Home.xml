@@ -39,7 +39,7 @@
       <visible>!Control.HasFocus(311) + !Control.HasFocus(312) + !Control.HasFocus(313) + !Control.HasFocus(314) + !Control.HasFocus(315)</visible>
       <posx>0</posx>
       <posy>568</posy>
-      <width>auto</width>
+      <width max="1920">auto</width>
       <height>420</height>
       <align>center</align>
       <aligny>top</aligny>
@@ -56,7 +56,7 @@
       <posx>0</posx>
       <posy>585</posy>
       <itemgap>0</itemgap>
-      <width>auto</width>
+      <width max="1920">auto</width>
       <height>420</height>
       <align>center</align>
       <aligny>top</aligny>
@@ -355,8 +355,8 @@
           <item id="0" description="LiveTV">
             <visible>System.GetBool(pvrmanager.enabled)</visible>
             <label>31502</label>
-            <onclick>ActivateWindow(PVR)</onclick>
-          </item>
+            <onclick>XBMC.ActivateWindowAndFocus(PVR, 11,0)</onclick>
+		  </item>
           <item id="1" description="Weather">
             <visible>!Skin.HasSetting(Addons1)</visible>
             <label>8</label>
@@ -365,8 +365,9 @@
           <item id="2" description="Program apps">
             <visible>!Skin.HasSetting(Addons2)</visible>
             <label>0</label>
-            <onclick>XBMC.ActivateWindow(Programs,Addons,return)</onclick>
-          </item>
+            <onclick condition="!System.Platform.Android">ActivateWindow(Programs,Addons,return)</onclick>
+			<onclick condition="System.Platform.Android">ActivateWindow(Programs)</onclick>
+	      </item>
           <item id="3" description="Picture apps">
             <visible>!Skin.HasSetting(Addons3)</visible>
             <label>1</label>
