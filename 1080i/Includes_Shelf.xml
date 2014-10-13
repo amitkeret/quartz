@@ -473,7 +473,7 @@
         <visible>Control.IsVisible(311)</visible>
         <include>LabelVisibleFade</include>
         <include>ShelfTopLabel</include>
-        <label>[B]$VAR[MovieShelfAutoItemsLabel][/B]</label>
+        <label>$VAR[MovieShelfAutoItemsLabel]</label>
       </control>
       <control type="panel" id="311" description="TOP Shortcuts">
         <visible>[Library.HasContent(Movies) | StringCompare(Skin.String(MovieShelfItemsType),custom)] + [ControlGroup(9000).HasFocus(301) | Control.HasFocus(311)]</visible>
@@ -702,16 +702,10 @@
   <include name="TV_RA">
     <control type="group">
       <control type="label" description="Top Label">
-        <visible>Control.IsVisible(312) + ![Skin.HasSetting(UseWidgets) + SubString(Window(Home).Property(SkinWidgets_Recommended),true)]</visible>
+        <visible>Control.IsVisible(312)</visible>
         <include>LabelVisibleFade</include>
         <include>ShelfTopLabel</include>
-        <label fallback="31020">$INFO[Container(312).ListItem.Property(ItemType)]</label>
-      </control>
-      <control type="label" description="Top Label">
-        <visible>Control.IsVisible(312) + Skin.HasSetting(UseWidgets) + SubString(Window(Home).Property(SkinWidgets_Recommended),true)</visible>
-        <include>LabelVisibleFade</include>
-        <include>ShelfTopLabel</include>
-        <label>[B]$VAR[TVShelfAutoItemsLabel][/B]</label>
+        <label>$VAR[TVShelfAutoItemsLabel]</label>
       </control>
       <control type="panel" id="312" description="TOP Shortcuts">
         <visible>[Library.HasContent(TVShows) | StringCompare(Skin.String(TVShelfItemsType),custom)] + [ControlGroup(9000).HasFocus(302) | Control.HasFocus(312)]</visible>
@@ -1757,7 +1751,7 @@
       <height>30</height>
       <font>size17</font>
       <textcolor>White2</textcolor>
-      <label>[B]$INFO[ListItem.Label][/B]</label>
+      <label>$INFO[ListItem.Label]</label>
       <align>center</align>
     </control>
   </include>
@@ -1814,7 +1808,7 @@
       <height>30</height>
       <font>size17</font>
       <textcolor>White2</textcolor>
-      <label>[B]$INFO[ListItem.Label][/B]</label>
+      <label>$INFO[ListItem.Label]</label>
       <align>center</align>
     </control>
   </include>
